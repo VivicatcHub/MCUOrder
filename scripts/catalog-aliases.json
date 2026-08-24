@@ -1,0 +1,26 @@
+{
+  "characters": {
+    "rhodey": "james_rhodes",
+    "war machine": "james_rhodes",
+    "happy": "happy_hogan",
+    "coulson": "phil_coulson",
+    "nat": "natasha_romanoff",
+    "bucky": "bucky_barnes",
+    "cap": "steve_rogers",
+    "t challa": "t_challa",
+    "peter b parker": "peter_parker",
+    "banner": "bruce_banner"
+  },
+  "skip": [
+    "party guest",
+    "partygoer",
+    "reveler",
+    "onlooker",
+    "bystander",
+    "pedestrian",
+    "commuter",
+    "wedding guest",
+    "dancer",
+    "stunt double"
+  ]
+}
