@@ -16,6 +16,7 @@ interface TitleCardProps {
   onToggleWatched: (id: string) => void;
   dateLabel: string | null;
   credit: SpotlightCredit | null;
+  highlighted?: boolean;
 }
 
 export const TitleCard = memo(function TitleCard({
@@ -24,13 +25,17 @@ export const TitleCard = memo(function TitleCard({
   onToggleWatched,
   dateLabel,
   credit,
+  highlighted = false,
 }: TitleCardProps) {
   const upcoming = title.status === "upcoming";
   const runtime = formatRuntime(title);
 
   return (
     <div
-      className="group relative select-none rounded-xl transition-all duration-300"
+      className={cn(
+        "group relative select-none rounded-xl transition-all duration-300",
+        highlighted && "z-10 scale-[1.04]",
+      )}
       style={{ width: CARD_WIDTH, height: CARD_HEIGHT }}
     >
       <Link
@@ -44,6 +49,8 @@ export const TitleCard = memo(function TitleCard({
             : upcoming
               ? "border-dashed border-border/70"
               : "border-border",
+          highlighted &&
+            "border-primary shadow-[0_0_0_3px_var(--primary),0_0_40px_-4px_var(--primary)]",
         )}
       >
         <div className="relative h-[62%] w-full">

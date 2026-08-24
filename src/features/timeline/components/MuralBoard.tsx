@@ -31,14 +31,36 @@ interface MuralBoardProps {
   titles: readonly Title[];
   mode: OrderMode;
   credits: ReadonlyMap<TitleId, SpotlightCredit>;
+  focus?: BoardFocus | null;
+  onFocused?: () => void;
 }
 
-export function MuralBoard({ titles, mode, credits }: MuralBoardProps) {
+export interface BoardFocus {
+  readonly id: TitleId;
+  readonly at: number;
+}
+
+const FOCUS_MIN_SCALE = 0.7;
+
+const HIGHLIGHT_MS = 2600;
+
+export function MuralBoard({
+  titles,
+  mode,
+  credits,
+  focus = null,
+  onFocused,
+}: MuralBoardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [container, setContainer] = useState({ width: 1280, height: 720 });
   const { viewport, isPanning, zoomBy, reset, handlers } =
     usePanZoom(containerRef);
   const { isWatched, toggle } = useWatched();
+
+  const scaleRef = useRef(viewport.scale);
+  useEffect(() => {
+    scaleRef.current = viewport.scale;
+  }, [viewport.scale]);
 
   useLayoutEffect(() => {
     const element = containerRef.current;
@@ -102,6 +124,23 @@ export function MuralBoard({ titles, mode, credits }: MuralBoardProps) {
     fit();
   }, [fit, layout.columns, layout.height]);
 
+  useEffect(() => {
+    if (!focus) return;
+    const card = layout.cards.find(({ title }) => title.id === focus.id);
+
+    if (!card) return;
+
+    const scale = Math.min(1, Math.max(scaleRef.current, FOCUS_MIN_SCALE));
+    reset({
+      scale,
+      x: container.width / 2 - (card.x + CARD_WIDTH / 2) * scale,
+      y: container.height / 2 - (card.y + CARD_HEIGHT / 2) * scale,
+    });
+
+    const timer = setTimeout(() => onFocused?.(), HIGHLIGHT_MS);
+    return () => clearTimeout(timer);
+  }, [focus, layout.cards, container, reset, onFocused]);
+
   return (
     <div
       ref={containerRef}
@@ -144,6 +183,7 @@ export function MuralBoard({ titles, mode, credits }: MuralBoardProps) {
             <TitleCard
               title={title}
               watched={isWatched(title.id)}
+              highlighted={title.id === focus?.id}
               onToggleWatched={toggle}
               credit={credits.get(title.id) ?? null}
               dateLabel={

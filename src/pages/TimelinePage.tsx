@@ -1,24 +1,33 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { SlidersHorizontal } from "lucide-react";
 import { useCatalog } from "@/app/providers/catalog-context";
 import { sortTitles } from "@/domain/services/ordering";
 import { applySpotlight } from "@/domain/services/spotlight";
-import type { TitleId } from "@/domain/entities/title";
+import type { Title, TitleId } from "@/domain/entities/title";
 import {
   creditsFor,
   type SpotlightCredit,
 } from "@/domain/services/spotlight-credit";
-import { MuralBoard } from "@/features/timeline/components/MuralBoard";
+import {
+  MuralBoard,
+  type BoardFocus,
+} from "@/features/timeline/components/MuralBoard";
+import { TimelineReel } from "@/features/timeline/components/TimelineReel";
 import { OrderToggle } from "@/features/timeline/components/OrderToggle";
 import { useOrderMode } from "@/features/timeline/hooks/useOrderMode";
 import { PersonPicker } from "@/features/spotlight/components/PersonPicker";
 import { StudioToggle } from "@/features/spotlight/components/StudioToggle";
 import { TypeToggle } from "@/features/spotlight/components/TypeToggle";
 import { useSpotlight } from "@/features/spotlight/hooks/useSpotlight";
+import { TitleSearch } from "@/features/search/components/TitleSearch";
 import { WatchedProgress } from "@/features/watched/components/WatchedProgress";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useMediaQuery } from "@/shared/hooks/use-media-query";
 import { cn } from "@/shared/lib/utils";
+
+const REEL_QUERY = "(max-width: 767px)";
 
 export function TimelinePage() {
   const { status, catalog, error } = useCatalog();
@@ -34,6 +43,10 @@ export function TimelinePage() {
   } = useSpotlight({ persist: true });
 
   const [controlsOpen, setControlsOpen] = useState(false);
+  const [focus, setFocus] = useState<BoardFocus | null>(null);
+
+  const reel = useMediaQuery(REEL_QUERY);
+  const navigate = useNavigate();
 
   const ordered = useMemo(
     () => (catalog ? sortTitles(catalog.titles, mode) : []),
@@ -52,6 +65,25 @@ export function TimelinePage() {
         : new Map<TitleId, SpotlightCredit>(),
     [catalog, visible, spotlight],
   );
+
+  const visibleIds = useMemo(
+    () => new Set(visible.map((title) => title.id)),
+    [visible],
+  );
+
+  const onSearchSelect = useCallback(
+    (title: Title) => {
+      if (reel) {
+        navigate(`/title/${title.id}`);
+        return;
+      }
+      if (!visibleIds.has(title.id)) clear();
+      setFocus({ id: title.id, at: Date.now() });
+    },
+    [reel, navigate, visibleIds, clear],
+  );
+
+  const onFocused = useCallback(() => setFocus(null), []);
 
   const caption = isActive
     ? `${visible.length} of ${ordered.length} shown`
@@ -73,6 +105,13 @@ export function TimelinePage() {
 
         {catalog && (
           <>
+            <TitleSearch
+              titles={ordered}
+              visibleIds={visibleIds}
+              action={reel ? "open" : "center"}
+              onSelect={onSearchSelect}
+            />
+
             <Button
               variant={isActive ? "default" : "outline"}
               size="sm"
@@ -123,7 +162,7 @@ export function TimelinePage() {
         )}
       </header>
 
-      <main className="relative flex-1">
+      <main className="relative min-h-0 flex-1">
         {status === "loading" && (
           <div className="grid h-full place-items-center p-4">
             <div className="grid w-full max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
@@ -152,9 +191,19 @@ export function TimelinePage() {
           </div>
         )}
 
-        {status === "ready" && visible.length > 0 && (
-          <MuralBoard titles={visible} mode={mode} credits={credits} />
-        )}
+        {status === "ready" &&
+          visible.length > 0 &&
+          (reel ? (
+            <TimelineReel titles={visible} mode={mode} credits={credits} />
+          ) : (
+            <MuralBoard
+              titles={visible}
+              mode={mode}
+              credits={credits}
+              focus={focus}
+              onFocused={onFocused}
+            />
+          ))}
 
         {status === "ready" && visible.length === 0 && (
           <div className="grid h-full place-items-center p-8 text-center">
