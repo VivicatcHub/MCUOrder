@@ -71,17 +71,21 @@ const actors = JSON.parse(await readFile(actorsPath, "utf8"));
 
 const titles = JSON.parse(await readFile(titlesPath, "utf8"));
 
-function titlesOf(actor) {
-  const wanted = new Set();
-  for (const role of actor.roles) {
-    for (const title of titles) {
-      const inIt = role.titleIds
-        ? role.titleIds.includes(title.id)
-        : title.characters.includes(role.characterId);
-      if (inIt) wanted.add(normalize(title.title));
-    }
+// The entries this dataset already credits each actor in — what a TMDB
+// candidate's own credits have to overlap before the match is believed.
+const appearances = new Map();
+for (const title of titles) {
+  for (const credit of title.cast ?? []) {
+    if (!credit.actorId) continue;
+
+    const seen = appearances.get(credit.actorId) ?? new Set();
+    seen.add(normalize(title.title));
+    appearances.set(credit.actorId, seen);
   }
-  return wanted;
+}
+
+function titlesOf(actor) {
+  return appearances.get(actor.id) ?? new Set();
 }
 
 const results = { written: [], unverified: [], noPhoto: [], notFound: [] };

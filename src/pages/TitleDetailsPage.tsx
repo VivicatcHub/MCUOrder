@@ -1,6 +1,7 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Check, Clapperboard, ExternalLink, Tv } from "lucide-react";
 import { useCatalog } from "@/app/providers/catalog-context";
+import { isUpcoming } from "@/domain/entities/title";
 import {
   formatDateRange,
   formatPartialDate,
@@ -11,7 +12,12 @@ import {
 } from "@/domain/services/formatting";
 import { imdbUrl, isImdbGuess } from "@/domain/services/external-links";
 import { sortTitles } from "@/domain/services/ordering";
-import { actorsForCharacter } from "@/domain/services/actor-filter";
+import { castByCharacter } from "@/domain/services/actor-filter";
+import {
+  billedCast,
+  indexBillingOverrides,
+  recurringCharacterIds,
+} from "@/domain/services/billing";
 import { useSpotlight } from "@/features/spotlight/hooks/useSpotlight";
 import { useWatched } from "@/features/watched/hooks/watched-context";
 import { PosterArt } from "@/components/poster-art";
@@ -69,6 +75,24 @@ export function TitleDetailsPage() {
     catalog.titles.filter((other) => other.franchise.id === title.franchise.id),
     "chronological",
   ).sort((a, b) => a.franchiseIndex - b.franchiseIndex);
+
+  const { principal, supporting } = billedCast(
+    title,
+    recurringCharacterIds(catalog.titles),
+    indexBillingOverrides(catalog.billingOverrides, catalog.titles),
+  );
+  const cast = castByCharacter(title, catalog.actors);
+
+  const credits = (characterIds: readonly string[]) =>
+    characterIds.flatMap((characterId) => {
+      const character = getCharacter(characterId);
+      if (!character) return [];
+
+      const playing = cast.get(characterId) ?? [];
+      const pairs = playing.length > 0 ? playing : [null];
+
+      return pairs.map((actor) => ({ characterId, character, actor }));
+    });
 
   return (
     <div className="min-h-dvh">
@@ -154,7 +178,7 @@ export function TitleDetailsPage() {
             value={formatDateRange(title.loreStart, title.loreEnd)}
           />
           <Fact
-            label={title.status === "upcoming" ? "Releases" : "Released"}
+            label={isUpcoming(title) ? "Releases" : "Released"}
             value={
               title.releaseDate ? formatPartialDate(title.releaseDate) : null
             }
@@ -228,18 +252,15 @@ export function TitleDetailsPage() {
           <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
             Cast
           </h2>
-          <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {title.characters.flatMap((characterId) => {
-              const character = getCharacter(characterId);
-              if (!character) return [];
-              const actors = actorsForCharacter(
-                title,
-                characterId,
-                catalog.actors,
-              );
-              const pairs = actors.length > 0 ? actors : [null];
+          {principal.length === 0 && supporting.length === 0 && (
+            <p className="mt-3 rounded-xl border border-dashed bg-card/40 px-4 py-6 text-center text-sm text-muted-foreground">
+              Cast in progress…
+            </p>
+          )}
 
-              return pairs.map((actor) => (
+          {principal.length > 0 && (
+            <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {credits(principal).map(({ characterId, character, actor }) => (
                 <div
                   key={`${characterId}-${actor?.id ?? "unknown"}`}
                   className="flex items-center gap-3 rounded-xl border bg-card p-2"
@@ -293,9 +314,52 @@ export function TitleDetailsPage() {
                     )}
                   </span>
                 </div>
-              ));
-            })}
-          </div>
+              ))}
+            </div>
+          )}
+
+          {supporting.length > 0 && (
+            <>
+              <h3 className="mt-8 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                Also appearing
+              </h3>
+              <div className="mt-3 grid grid-cols-2 gap-1.5 sm:grid-cols-3 lg:grid-cols-5">
+                {credits(supporting).map(
+                  ({ characterId, character, actor }) => (
+                    <div
+                      key={`${characterId}-${actor?.id ?? "unknown"}`}
+                      className="flex items-center gap-2 rounded-lg border bg-card/60 p-1.5"
+                    >
+                      {actor ? (
+                        <ActorAvatar actor={actor} className="size-9" />
+                      ) : (
+                        <span
+                          aria-hidden
+                          className="size-9 shrink-0 rounded-[25%] border border-dashed"
+                        />
+                      )}
+
+                      <span className="min-w-0 flex-1">
+                        <span
+                          className="block truncate text-xs font-medium"
+                          title={
+                            character.aka
+                              ? `${character.name} — ${character.aka}`
+                              : character.name
+                          }
+                        >
+                          {character.name}
+                        </span>
+                        <span className="block truncate text-[0.7rem] text-muted-foreground">
+                          {actor ? actor.name : "Uncredited here"}
+                        </span>
+                      </span>
+                    </div>
+                  ),
+                )}
+              </div>
+            </>
+          )}
         </section>
       </div>
     </div>

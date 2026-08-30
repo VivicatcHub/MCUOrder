@@ -1,14 +1,14 @@
 import type {
   Actor,
   ActorId,
+  CastCredit,
   CharacterId,
   Title,
-  TitleId,
 } from "../entities/title";
 
 export function featuresActor(title: Title, actorId: ActorId | null): boolean {
   if (!actorId) return true;
-  return title.cast.includes(actorId);
+  return title.cast.some((credit) => credit.actorId === actorId);
 }
 
 export function actorAppearanceCounts(
@@ -17,7 +17,7 @@ export function actorAppearanceCounts(
   const counts = new Map<ActorId, number>();
 
   for (const title of titles) {
-    for (const actorId of title.cast) {
+    for (const actorId of actorIdsOf(title.cast)) {
       counts.set(actorId, (counts.get(actorId) ?? 0) + 1);
     }
   }
@@ -25,22 +25,20 @@ export function actorAppearanceCounts(
   return counts;
 }
 
-export function castOf(
-  titleId: TitleId,
-  characterIds: readonly CharacterId[],
-  actors: readonly Actor[],
-): ActorId[] {
-  const characters = new Set(characterIds);
+/** The parts a cast sheet names, each once, still in billing order. */
+export function characterIdsOf(
+  cast: readonly CastCredit[],
+): readonly CharacterId[] {
+  return [...new Set(cast.map((credit) => credit.characterId))];
+}
 
-  return actors
-    .filter((actor) =>
-      actor.roles.some((role) =>
-        role.titleIds
-          ? role.titleIds.includes(titleId)
-          : characters.has(role.characterId),
-      ),
-    )
-    .map((actor) => actor.id);
+/** The people a cast sheet credits, each once — an actor may play two parts. */
+export function actorIdsOf(cast: readonly CastCredit[]): readonly ActorId[] {
+  const actorIds = cast
+    .map((credit) => credit.actorId)
+    .filter((actorId) => actorId !== null);
+
+  return [...new Set(actorIds)];
 }
 
 export function actorsForCharacter(
@@ -48,38 +46,67 @@ export function actorsForCharacter(
   characterId: CharacterId,
   actors: readonly Actor[],
 ): Actor[] {
-  return actors.filter((actor) =>
-    actor.roles.some(
-      (role) =>
-        role.characterId === characterId &&
-        (role.titleIds
-          ? role.titleIds.includes(title.id)
-          : title.characters.includes(characterId)),
-    ),
-  );
-}
+  const playing: Actor[] = [];
 
-export function playedCharacterIds(actor: Actor): CharacterId[] {
-  return [...new Set(actor.roles.map((role) => role.characterId))];
+  for (const credit of title.cast) {
+    if (credit.characterId !== characterId || !credit.actorId) continue;
+
+    const actor = actors.find((candidate) => candidate.id === credit.actorId);
+    if (actor && !playing.includes(actor)) playing.push(actor);
+  }
+
+  return playing;
 }
 
 export function charactersForActor(
   title: Title,
   actorId: ActorId,
-  actors: readonly Actor[],
 ): CharacterId[] {
-  const actor = actors.find((candidate) => candidate.id === actorId);
-  if (!actor) return [];
-
   return [
     ...new Set(
-      actor.roles
-        .filter((role) =>
-          role.titleIds
-            ? role.titleIds.includes(title.id)
-            : title.characters.includes(role.characterId),
-        )
-        .map((role) => role.characterId),
+      title.cast
+        .filter((credit) => credit.actorId === actorId)
+        .map((credit) => credit.characterId),
     ),
   ];
+}
+
+/** Every part each actor plays anywhere on the wall, in first-seen order. */
+export function charactersByActor(
+  titles: readonly Title[],
+): Map<ActorId, CharacterId[]> {
+  const played = new Map<ActorId, CharacterId[]>();
+
+  for (const title of titles) {
+    for (const credit of title.cast) {
+      if (!credit.actorId) continue;
+
+      const parts = played.get(credit.actorId);
+      if (!parts) played.set(credit.actorId, [credit.characterId]);
+      else if (!parts.includes(credit.characterId))
+        parts.push(credit.characterId);
+    }
+  }
+
+  return played;
+}
+
+export function castByCharacter(
+  title: Title,
+  actors: readonly Actor[],
+): Map<CharacterId, Actor[]> {
+  const byId = new Map(actors.map((actor) => [actor.id, actor]));
+  const cast = new Map<CharacterId, Actor[]>();
+
+  for (const credit of title.cast) {
+    const actor = credit.actorId ? byId.get(credit.actorId) : undefined;
+    if (!actor) continue;
+
+    const playing = cast.get(credit.characterId);
+    if (playing) {
+      if (!playing.includes(actor)) playing.push(actor);
+    } else cast.set(credit.characterId, [actor]);
+  }
+
+  return cast;
 }

@@ -2,7 +2,7 @@ import { memo } from "react";
 import { Link } from "react-router-dom";
 import { Check, Clapperboard, Drama, Tv } from "lucide-react";
 import { cn } from "@/shared/lib/utils";
-import type { Title } from "@/domain/entities/title";
+import { isUpcoming, type Title } from "@/domain/entities/title";
 import { imdbUrl } from "@/domain/services/external-links";
 import { formatRuntime } from "@/domain/services/formatting";
 import type { SpotlightCredit } from "@/domain/services/spotlight-credit";
@@ -27,7 +27,7 @@ export const TitleCard = memo(function TitleCard({
   credit,
   highlighted = false,
 }: TitleCardProps) {
-  const upcoming = title.status === "upcoming";
+  const upcoming = isUpcoming(title);
   const runtime = formatRuntime(title);
 
   return (

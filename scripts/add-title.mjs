@@ -305,9 +305,8 @@ const entry = {
           seasonRecord?.episodes?.length ?? record.number_of_episodes ?? null,
       }
     : {}),
-  characters: [],
+  cast: [],
   synopsis: text(options.get("synopsis") ?? overview),
-  status: releaseDate && releaseDate <= today ? "released" : "upcoming",
   poster: posterPath
     ? `https://image.tmdb.org/t/p/${POSTER_SIZE}${posterPath}`
     : null,
@@ -355,12 +354,15 @@ if (dryRun) {
   if (newFranchise) writeJson(paths.franchises, franchises);
 }
 
+const status =
+  entry.releaseDate && entry.releaseDate <= today ? "released" : "upcoming";
+
 console.log(
   [
     "",
     `${dryRun ? "would add" : "added"} ${entry.id} — ${entry.title}`,
     `  ${entry.type} · ${entry.studio} · ${entry.phase} · ${entry.franchiseId} #${entry.franchiseIndex}`,
-    `  ${entry.releaseDate ?? "no date"} · ${entry.status} · ${entry.imdbId ?? "no IMDb id"} · TMDB #${entry.tmdbId}`,
+    `  ${entry.releaseDate ?? "no date"} · ${status} · ${entry.imdbId ?? "no IMDb id"} · TMDB #${entry.tmdbId}`,
     entry.poster ? "" : "  no poster on TMDB — PosterArt will draw one",
     "",
     "next: fill in loreStart / loreEnd (TMDB does not know them)" +

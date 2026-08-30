@@ -138,6 +138,7 @@ export function TimelinePage() {
                 characters={catalog.characters}
                 actors={catalog.actors}
                 titles={catalog.titles}
+                billingOverrides={catalog.billingOverrides}
                 characterId={spotlight.characterId}
                 actorId={spotlight.actorId}
                 onSelectCharacter={setCharacter}

@@ -64,7 +64,7 @@ if (positionals.length > 0) {
 } else if (flags.has("all")) {
   targets = titles;
 } else {
-  targets = titles.filter((title) => title.characters.length === 0);
+  targets = titles.filter((title) => title.cast.length === 0);
   if (targets.length === 0) {
     console.log(
       "Every entry already has a cast. Name the ones to re-sync, or pass --all.",
@@ -241,6 +241,7 @@ function parsePart(raw) {
 
 const ambiguous = [];
 const invented = [];
+let touchedActors = false;
 
 function byTokens(name, credit, title) {
   const wanted = normalize(name)
@@ -327,16 +328,18 @@ function actorFor(credit) {
     if (!existing.tmdbId) {
       existing.tmdbId = credit.tmdbId;
       actorByTmdb.set(credit.tmdbId, existing);
+      touchedActors = true;
     }
-    if (withPhotos && !existing.photo && credit.profilePath)
+    if (withPhotos && !existing.photo && credit.profilePath) {
       existing.photo = `https://image.tmdb.org/t/p/${PROFILE_SIZE}${credit.profilePath}`;
+      touchedActors = true;
+    }
     return { actor: existing, created: false };
   }
 
   const actor = {
     id: uniqueId(slugify(credit.name), actorIds),
     name: datasetText(credit.name, keepDashes),
-    roles: [],
     photo:
       withPhotos && credit.profilePath
         ? `https://image.tmdb.org/t/p/${PROFILE_SIZE}${credit.profilePath}`
@@ -348,19 +351,20 @@ function actorFor(credit) {
   actors.push(actor);
   actorByTmdb.set(actor.tmdbId, actor);
   actorByName.set(normalize(actor.name), actor);
+  touchedActors = true;
   return { actor, created: true };
 }
 
-function attach(actor, characterId, titleId) {
-  const role = actor.roles.find(
-    (candidate) => candidate.characterId === characterId,
+/** Appends one line to a cast sheet — a part the entry already credits that
+ * actor with is left exactly as it stands. */
+function attach(cast, characterId, actorId) {
+  const known = cast.some(
+    (credit) =>
+      credit.characterId === characterId && credit.actorId === actorId,
   );
-  if (!role) {
-    actor.roles.push({ characterId, titleIds: [titleId] });
-    return true;
-  }
-  if (!role.titleIds || role.titleIds.includes(titleId)) return false;
-  role.titleIds.push(titleId);
+  if (known) return false;
+
+  cast.push({ characterId, actorId });
   return true;
 }
 
@@ -370,7 +374,7 @@ const stats = {
   titles: 0,
   characters: characters.length,
   actors: actors.length,
-  roles: 0,
+  credits: 0,
 };
 
 console.log(`${targets.length} of ${titles.length} entries to sync\n`);
@@ -394,11 +398,11 @@ for (const [index, title] of targets.entries()) {
     continue;
   }
 
-  const list = [...title.characters];
+  const cast = [...title.cast];
   const seen = new Set();
   let kept = 0;
   let addedCharacters = 0;
-  let addedRoles = 0;
+  let addedCredits = 0;
   let addedActors = 0;
 
   for (const credit of credits) {
@@ -419,32 +423,54 @@ for (const [index, title] of targets.entries()) {
     seen.add(pair);
     kept += 1;
 
-    if (!list.includes(character.id)) list.push(character.id);
-
     const { actor, created } = actorFor(credit);
     if (created) addedActors += 1;
-    if (attach(actor, character.id, title.id)) addedRoles += 1;
+    if (attach(cast, character.id, actor.id)) addedCredits += 1;
   }
 
-  if (list.length !== title.characters.length) updates.set(title.id, list);
-  if (addedCharacters + addedActors + addedRoles > 0) stats.titles += 1;
-  stats.roles += addedRoles;
+  if (addedCredits > 0) updates.set(title.id, cast);
+  if (addedCharacters + addedActors + addedCredits > 0) stats.titles += 1;
+  stats.credits += addedCredits;
 
   console.log(
     `↓ ${label} — ${kept} credits (${found.how}): ` +
-      `+${addedCharacters} characters, +${addedActors} actors, +${addedRoles} roles`,
+      `+${addedCharacters} characters, +${addedActors} actors, +${addedCredits} credits`,
   );
 }
 
-function renderCharacters(ids, trailing) {
-  const inline = `    "characters": [${ids.map((id) => JSON.stringify(id)).join(", ")}]${trailing}`;
-  if (inline.length <= 100) return inline;
+// One credit a line, wrapped where titles.json already wraps.
+const PRINT_WIDTH = 80;
+
+function compact(credit) {
+  return (
+    `{ "characterId": ${JSON.stringify(credit.characterId)}, ` +
+    `"actorId": ${JSON.stringify(credit.actorId)} }`
+  );
+}
+
+function renderCredit(credit, trailing) {
+  const characterId = JSON.stringify(credit.characterId);
+  const actorId = JSON.stringify(credit.actorId);
+
+  const inline = `      ${compact(credit)}${trailing}`;
+  if (inline.length <= PRINT_WIDTH) return inline;
 
   return [
-    '    "characters": [',
-    ...ids.map(
-      (id, index) =>
-        `      ${JSON.stringify(id)}${index < ids.length - 1 ? "," : ""}`,
+    "      {",
+    `        "characterId": ${characterId},`,
+    `        "actorId": ${actorId}`,
+    `      }${trailing}`,
+  ].join("\n");
+}
+
+function renderCast(cast, trailing) {
+  const inline = `    "cast": [${cast.map(compact).join(", ")}]${trailing}`;
+  if (inline.length <= PRINT_WIDTH) return inline;
+
+  return [
+    '    "cast": [',
+    ...cast.map((credit, index) =>
+      renderCredit(credit, index < cast.length - 1 ? "," : ""),
     ),
     `    ]${trailing}`,
   ].join("\n");
@@ -460,13 +486,13 @@ function patch(raw, lists) {
     const id = /^ {4}"id": "(.+)",$/.exec(line);
     if (id) current = id[1];
 
-    const opener = /^ {4}"characters": \[/.test(line);
+    const opener = /^ {4}"cast": \[/.test(line);
     if (!opener || !current || !lists.has(current)) {
       out.push(line);
       continue;
     }
 
-    const oneLine = /^ {4}"characters": \[.*\](,?)$/.exec(line);
+    const oneLine = /^ {4}"cast": \[.*\](,?)$/.exec(line);
     let trailing;
     if (oneLine) {
       trailing = oneLine[1];
@@ -475,7 +501,7 @@ function patch(raw, lists) {
         index += 1;
       trailing = /^ {4}\](,?)$/.exec(lines[index])?.[1] ?? "";
     }
-    out.push(renderCharacters(lists.get(current), trailing));
+    out.push(renderCast(lists.get(current), trailing));
   }
 
   return out.join("\n");
@@ -490,8 +516,7 @@ if (!dryRun) {
   if (characters.length > stats.characters)
     writeJson(paths.characters, characters);
 
-  if (actors.length > stats.actors || stats.roles > 0)
-    writeJson(paths.actors, actors);
+  if (touchedActors) writeJson(paths.actors, actors);
 }
 
 console.log(
@@ -500,7 +525,7 @@ console.log(
     `done — ${stats.titles} entries updated, ` +
       `+${characters.length - stats.characters} characters (${characters.length} total), ` +
       `+${actors.length - stats.actors} actors (${actors.length} total), ` +
-      `+${stats.roles} roles`,
+      `+${stats.credits} credits`,
     dryRun ? "(--dry-run: nothing written)" : "",
     ambiguous.length
       ? "\nskipped — the codename alone does not say who this is:"

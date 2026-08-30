@@ -1,4 +1,5 @@
 import type { PartialDate } from "./partial-date";
+import { compareDates, todayPartialDate } from "./partial-date";
 
 export type TitleId = string;
 export type CharacterId = string;
@@ -6,8 +7,6 @@ export type ActorId = string;
 export type FranchiseId = string;
 
 export type TitleType = "movie" | "series";
-
-export type TitleStatus = "released" | "upcoming";
 
 export type OrderMode = "chronological" | "release";
 
@@ -18,17 +17,30 @@ export interface Character {
   readonly aka?: string;
 }
 
-export interface ActorRole {
+/** One line of a title's cast sheet: the part, and who plays it here. */
+export interface CastCredit {
   readonly characterId: CharacterId;
-  readonly titleIds: readonly TitleId[] | null;
+  readonly actorId: ActorId | null;
 }
 
 export interface Actor {
   readonly id: ActorId;
   readonly name: string;
-  readonly roles: readonly ActorRole[];
 
   readonly photo: string | null;
+}
+
+export type BillingWeight = "principal" | "supporting";
+
+export type BillingSubject = "character" | "actor";
+
+export interface BillingOverride {
+  readonly subject: BillingSubject;
+  readonly id: CharacterId | ActorId;
+  readonly weight: BillingWeight;
+
+  readonly titleIds: readonly TitleId[] | null;
+  readonly note: string | null;
 }
 
 export interface Franchise {
@@ -48,7 +60,6 @@ export interface Title {
 
   readonly franchiseIndex: number;
   readonly phase: string;
-  readonly status: TitleStatus;
 
   readonly releaseDate: PartialDate | null;
 
@@ -59,9 +70,12 @@ export interface Title {
   readonly runtimeMinutes: number | null;
 
   readonly episodes: number | null;
-  readonly characters: readonly CharacterId[];
 
-  readonly cast: readonly ActorId[];
+  /** In billing order, one line per credit — a part may be played by several. */
+  readonly cast: readonly CastCredit[];
+
+  /** The parts in `cast`, deduplicated and still in billing order. */
+  readonly characters: readonly CharacterId[];
   readonly synopsis: string;
   readonly poster: string | null;
 
@@ -73,14 +87,20 @@ export interface Catalog {
   readonly characters: readonly Character[];
   readonly actors: readonly Actor[];
   readonly franchises: readonly Franchise[];
+
+  readonly billingOverrides: readonly BillingOverride[];
 }
 
 export function isSeries(title: Title): title is Title & { episodes: number } {
   return title.type === "series";
 }
 
-export function isUpcoming(title: Title): boolean {
-  return title.status === "upcoming";
+export function isUpcoming(
+  title: Title,
+  now: PartialDate = todayPartialDate(),
+): boolean {
+  if (!title.releaseDate) return true;
+  return compareDates(title.releaseDate, now) > 0;
 }
 
 export function totalRuntimeMinutes(title: Title): number | null {

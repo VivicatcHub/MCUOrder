@@ -66,6 +66,13 @@ export function parseOptionalDate(
   return raw ? parsePartialDate(raw) : null;
 }
 
+export function todayPartialDate(): PartialDate {
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  return parsePartialDate(`${now.getFullYear()}-${month}-${day}`);
+}
+
 export function formatDateRange(
   start: PartialDate | null,
   end: PartialDate | null,

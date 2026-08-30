@@ -4,15 +4,14 @@ export interface CharacterDto {
   aka?: string;
 }
 
-export interface ActorRoleDto {
+export interface CastCreditDto {
   characterId: string;
-  titleIds?: string[];
+  actorId: string | null;
 }
 
 export interface ActorDto {
   id: string;
   name: string;
-  roles: ActorRoleDto[];
   photo?: string | null;
   tmdbId?: number | null;
 }
@@ -32,18 +31,25 @@ export interface TitleDto {
   franchiseId: string;
   franchiseIndex: number;
   phase: string;
-  status: "released" | "upcoming";
   releaseDate: string | null;
   loreStart: string | null;
   loreEnd: string | null;
   loreNote: string | null;
   runtimeMinutes: number | null;
   episodes: number | null;
-  characters: string[];
+  cast: CastCreditDto[];
   synopsis: string;
   poster?: string | null;
   imdbId?: string | null;
   tmdbId?: number | null;
+}
+
+export interface BillingOverrideDto {
+  subject: "character" | "actor";
+  id: string;
+  weight: "principal" | "supporting";
+  titleIds?: string[] | null;
+  note?: string | null;
 }
 
 export interface CatalogDto {
@@ -51,4 +57,5 @@ export interface CatalogDto {
   characters: CharacterDto[];
   actors: ActorDto[];
   titles: TitleDto[];
+  billingOverrides: BillingOverrideDto[];
 }

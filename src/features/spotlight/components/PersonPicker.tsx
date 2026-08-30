@@ -17,6 +17,7 @@ import { cn } from "@/shared/lib/utils";
 import type {
   Actor,
   ActorId,
+  BillingOverride,
   Character,
   CharacterId,
   Title,
@@ -24,13 +25,16 @@ import type {
 import { appearanceCounts } from "@/domain/services/character-filter";
 import {
   actorAppearanceCounts,
-  playedCharacterIds,
+  charactersByActor,
 } from "@/domain/services/actor-filter";
+import {
+  indexBillingOverrides,
+  principalActorIds,
+  principalCharacterIds,
+} from "@/domain/services/billing";
 import { useHasHover } from "@/shared/hooks/use-media-query";
 
 type Lens = "character" | "actor";
-
-const RECURRING_MIN = 2;
 
 const MAX_ROWS = 60;
 
@@ -38,6 +42,7 @@ interface PersonPickerProps {
   characters: readonly Character[];
   actors: readonly Actor[];
   titles: readonly Title[];
+  billingOverrides: readonly BillingOverride[];
   characterId: CharacterId | null;
   actorId: ActorId | null;
   onSelectCharacter: (id: CharacterId | null) => void;
@@ -58,6 +63,7 @@ export function PersonPicker({
   characters,
   actors,
   titles,
+  billingOverrides,
   characterId,
   actorId,
   onSelectCharacter,
@@ -84,6 +90,11 @@ export function PersonPicker({
   const allRows = useMemo<Row[]>(() => {
     if (!open) return [];
 
+    const overrides = indexBillingOverrides(billingOverrides, titles);
+    const principalCharacters = principalCharacterIds(titles, overrides);
+    const principalActors = principalActorIds(titles, overrides);
+    const played = charactersByActor(titles);
+
     const counts =
       lens === "character"
         ? appearanceCounts(titles)
@@ -91,49 +102,51 @@ export function PersonPicker({
 
     const rows: Row[] =
       lens === "character"
-        ? characters.map((character) => ({
-            id: character.id,
-            name: character.name,
-            caption: character.aka ?? null,
-            appearances: counts.get(character.id) ?? 0,
-            actor: null,
-          }))
-        : actors.map((actor) => ({
-            id: actor.id,
-            name: actor.name,
-            caption: playedCharacterIds(actor)
-              .map((id) => characterNames.get(id) ?? id)
-              .join(", "),
-            appearances: counts.get(actor.id) ?? 0,
-            actor,
-          }));
+        ? characters
+            .filter((character) => principalCharacters.has(character.id))
+            .map((character) => ({
+              id: character.id,
+              name: character.name,
+              caption: character.aka ?? null,
+              appearances: counts.get(character.id) ?? 0,
+              actor: null,
+            }))
+        : actors
+            .filter((actor) => principalActors.has(actor.id))
+            .map((actor) => ({
+              id: actor.id,
+              name: actor.name,
+              caption: (played.get(actor.id) ?? [])
+                .filter((id) => principalCharacters.has(id))
+                .map((id) => characterNames.get(id) ?? id)
+                .join(", "),
+              appearances: counts.get(actor.id) ?? 0,
+              actor,
+            }));
 
     return rows.sort(
       (a, b) => b.appearances - a.appearances || a.name.localeCompare(b.name),
     );
-  }, [open, lens, characters, actors, titles, characterNames]);
+  }, [
+    open,
+    lens,
+    characters,
+    actors,
+    titles,
+    billingOverrides,
+    characterNames,
+  ]);
 
-  const walkOnsFrom = useMemo(() => {
-    const index = allRows.findIndex((row) => row.appearances < RECURRING_MIN);
-    return index === -1 ? allRows.length : index;
-  }, [allRows]);
-
-  const { matches, searchedWalkOns } = useMemo(() => {
+  const matches = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    const matching = (row: Row) =>
-      !normalized ||
-      row.name.toLowerCase().includes(normalized) ||
-      row.caption?.toLowerCase().includes(normalized);
+    if (!normalized) return allRows;
 
-    const recurring = allRows.slice(0, walkOnsFrom).filter(matching);
-    if (recurring.length > 0 || !normalized)
-      return { matches: recurring, searchedWalkOns: false };
-
-    return {
-      matches: allRows.slice(walkOnsFrom).filter(matching),
-      searchedWalkOns: true,
-    };
-  }, [allRows, walkOnsFrom, query]);
+    return allRows.filter(
+      (row) =>
+        row.name.toLowerCase().includes(normalized) ||
+        row.caption?.toLowerCase().includes(normalized),
+    );
+  }, [allRows, query]);
 
   const capped = matches.slice(0, MAX_ROWS);
   const pinned =
@@ -233,12 +246,6 @@ export function PersonPicker({
               className="pl-9"
             />
           </div>
-
-          {searchedWalkOns && rows.length > 0 && (
-            <p className="text-xs text-muted-foreground">
-              No recurring {lens} matches — showing one-entry ones.
-            </p>
-          )}
 
           <ScrollArea className="-mx-1 h-[50vh] px-1 sm:h-80">
             <div className="grid gap-1">

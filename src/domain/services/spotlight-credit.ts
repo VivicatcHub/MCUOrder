@@ -18,7 +18,7 @@ export function creditFor(
   }
 
   if (spotlight.actorId) {
-    const parts = charactersForActor(title, spotlight.actorId, actors)
+    const parts = charactersForActor(title, spotlight.actorId)
       .map((id) => characters.find((character) => character.id === id))
       .filter((character) => character !== undefined);
     return parts.length > 0 ? { kind: "characters", characters: parts } : null;
