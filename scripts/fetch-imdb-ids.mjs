@@ -16,7 +16,7 @@ const force = process.argv.includes("--force");
 if (!token && !key) {
   console.error(
     "Set TMDB_API_KEY (v3 key) or TMDB_ACCESS_TOKEN (v4 read token) first.\n" +
-    "Both live at https://www.themoviedb.org/settings/api",
+      "Both live at https://www.themoviedb.org/settings/api",
   );
   process.exit(1);
 }
@@ -207,7 +207,7 @@ console.log(
   [
     "",
     `done — ${results.written.length} confirmed, ${results.unverified.length} unconfirmed, ` +
-    `${results.noImdb.length} without an IMDb id, ${results.notFound.length} not found`,
+      `${results.noImdb.length} without an IMDb id, ${results.notFound.length} not found`,
     dryRun ? "(--dry-run: nothing written)" : "",
     results.unverified.length
       ? "\nreview these — neither the poster nor the year confirmed the match:"

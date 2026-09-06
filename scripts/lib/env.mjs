@@ -7,7 +7,7 @@ export const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 let raw = "";
 try {
   raw = readFileSync(resolve(root, ".env"), "utf8");
-} catch { }
+} catch {}
 
 const eol = raw.includes("\r\n") ? "\r\n" : "\n";
 for (const line of raw.split(eol)) {

@@ -3335,5 +3335,142 @@
     "id": "t_challa",
     "name": "T'Challa",
     "aka": "Black Panther"
+  },
+  {
+    "id": "jarvis",
+    "name": "Jarvis",
+    "aka": "Vision"
+  },
+  {
+    "id": "laura_barton",
+    "name": "Laura Barton"
+  },
+  {
+    "id": "dr_helen_cho",
+    "name": "Dr. Helen Cho"
+  },
+  {
+    "id": "ulysses_klaue",
+    "name": "Ulysses Klaue"
+  },
+  {
+    "id": "madame_b",
+    "name": "Madame B"
+  },
+  {
+    "id": "fortress_soldier",
+    "name": "Fortress Soldier"
+  },
+  {
+    "id": "strucker_mercenary",
+    "name": "Strucker Mercenary"
+  },
+  {
+    "id": "zrinka",
+    "name": "Zrinka"
+  },
+  {
+    "id": "costel",
+    "name": "Costel"
+  },
+  {
+    "id": "sokovian_acid_student",
+    "name": "Sokovian Acid Student"
+  },
+  {
+    "id": "dr_cho_s_assistant",
+    "name": "Dr. Cho's Assistant"
+  },
+  {
+    "id": "klaue_s_mercenary",
+    "name": "Klaue's Mercenary"
+  },
+  {
+    "id": "ballet_instructor",
+    "name": "Ballet Instructor"
+  },
+  {
+    "id": "johannesburg_cop",
+    "name": "Johannesburg Cop"
+  },
+  {
+    "id": "johannesburg_driver",
+    "name": "Johannesburg Driver"
+  },
+  {
+    "id": "johannesburg_onlooker",
+    "name": "Johannesburg Onlooker"
+  },
+  {
+    "id": "johannesburg_elevator_passenger",
+    "name": "Johannesburg Elevator Passenger"
+  },
+  {
+    "id": "cooper_barton",
+    "name": "Cooper Barton"
+  },
+  {
+    "id": "lila_barton",
+    "name": "Lila Barton"
+  },
+  {
+    "id": "world_hub_tech",
+    "name": "World Hub Tech"
+  },
+  {
+    "id": "korean_train_passenger",
+    "name": "Korean Train Passenger"
+  },
+  {
+    "id": "sokovian_family",
+    "name": "Sokovian Family"
+  },
+  {
+    "id": "sokovian_woman",
+    "name": "Sokovian Woman"
+  },
+  {
+    "id": "tub_family_child",
+    "name": "Tub Family Child"
+  },
+  {
+    "id": "sokovian_driver",
+    "name": "Sokovian Driver"
+  },
+  {
+    "id": "sokovian_suv_driver",
+    "name": "Sokovian SUV Driver"
+  },
+  {
+    "id": "sokovian_suv_passenger",
+    "name": "Sokovian SUV Passenger"
+  },
+  {
+    "id": "sokovian_police_captain",
+    "name": "Sokovian Police Captain"
+  },
+  {
+    "id": "specialist_cameron_klein",
+    "name": "Specialist Cameron Klein"
+  },
+  {
+    "id": "nathaniel_pietro_barton",
+    "name": "Nathaniel Pietro Barton"
+  },
+  {
+    "id": "youth",
+    "name": "Youth"
+  },
+  {
+    "id": "sokovian_boy",
+    "name": "Sokovian Boy"
+  },
+  {
+    "id": "sokovian",
+    "name": "Sokovian"
+  },
+  {
+    "id": "asgardian_god",
+    "name": "Asgardian God"
   }
 ]
