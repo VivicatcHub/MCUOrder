@@ -1,18 +1,24 @@
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import type { ActorId, CharacterId } from "@/domain/entities/title";
+import type { ActorId, CharacterId, TitleId } from "@/domain/entities/title";
 import { isSpotlightActive, type Spotlight } from "@/domain/services/spotlight";
 import {
   isStudioFilter,
   type StudioFilter,
 } from "@/domain/services/studio-filter";
 import { isTypeFilter, type TypeFilter } from "@/domain/services/type-filter";
+import {
+  isWatchedFilter,
+  type WatchedFilter,
+} from "@/domain/services/watched-filter";
 import { spotlightStorage } from "../storage/spotlight-storage";
 
 const CHARACTER = "c";
 const ACTOR = "a";
 const STUDIO = "studio";
 const TYPE = "type";
+const WATCHED = "watched";
+const ROAD_TO = "road";
 
 export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -21,6 +27,8 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
   const actorId: ActorId | null = searchParams.get(ACTOR) || null;
   const rawStudio = searchParams.get(STUDIO);
   const rawType = searchParams.get(TYPE);
+  const rawWatched = searchParams.get(WATCHED);
+  const roadTo: TitleId | null = searchParams.get(ROAD_TO) || null;
 
   const spotlight: Spotlight = useMemo(
     () => ({
@@ -28,8 +36,10 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
       actorId,
       studio: isStudioFilter(rawStudio) ? rawStudio : "all",
       type: isTypeFilter(rawType) ? rawType : "all",
+      watched: isWatchedFilter(rawWatched) ? rawWatched : "all",
+      roadTo,
     }),
-    [characterId, actorId, rawStudio, rawType],
+    [characterId, actorId, rawStudio, rawType, rawWatched, roadTo],
   );
 
   const patch = useCallback(
@@ -106,6 +116,22 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
     [patch],
   );
 
+  const setWatched = useCallback(
+    (value: WatchedFilter) =>
+      patch((params) =>
+        value === "all" ? params.delete(WATCHED) : params.set(WATCHED, value),
+      ),
+    [patch],
+  );
+
+  const setRoadTo = useCallback(
+    (filmId: TitleId | null) =>
+      patch((params) =>
+        filmId ? params.set(ROAD_TO, filmId) : params.delete(ROAD_TO),
+      ),
+    [patch],
+  );
+
   const clear = useCallback(
     () =>
       patch((params) => {
@@ -113,6 +139,8 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
         params.delete(ACTOR);
         params.delete(STUDIO);
         params.delete(TYPE);
+        params.delete(WATCHED);
+        params.delete(ROAD_TO);
       }),
     [patch],
   );
@@ -123,6 +151,8 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
     setActor,
     setStudio,
     setType,
+    setWatched,
+    setRoadTo,
     clear,
     isActive: isSpotlightActive(spotlight),
   };

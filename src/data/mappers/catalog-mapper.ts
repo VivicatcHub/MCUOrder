@@ -7,12 +7,14 @@ import type {
   Franchise,
   Title,
 } from "@/domain/entities/title";
+import type { FilmDependency } from "@/domain/entities/dependency";
 import { characterIdsOf } from "@/domain/services/actor-filter";
 import type {
   ActorDto,
   BillingOverrideDto,
   CatalogDto,
   CharacterDto,
+  DependencyDto,
   FranchiseDto,
   TitleDto,
 } from "../dto/catalog-dto";
@@ -53,6 +55,28 @@ function toBillingOverride(
     weight: dto.weight,
     titleIds: dto.titleIds ?? null,
     note: dto.note ?? null,
+  };
+}
+
+function toDependency(
+  dto: DependencyDto,
+  titleIds: ReadonlySet<string>,
+): FilmDependency {
+  if (!titleIds.has(dto.filmId))
+    throw new Error(`Dependency points at unknown title "${dto.filmId}"`);
+
+  for (const prereqId of dto.prerequisites) {
+    if (!titleIds.has(prereqId))
+      throw new Error(
+        `Dependency for "${dto.filmId}" lists unknown prerequisite "${prereqId}"`,
+      );
+  }
+
+  return {
+    filmId: dto.filmId,
+    label: dto.label,
+    description: dto.description,
+    prerequisites: dto.prerequisites,
   };
 }
 
@@ -127,5 +151,6 @@ export function toCatalog(dto: CatalogDto): Catalog {
     billingOverrides: dto.billingOverrides.map((override) =>
       toBillingOverride(override, known, titleIds),
     ),
+    dependencies: dto.dependencies.map((dep) => toDependency(dep, titleIds)),
   };
 }

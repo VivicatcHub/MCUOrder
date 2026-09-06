@@ -1,4 +1,5 @@
 import type { PartialDate } from "./partial-date";
+import type { FilmDependency } from "./dependency";
 import { compareDates, todayPartialDate } from "./partial-date";
 
 export type TitleId = string;
@@ -89,6 +90,7 @@ export interface Catalog {
   readonly franchises: readonly Franchise[];
 
   readonly billingOverrides: readonly BillingOverride[];
+  readonly dependencies: readonly FilmDependency[];
 }
 
 export function isSeries(title: Title): title is Title & { episodes: number } {

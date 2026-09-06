@@ -4,6 +4,7 @@ import type {
   ActorDto,
   BillingOverrideDto,
   CharacterDto,
+  DependencyDto,
   FranchiseDto,
   TitleDto,
 } from "../dto/catalog-dto";
@@ -19,7 +20,8 @@ export class StaticCatalogRepository implements CatalogRepository {
       import("../catalog/actors.json"),
       import("../catalog/titles.json"),
       import("../catalog/billing-overrides.json"),
-    ]).then(([franchises, characters, actors, titles, billingOverrides]) =>
+      import("../catalog/dependencies.json"),
+    ]).then(([franchises, characters, actors, titles, billingOverrides, dependencies]) =>
       toCatalog({
         franchises: franchises.default as unknown as FranchiseDto[],
         characters: characters.default as unknown as CharacterDto[],
@@ -27,6 +29,7 @@ export class StaticCatalogRepository implements CatalogRepository {
         titles: titles.default as unknown as TitleDto[],
         billingOverrides:
           billingOverrides.default as unknown as BillingOverrideDto[],
+        dependencies: dependencies.default as unknown as DependencyDto[],
       }),
     );
     return this.cache;

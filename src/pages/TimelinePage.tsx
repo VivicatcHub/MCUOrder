@@ -4,6 +4,7 @@ import { SlidersHorizontal } from "lucide-react";
 import { useCatalog } from "@/app/providers/catalog-context";
 import { sortTitles } from "@/domain/services/ordering";
 import { applySpotlight } from "@/domain/services/spotlight";
+import { resolveRoadToPrerequisites } from "@/domain/services/road-to-filter";
 import type { Title, TitleId } from "@/domain/entities/title";
 import {
   creditsFor,
@@ -15,37 +16,47 @@ import {
 } from "@/features/timeline/components/MuralBoard";
 import { TimelineReel } from "@/features/timeline/components/TimelineReel";
 import { OrderToggle } from "@/features/timeline/components/OrderToggle";
+import { ViewToggle } from "@/features/timeline/components/ViewToggle";
 import { useOrderMode } from "@/features/timeline/hooks/useOrderMode";
+import { useViewMode } from "@/features/timeline/hooks/useViewMode";
 import { PersonPicker } from "@/features/spotlight/components/PersonPicker";
 import { StudioToggle } from "@/features/spotlight/components/StudioToggle";
 import { TypeToggle } from "@/features/spotlight/components/TypeToggle";
+import { WatchedToggle } from "@/features/spotlight/components/WatchedToggle";
 import { useSpotlight } from "@/features/spotlight/hooks/useSpotlight";
+import { RoadToPicker } from "@/features/road-to/components/RoadToPicker";
 import { TitleSearch } from "@/features/search/components/TitleSearch";
 import { WatchedProgress } from "@/features/watched/components/WatchedProgress";
+import { useWatched } from "@/features/watched/hooks/watched-context";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useMediaQuery } from "@/shared/hooks/use-media-query";
 import { cn } from "@/shared/lib/utils";
 
-const REEL_QUERY = "(max-width: 767px)";
+const HANDSET_QUERY = "(max-width: 767px)";
 
 export function TimelinePage() {
   const { status, catalog, error } = useCatalog();
   const { mode, setMode } = useOrderMode();
+  const { mode: viewMode, setMode: setViewMode } = useViewMode();
   const {
     spotlight,
     setCharacter,
     setActor,
     setStudio,
     setType,
+    setWatched,
+    setRoadTo,
     clear,
     isActive,
   } = useSpotlight({ persist: true });
+  const { watched } = useWatched();
 
   const [controlsOpen, setControlsOpen] = useState(false);
   const [focus, setFocus] = useState<BoardFocus | null>(null);
 
-  const reel = useMediaQuery(REEL_QUERY);
+  const handset = useMediaQuery(HANDSET_QUERY);
+  const reel = handset || viewMode === "reel";
   const navigate = useNavigate();
 
   const ordered = useMemo(
@@ -53,9 +64,17 @@ export function TimelinePage() {
     [catalog, mode],
   );
 
+  const roadToPrerequisites = useMemo(
+    () =>
+      catalog
+        ? resolveRoadToPrerequisites(catalog.dependencies, spotlight.roadTo)
+        : null,
+    [catalog, spotlight.roadTo],
+  );
+
   const visible = useMemo(
-    () => applySpotlight(ordered, spotlight),
-    [ordered, spotlight],
+    () => applySpotlight(ordered, spotlight, watched, roadToPrerequisites),
+    [ordered, spotlight, watched, roadToPrerequisites],
   );
 
   const credits = useMemo(
@@ -115,7 +134,7 @@ export function TimelinePage() {
             <Button
               variant={isActive ? "default" : "outline"}
               size="sm"
-              className="rounded-full lg:hidden"
+              className="rounded-full"
               onClick={() => setControlsOpen((open) => !open)}
               aria-expanded={controlsOpen}
               aria-controls="board-controls"
@@ -128,7 +147,6 @@ export function TimelinePage() {
               id="board-controls"
               className={cn(
                 "w-full flex-wrap items-center gap-2 border-t pt-2.5",
-                "lg:contents",
                 controlsOpen
                   ? "flex animate-in fade-in-0 slide-in-from-top-1 duration-200"
                   : "hidden",
@@ -146,13 +164,21 @@ export function TimelinePage() {
               />
               <StudioToggle value={spotlight.studio} onChange={setStudio} />
               <TypeToggle value={spotlight.type} onChange={setType} />
+              <WatchedToggle value={spotlight.watched} onChange={setWatched} />
+              <RoadToPicker
+                dependencies={catalog.dependencies}
+                titles={catalog.titles}
+                value={spotlight.roadTo}
+                onChange={setRoadTo}
+              />
               <OrderToggle mode={mode} onChange={setMode} />
+              <ViewToggle mode={viewMode} onChange={setViewMode} />
               <WatchedProgress total={catalog.titles.length} />
               {isActive && (
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="rounded-full text-muted-foreground lg:hidden"
+                  className="rounded-full text-muted-foreground"
                   onClick={clear}
                 >
                   Clear filters
