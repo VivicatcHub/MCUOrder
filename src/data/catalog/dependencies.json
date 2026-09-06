@@ -1,0 +1,51 @@
+[
+  {
+    "filmId": "the_avengers",
+    "label": "Road to The Avengers",
+    "description": "Films you need to watch to understand The Avengers",
+    "prerequisites": [
+      "iron_man",
+      "the_incredible_hulk",
+      "iron_man_2",
+      "thor",
+      "captain_america_the_first_avenger"
+    ]
+  },
+  {
+    "filmId": "avengers_age_of_ultron",
+    "label": "Road to Age of Ultron",
+    "description": "Films you need to watch to understand Avengers: Age of Ultron",
+    "prerequisites": [
+      "iron_man",
+      "the_incredible_hulk",
+      "iron_man_2",
+      "thor",
+      "captain_america_the_first_avenger",
+      "the_avengers"
+    ]
+  },
+  {
+    "filmId": "avengers_infinity_war",
+    "label": "Road to Infinity War",
+    "description": "Films you need to watch to understand Avengers: Infinity War",
+    "prerequisites": [
+      "iron_man",
+      "the_incredible_hulk",
+      "iron_man_2",
+      "thor",
+      "captain_america_the_first_avenger",
+      "the_avengers",
+      "iron_man_3",
+      "thor_the_dark_world",
+      "captain_america_the_winter_soldier",
+      "guardians_of_the_galaxy",
+      "avengers_age_of_ultron",
+      "ant_man",
+      "captain_america_civil_war",
+      "doctor_strange",
+      "spider_man_homecoming",
+      "thor_ragnarok",
+      "black_panther"
+    ]
+  }
+]

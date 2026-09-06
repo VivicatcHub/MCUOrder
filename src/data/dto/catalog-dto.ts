@@ -52,10 +52,18 @@ export interface BillingOverrideDto {
   note?: string | null;
 }
 
+export interface DependencyDto {
+  filmId: string;
+  label: string;
+  description: string;
+  prerequisites: string[];
+}
+
 export interface CatalogDto {
   franchises: FranchiseDto[];
   characters: CharacterDto[];
   actors: ActorDto[];
   titles: TitleDto[];
   billingOverrides: BillingOverrideDto[];
+  dependencies: DependencyDto[];
 }
