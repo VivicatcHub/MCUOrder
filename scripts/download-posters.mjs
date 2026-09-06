@@ -43,7 +43,8 @@ function patch(raw, posters) {
   const out = [];
   let current = null;
 
-  for (const line of raw.split("\n")) {
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  for (const line of raw.split(eol)) {
     const id = /^ {4}"id": "(.+)",$/.exec(line);
     if (id) current = id[1];
 
@@ -57,7 +58,7 @@ function patch(raw, posters) {
 
     out.push(line);
   }
-  return out.join("\n");
+  return out.join(eol);
 }
 
 if (vendored.size > 0)

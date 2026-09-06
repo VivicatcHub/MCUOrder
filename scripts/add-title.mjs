@@ -90,7 +90,7 @@ async function findRecord() {
   if (!options.has("query"))
     fail(
       'Name the entry: --tmdb <id>, --imdb <tt…>, or --query "Title".\n' +
-        "Add --franchise <id> for the franchise it belongs to.",
+      "Add --franchise <id> for the franchise it belongs to.",
     );
 
   const path = kind === "series" ? "tv" : "movie";
@@ -126,7 +126,7 @@ async function findRecord() {
     for (const result of ranked.slice(0, 5))
       console.log(
         `  ${String(result.id).padStart(7)}  ${result.title ?? result.name} ` +
-          `(${yearOf(result) || "?"})`,
+        `(${yearOf(result) || "?"})`,
       );
     console.log("");
   }
@@ -148,8 +148,8 @@ const franchiseId = options.get("franchise");
 if (!franchiseId)
   fail(
     "--franchise <id> is required — it is what colours the card.\n" +
-      `known: ${franchises.map((franchise) => franchise.id).join(", ")}\n` +
-      'a new one: --franchise ghost_rider --franchise-name "Ghost Rider" --accent "#c2410c"',
+    `known: ${franchises.map((franchise) => franchise.id).join(", ")}\n` +
+    'a new one: --franchise ghost_rider --franchise-name "Ghost Rider" --accent "#c2410c"',
   );
 
 let franchise = franchises.find((entry) => entry.id === franchiseId);
@@ -159,8 +159,8 @@ if (!franchise) {
   if (!name)
     fail(
       `No franchise "${franchiseId}" in franchises.json.\n` +
-        `known: ${franchises.map((entry) => entry.id).join(", ")}\n` +
-        `to add it: --franchise ${franchiseId} --franchise-name "…" --accent "#rrggbb"`,
+      `known: ${franchises.map((entry) => entry.id).join(", ")}\n` +
+      `to add it: --franchise ${franchiseId} --franchise-name "…" --accent "#rrggbb"`,
     );
   franchise = {
     id: franchiseId,
@@ -232,17 +232,17 @@ const phase = phaseOf();
 const franchiseIndex = options.has("index")
   ? Number(options.get("index"))
   : Math.max(
-      0,
-      ...titles
-        .filter((title) => title.franchiseId === franchiseId)
-        .map((title) => title.franchiseIndex),
-    ) + 1;
+    0,
+    ...titles
+      .filter((title) => title.franchiseId === franchiseId)
+      .map((title) => title.franchiseIndex),
+  ) + 1;
 
 const baseTitle = text(
   options.get("title") ??
-    (seasonRecord
-      ? `${record.name} — Season ${season}`
-      : (record.title ?? record.name)),
+  (seasonRecord
+    ? `${record.name} — Season ${season}`
+    : (record.title ?? record.name)),
 );
 
 const taken = new Set(titles.map((title) => title.id));
@@ -250,7 +250,7 @@ const wantedId = options.get("id") ?? slugify(baseTitle);
 if (taken.has(wantedId) && !force)
   fail(
     `titles.json already has "${wantedId}". Pass --id <other> for a second ` +
-      "entry of the same name, or --force to add it anyway.",
+    "entry of the same name, or --force to add it anyway.",
   );
 const id = force ? uniqueId(wantedId, taken) : wantedId;
 
@@ -301,9 +301,9 @@ const entry = {
   runtimeMinutes: runtime,
   ...(kind === "series"
     ? {
-        episodes:
-          seasonRecord?.episodes?.length ?? record.number_of_episodes ?? null,
-      }
+      episodes:
+        seasonRecord?.episodes?.length ?? record.number_of_episodes ?? null,
+    }
     : {}),
   cast: [],
   synopsis: text(options.get("synopsis") ?? overview),
@@ -322,7 +322,8 @@ const successor = titles.find(
 );
 
 function insert(raw, block, beforeId) {
-  const lines = raw.split("\n");
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  const lines = raw.split(eol);
 
   if (!beforeId) {
     let last = lines.length - 1;
@@ -330,7 +331,7 @@ function insert(raw, block, beforeId) {
     if (last < 0) throw new Error("titles.json does not end in an entry");
     lines[last] = "  },";
     lines.splice(last + 1, 0, block);
-    return lines.join("\n");
+    return lines.join(eol);
   }
 
   const marker = lines.findIndex((line) => line === `    "id": "${beforeId}",`);
@@ -339,7 +340,7 @@ function insert(raw, block, beforeId) {
   let open = marker;
   while (open >= 0 && !/^ {2}\{$/.test(lines[open])) open -= 1;
   lines.splice(open, 0, `${block},`);
-  return lines.join("\n");
+  return lines.join(eol);
 }
 
 const block = entryBlock(entry);
@@ -366,9 +367,9 @@ console.log(
     entry.poster ? "" : "  no poster on TMDB — PosterArt will draw one",
     "",
     "next: fill in loreStart / loreEnd (TMDB does not know them)" +
-      (flags.has("cast")
-        ? ""
-        : `, then: node scripts/sync-cast.mjs ${entry.id}`),
+    (flags.has("cast")
+      ? ""
+      : `, then: node scripts/sync-cast.mjs ${entry.id}`),
   ]
     .filter((line) => line !== "")
     .join("\n"),

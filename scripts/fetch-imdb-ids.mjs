@@ -16,7 +16,7 @@ const force = process.argv.includes("--force");
 if (!token && !key) {
   console.error(
     "Set TMDB_API_KEY (v3 key) or TMDB_ACCESS_TOKEN (v4 read token) first.\n" +
-      "Both live at https://www.themoviedb.org/settings/api",
+    "Both live at https://www.themoviedb.org/settings/api",
   );
   process.exit(1);
 }
@@ -162,7 +162,8 @@ for (const [index, title] of pending.entries()) {
 }
 
 function patch(raw, ids, already) {
-  const lines = raw.split("\n");
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  const lines = raw.split(oel);
   const out = [];
   let current = null;
 
@@ -191,7 +192,7 @@ function patch(raw, ids, already) {
 
     out.push(line);
   }
-  return out.join("\n");
+  return out.join(oel);
 }
 
 if (!dryRun && found.size > 0) {
@@ -206,7 +207,7 @@ console.log(
   [
     "",
     `done — ${results.written.length} confirmed, ${results.unverified.length} unconfirmed, ` +
-      `${results.noImdb.length} without an IMDb id, ${results.notFound.length} not found`,
+    `${results.noImdb.length} without an IMDb id, ${results.notFound.length} not found`,
     dryRun ? "(--dry-run: nothing written)" : "",
     results.unverified.length
       ? "\nreview these — neither the poster nor the year confirmed the match:"

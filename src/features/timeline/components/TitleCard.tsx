@@ -28,7 +28,7 @@ export const TitleCard = memo(function TitleCard({
   highlighted = false,
 }: TitleCardProps) {
   const upcoming = isUpcoming(title);
-  const runtime = formatRuntime(title);
+  const runtime = title.runtimeMinutes ? formatRuntime(title) : null;
 
   return (
     <div

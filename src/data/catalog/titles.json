@@ -33,7 +33,7 @@
     "loreNote": null,
     "runtimeMinutes": 121,
     "cast": [],
-    "poster": "https://image.tmdb.org/t/p/w500/or6XJBVpcEbIkma0V9zshnbEtx4.jpg",
+    "poster": "/posters/spider_man.jpg",
     "imdbId": "tt0145487",
     "tmdbId": 557
   },
@@ -70,7 +70,7 @@
     "loreNote": null,
     "runtimeMinutes": 127,
     "cast": [],
-    "poster": "https://image.tmdb.org/t/p/w500/aGuvNAaaZuWXYQQ6N2v7DeuP6mB.jpg",
+    "poster": "/posters/spider_man_2.jpg",
     "imdbId": "tt0316654",
     "tmdbId": 558
   },
@@ -107,7 +107,7 @@
     "loreNote": null,
     "runtimeMinutes": 139,
     "cast": [],
-    "poster": "https://image.tmdb.org/t/p/w500/sJMTTGjtjvrMZ7G0oP9D13wNUum.jpg",
+    "poster": "/posters/spider_man_3.jpg",
     "imdbId": "tt0413300",
     "tmdbId": 559
   },
@@ -125,7 +125,260 @@
     "loreEnd": "2008",
     "runtimeMinutes": 126,
     "synopsis": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "tony_stark",
+        "actorId": "robert_downey_jr"
+      },
+      {
+        "characterId": "james_rhodes",
+        "actorId": "terrence_howard"
+      },
+      {
+        "characterId": "obadiah_stane",
+        "actorId": "jeff_bridges"
+      },
+      {
+        "characterId": "pepper_potts",
+        "actorId": "gwyneth_paltrow"
+      },
+      {
+        "characterId": "christine_everhart",
+        "actorId": "leslie_bibb"
+      },
+      {
+        "characterId": "ho_yinsen",
+        "actorId": "shaun_toub"
+      },
+      {
+        "characterId": "raza",
+        "actorId": "faran_tahir"
+      },
+      {
+        "characterId": "agent_phil_coulson",
+        "actorId": "clark_gregg"
+      },
+      {
+        "characterId": "general_gabriel",
+        "actorId": "bill_smitrovich"
+      },
+      {
+        "characterId": "abu_bakaar",
+        "actorId": "sayed_badreya"
+      },
+      {
+        "characterId": "happy_hogan",
+        "actorId": "jon_favreau"
+      },
+      {
+        "characterId": "william_ginter_riva",
+        "actorId": "peter_billingsley"
+      },
+      {
+        "characterId": "major_allen",
+        "actorId": "tim_guinee"
+      },
+      {
+        "characterId": "guard",
+        "actorId": "tom_morello"
+      },
+      {
+        "characterId": "guard",
+        "actorId": "marco_khan"
+      },
+      {
+        "characterId": "guard",
+        "actorId": "daston_kalili"
+      },
+      {
+        "characterId": "guard",
+        "actorId": "ido_mor"
+      },
+      {
+        "characterId": "jimmy",
+        "actorId": "kevin_foster"
+      },
+      {
+        "characterId": "pratt",
+        "actorId": "garret_noel"
+      },
+      {
+        "characterId": "ramirez",
+        "actorId": "eileen_weisinger"
+      },
+      {
+        "characterId": "ahmed",
+        "actorId": "ahmed_ahmed"
+      },
+      {
+        "characterId": "omar",
+        "actorId": "fahim_fazli"
+      },
+      {
+        "characterId": "howard_stark",
+        "actorId": "gerard_sanders"
+      },
+      {
+        "characterId": "viper_1",
+        "actorId": "tim_rigby"
+      },
+      {
+        "characterId": "viper_2",
+        "actorId": "russell_richardson"
+      },
+      {
+        "characterId": "amira_ahmed",
+        "actorId": "nazanin_boniadi"
+      },
+      {
+        "characterId": "colonel_craig",
+        "actorId": "thomas_craig_plumer"
+      },
+      {
+        "characterId": "dealer_at_craps_table",
+        "actorId": "robert_berkman"
+      },
+      {
+        "characterId": "woman_at_craps_table",
+        "actorId": "stacy_stas_hurst"
+      },
+      {
+        "characterId": "woman_at_craps_table",
+        "actorId": "lauren_scyphers"
+      },
+      {
+        "characterId": "engineer",
+        "actorId": "frank_nyi"
+      },
+      {
+        "characterId": "air_force_officer",
+        "actorId": "marvin_jordan"
+      },
+      {
+        "characterId": "jim_cramer",
+        "actorId": "jim_cramer"
+      },
+      {
+        "characterId": "woman_in_suv",
+        "actorId": "donna_evans"
+      },
+      {
+        "characterId": "kid_in_suv",
+        "actorId": "reid_harper"
+      },
+      {
+        "characterId": "kid_in_suv",
+        "actorId": "summer_kylie_remington"
+      },
+      {
+        "characterId": "kid_in_suv",
+        "actorId": "ava_rose_williams"
+      },
+      {
+        "characterId": "kid_in_suv",
+        "actorId": "vladimir_kubr"
+      },
+      {
+        "characterId": "kid_in_suv",
+        "actorId": "callie_croughwell"
+      },
+      {
+        "characterId": "gulmira_kid",
+        "actorId": "javan_tahir"
+      },
+      {
+        "characterId": "gulmira_mom",
+        "actorId": "sahar_bibiyan"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "patrick_o_connell"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "adam_harrington"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "meera_simhan"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "ben_newmark"
+      },
+      {
+        "characterId": "flight_attendant",
+        "actorId": "ricki_lander"
+      },
+      {
+        "characterId": "flight_attendant",
+        "actorId": "jeannine_kaspar"
+      },
+      {
+        "characterId": "flight_attendant",
+        "actorId": "sarah_cahill"
+      },
+      {
+        "characterId": "stan_lee",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "air_force_lieutenant",
+        "actorId": "justin_rex"
+      },
+      {
+        "characterId": "zorianna_kit",
+        "actorId": "zorianna_kit"
+      },
+      {
+        "characterId": "stan_s_girl",
+        "actorId": "lana_kinnear"
+      },
+      {
+        "characterId": "stan_s_girl",
+        "actorId": "nicole_lindeblad"
+      },
+      {
+        "characterId": "stan_s_girl",
+        "actorId": "masha_lund"
+      },
+      {
+        "characterId": "stan_s_girl",
+        "actorId": "gabrielle_tuite"
+      },
+      {
+        "characterId": "caoc_analyst",
+        "actorId": "tim_griffin"
+      },
+      {
+        "characterId": "caoc_analyst",
+        "actorId": "joshua_harto"
+      },
+      {
+        "characterId": "caoc_analyst",
+        "actorId": "micah_a_hauptman"
+      },
+      {
+        "characterId": "caoc_analyst",
+        "actorId": "james_bethea"
+      },
+      {
+        "characterId": "gulmira_villager",
+        "actorId": "mike_cochrane"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "flavia_manes_rossi"
+      },
+      {
+        "characterId": "nick_fury",
+        "actorId": "samuel_l_jackson"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "kristin_j_hooper"
+      }
+    ],
     "poster": "/posters/iron_man.jpg",
     "imdbId": "tt0371746"
   },
@@ -143,7 +396,396 @@
     "loreEnd": "2010",
     "runtimeMinutes": 112,
     "synopsis": "Bruce Banner, a scientist on the run from the U.S. Government, must find a cure for the monster he turns into whenever he loses his temper.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "bruce_banner",
+        "actorId": "edward_norton"
+      },
+      {
+        "characterId": "betty_ross",
+        "actorId": "liv_tyler"
+      },
+      {
+        "characterId": "emil_blonsky",
+        "actorId": "tim_roth"
+      },
+      {
+        "characterId": "general_thunderbolt_ross",
+        "actorId": "william_hurt"
+      },
+      {
+        "characterId": "samuel_sterns",
+        "actorId": "tim_blake_nelson"
+      },
+      {
+        "characterId": "leonard",
+        "actorId": "ty_burrell"
+      },
+      {
+        "characterId": "major_kathleen_sparr",
+        "actorId": "christina_cabot"
+      },
+      {
+        "characterId": "general_joe_greller",
+        "actorId": "peter_mensah"
+      },
+      {
+        "characterId": "stanley",
+        "actorId": "paul_soles"
+      },
+      {
+        "characterId": "martina",
+        "actorId": "debora_nascimento"
+      },
+      {
+        "characterId": "commando",
+        "actorId": "greg_bryk"
+      },
+      {
+        "characterId": "commando",
+        "actorId": "chris_owens"
+      },
+      {
+        "characterId": "commando",
+        "actorId": "al_vrkljan"
+      },
+      {
+        "characterId": "commando",
+        "actorId": "adrian_hein"
+      },
+      {
+        "characterId": "commando",
+        "actorId": "john_macdonald"
+      },
+      {
+        "characterId": "helicopter_soldier",
+        "actorId": "shaun_mccomb"
+      },
+      {
+        "characterId": "grad_student",
+        "actorId": "simon_wong"
+      },
+      {
+        "characterId": "tough_guy_leader",
+        "actorId": "pedro_salvin"
+      },
+      {
+        "characterId": "tough_guy",
+        "actorId": "julio_cesar_torres_dantas"
+      },
+      {
+        "characterId": "tough_guy",
+        "actorId": "raimundo_camargo_nascimento"
+      },
+      {
+        "characterId": "tough_guy",
+        "actorId": "nick_alachiotis"
+      },
+      {
+        "characterId": "communications_officer",
+        "actorId": "jason_burke"
+      },
+      {
+        "characterId": "helicopter_pilot",
+        "actorId": "grant_nickalls"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "joris_jarsky"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "arnold_pinnock"
+      },
+      {
+        "characterId": "cop",
+        "actorId": "tig_fong"
+      },
+      {
+        "characterId": "cop",
+        "actorId": "jason_hunter"
+      },
+      {
+        "characterId": "cab_driver",
+        "actorId": "maxwell_mccabe_lokos"
+      },
+      {
+        "characterId": "medical_technician",
+        "actorId": "david_collins"
+      },
+      {
+        "characterId": "plant_manager",
+        "actorId": "john_carvalho"
+      },
+      {
+        "characterId": "sniper",
+        "actorId": "robin_wilcock"
+      },
+      {
+        "characterId": "boat_captain",
+        "actorId": "wayne_robson"
+      },
+      {
+        "characterId": "guatemalan_trucker",
+        "actorId": "javier_lambert"
+      },
+      {
+        "characterId": "mr_harrington",
+        "actorId": "martin_starr"
+      },
+      {
+        "characterId": "young_guy",
+        "actorId": "chris_ratz"
+      },
+      {
+        "characterId": "apache_helicopter_pilot",
+        "actorId": "todd_hofley"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "joe_la_loggia"
+      },
+      {
+        "characterId": "colleague",
+        "actorId": "tamsen_mcdonough"
+      },
+      {
+        "characterId": "harlem_bystander",
+        "actorId": "michael_kenneth_williams"
+      },
+      {
+        "characterId": "market_vendor",
+        "actorId": "roberto_bakker"
+      },
+      {
+        "characterId": "supply_driver",
+        "actorId": "ruru_sacha"
+      },
+      {
+        "characterId": "army_base_doctor",
+        "actorId": "james_downing"
+      },
+      {
+        "characterId": "aikido_instructor",
+        "actorId": "rickson_gracie"
+      },
+      {
+        "characterId": "ross_s_soldier",
+        "actorId": "stephen_gartner"
+      },
+      {
+        "characterId": "mcgee",
+        "actorId": "nicholas_rose"
+      },
+      {
+        "characterId": "terrified_gal",
+        "actorId": "genelle_williams"
+      },
+      {
+        "characterId": "wilson",
+        "actorId": "p_j_kerr"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "jee_yun_lee"
+      },
+      {
+        "characterId": "gunner",
+        "actorId": "desmond_campbell"
+      },
+      {
+        "characterId": "little_boy",
+        "actorId": "deshaun_clarke"
+      },
+      {
+        "characterId": "brave_cop",
+        "actorId": "tony_nappo"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "aaron_berg"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "david_meunier"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "tre_smith"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "moses_nyarko"
+      },
+      {
+        "characterId": "bope_officer",
+        "actorId": "carlos_a_gonzalez"
+      },
+      {
+        "characterId": "medic_soldier",
+        "actorId": "yan_regis"
+      },
+      {
+        "characterId": "handsome_soldier",
+        "actorId": "stephen_broussard"
+      },
+      {
+        "characterId": "command_van_soldier",
+        "actorId": "robert_morse"
+      },
+      {
+        "characterId": "ross_s_aide",
+        "actorId": "matt_purdy"
+      },
+      {
+        "characterId": "female_medical_assistant",
+        "actorId": "lenka_matuska"
+      },
+      {
+        "characterId": "humvee_driver",
+        "actorId": "scott_magee"
+      },
+      {
+        "characterId": "sterns_lab_soldier",
+        "actorId": "wes_berger"
+      },
+      {
+        "characterId": "large_woman",
+        "actorId": "carla_nascimento"
+      },
+      {
+        "characterId": "female_bartender",
+        "actorId": "krista_vendy"
+      },
+      {
+        "characterId": "hopscotch_girl",
+        "actorId": "mila_stromboni"
+      },
+      {
+        "characterId": "milwaukee_man_drinking_from_bottle",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "tony_stark",
+        "actorId": "robert_downey_jr"
+      },
+      {
+        "characterId": "a_soldier",
+        "actorId": "john_campea"
+      },
+      {
+        "characterId": "intelligence_officer",
+        "actorId": "jim_annan"
+      },
+      {
+        "characterId": "helicopter_co_pilot",
+        "actorId": "john_atkin"
+      },
+      {
+        "characterId": "warehouse_worker",
+        "actorId": "jon_cesar"
+      },
+      {
+        "characterId": "taxi_driver",
+        "actorId": "rick_cordeiro"
+      },
+      {
+        "characterId": "bus_driver",
+        "actorId": "scoot_deville"
+      },
+      {
+        "characterId": "brazilian_liaison_officer",
+        "actorId": "fabio_dorea"
+      },
+      {
+        "characterId": "test_subject",
+        "actorId": "kieran_gallant"
+      },
+      {
+        "characterId": "cop_2",
+        "actorId": "jay_hunter"
+      },
+      {
+        "characterId": "man",
+        "actorId": "dave_kiner"
+      },
+      {
+        "characterId": "student",
+        "actorId": "richard_d_leko"
+      },
+      {
+        "characterId": "super_soldier_med_technician",
+        "actorId": "kevin_lise"
+      },
+      {
+        "characterId": "fbi_agent",
+        "actorId": "david_l_marston"
+      },
+      {
+        "characterId": "nypd_cop",
+        "actorId": "francois_mequer"
+      },
+      {
+        "characterId": "student",
+        "actorId": "ish_morris"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "scott_murphy"
+      },
+      {
+        "characterId": "security_guard",
+        "actorId": "billy_parrott"
+      },
+      {
+        "characterId": "female_faculty_member",
+        "actorId": "imali_perera"
+      },
+      {
+        "characterId": "sorority_girl",
+        "actorId": "kristina_pesic"
+      },
+      {
+        "characterId": "college_student",
+        "actorId": "jeffrey_w_pike"
+      },
+      {
+        "characterId": "tank_operator",
+        "actorId": "johnny_prince"
+      },
+      {
+        "characterId": "frightened_harlem_pedestrian",
+        "actorId": "t_j_smith"
+      },
+      {
+        "characterId": "female_bartender",
+        "actorId": "nick_stankevich"
+      },
+      {
+        "characterId": "keg_guy",
+        "actorId": "dylan_taylor"
+      },
+      {
+        "characterId": "jimmy_older_boy",
+        "actorId": "max_topplin"
+      },
+      {
+        "characterId": "student",
+        "actorId": "j_a_worthington"
+      },
+      {
+        "characterId": "fbi_agent",
+        "actorId": "russell_yuen"
+      },
+      {
+        "characterId": "news_crew",
+        "actorId": "dl_macdonald"
+      },
+      {
+        "characterId": "student_in_lab",
+        "actorId": "avi_phillips"
+      }
+    ],
     "poster": "/posters/the_incredible_hulk.jpg",
     "imdbId": "tt0800080"
   },
@@ -180,7 +822,348 @@
     "loreEnd": "2010",
     "runtimeMinutes": 124,
     "synopsis": "With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful madman with ties to his father's legacy.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "tony_stark",
+        "actorId": "robert_downey_jr"
+      },
+      {
+        "characterId": "pepper_potts",
+        "actorId": "gwyneth_paltrow"
+      },
+      {
+        "characterId": "james_rhodes",
+        "actorId": "don_cheadle"
+      },
+      {
+        "characterId": "natasha_romanoff",
+        "actorId": "scarlett_johansson"
+      },
+      {
+        "characterId": "justin_hammer",
+        "actorId": "sam_rockwell"
+      },
+      {
+        "characterId": "ivan_vanko",
+        "actorId": "mickey_rourke"
+      },
+      {
+        "characterId": "nick_fury",
+        "actorId": "samuel_l_jackson"
+      },
+      {
+        "characterId": "agent_phil_coulson",
+        "actorId": "clark_gregg"
+      },
+      {
+        "characterId": "howard_stark",
+        "actorId": "john_slattery"
+      },
+      {
+        "characterId": "senator_stern",
+        "actorId": "garry_shandling"
+      },
+      {
+        "characterId": "u_s_marshal",
+        "actorId": "kate_mara"
+      },
+      {
+        "characterId": "christine_everhart",
+        "actorId": "leslie_bibb"
+      },
+      {
+        "characterId": "happy_hogan",
+        "actorId": "jon_favreau"
+      },
+      {
+        "characterId": "christiane_amanpour",
+        "actorId": "christiane_amanpour"
+      },
+      {
+        "characterId": "detective_lemieux",
+        "actorId": "philippe_bergeron"
+      },
+      {
+        "characterId": "security_force_1",
+        "actorId": "james_bethea"
+      },
+      {
+        "characterId": "security_force_2",
+        "actorId": "michael_bruno"
+      },
+      {
+        "characterId": "expo_fan",
+        "actorId": "kate_clark"
+      },
+      {
+        "characterId": "russian_newscaster",
+        "actorId": "luminita_docan"
+      },
+      {
+        "characterId": "french_photographer",
+        "actorId": "francois_duhamel"
+      },
+      {
+        "characterId": "larry_ellison",
+        "actorId": "larry_ellison"
+      },
+      {
+        "characterId": "adam_goldstein",
+        "actorId": "adam_goldstein"
+      },
+      {
+        "characterId": "major_allen",
+        "actorId": "tim_guinee"
+      },
+      {
+        "characterId": "general_meade",
+        "actorId": "eric_l_haney"
+      },
+      {
+        "characterId": "10_rings_gangster",
+        "actorId": "ali_khan"
+      },
+      {
+        "characterId": "anton_vanko",
+        "actorId": "evgeniy_lazarev"
+      },
+      {
+        "characterId": "stan_lee",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "av_operator",
+        "actorId": "isaiah_guyman_martin_iv"
+      },
+      {
+        "characterId": "rebecca",
+        "actorId": "helena_mattsson"
+      },
+      {
+        "characterId": "expo_cop",
+        "actorId": "keith_middlebrook"
+      },
+      {
+        "characterId": "rebeka",
+        "actorId": "anya_monzikova"
+      },
+      {
+        "characterId": "bambi_arbogast",
+        "actorId": "margy_moore"
+      },
+      {
+        "characterId": "chess_roberts",
+        "actorId": "olivia_munn"
+      },
+      {
+        "characterId": "elon_musk",
+        "actorId": "elon_musk"
+      },
+      {
+        "characterId": "bill_o_reilly",
+        "actorId": "bill_o_reilly"
+      },
+      {
+        "characterId": "strawberry_vendor",
+        "actorId": "alejandro_patino"
+      },
+      {
+        "characterId": "young_tony_stark",
+        "actorId": "davin_ransom"
+      },
+      {
+        "characterId": "guard",
+        "actorId": "karim_saleh"
+      },
+      {
+        "characterId": "hammer_expo_tech",
+        "actorId": "brian_schaeffer"
+      },
+      {
+        "characterId": "french_waiter",
+        "actorId": "phillipe_simon"
+      },
+      {
+        "characterId": "jack",
+        "actorId": "jack_white"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "melanie_brown"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "krystal_ellsworth"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "victoria_gracie"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "gina_cantrell"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "renee_herlocker"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "jill_ann_pineda_arnold"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "sandy_colton"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "annika_ihnat"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "jenny_robinson"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "lindsay_dennis"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "jennifer_d_johnson"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "lindsay_rosenberg"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "hannah_douglass"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "brooke_long"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "rachele_brooke_smith"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "nadine_ellis"
+      },
+      {
+        "characterId": "ironette_dancer",
+        "actorId": "kylette_zamora"
+      },
+      {
+        "characterId": "model",
+        "actorId": "ayelet_ben_shahar"
+      },
+      {
+        "characterId": "captain_anders",
+        "actorId": "john_ceallach"
+      },
+      {
+        "characterId": "beautiful_girl",
+        "actorId": "katie_cleary"
+      },
+      {
+        "characterId": "expo_guest",
+        "actorId": "ajarae_coleman"
+      },
+      {
+        "characterId": "french_prison_guard_2",
+        "actorId": "timothy_tj_james_driscoll"
+      },
+      {
+        "characterId": "watermelon_girl",
+        "actorId": "jasmine_dustin"
+      },
+      {
+        "characterId": "stark_expo_attendee",
+        "actorId": "sam_felman"
+      },
+      {
+        "characterId": "pepper_s_party_guest",
+        "actorId": "shakira_vanise_gamble"
+      },
+      {
+        "characterId": "french_prison_guard_1",
+        "actorId": "paul_grace"
+      },
+      {
+        "characterId": "prisoner",
+        "actorId": "mark_kubr"
+      },
+      {
+        "characterId": "senate_page",
+        "actorId": "cameron_lee"
+      },
+      {
+        "characterId": "prison_guard_chevalier",
+        "actorId": "mathew_lorenceau"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "christopher_maleki"
+      },
+      {
+        "characterId": "expo_guest",
+        "actorId": "bryan_mccoy"
+      },
+      {
+        "characterId": "swat_sergeant_bellows",
+        "actorId": "tony_nevada"
+      },
+      {
+        "characterId": "watermelon_girl",
+        "actorId": "allison_ochmanek"
+      },
+      {
+        "characterId": "french_reporter",
+        "actorId": "nicolas_pajon"
+      },
+      {
+        "characterId": "senate_gallery_member",
+        "actorId": "steven_james_price"
+      },
+      {
+        "characterId": "security_guard_fighting_happy_hogan",
+        "actorId": "tanoai_reed"
+      },
+      {
+        "characterId": "senator",
+        "actorId": "peter_trenholm_smith"
+      },
+      {
+        "characterId": "pepper_s_party_guest",
+        "actorId": "doug_swander"
+      },
+      {
+        "characterId": "tony_stark_usher",
+        "actorId": "peter_sebastian_wrobel"
+      },
+      {
+        "characterId": "stark_expo_attendee",
+        "actorId": "nick_w_nicholson"
+      },
+      {
+        "characterId": "vip_expo_guest",
+        "actorId": "kristin_quick"
+      },
+      {
+        "characterId": "guard",
+        "actorId": "matt_mccolm"
+      },
+      {
+        "characterId": "expo_fan",
+        "actorId": "seth_green"
+      },
+      {
+        "characterId": "peter_parker",
+        "actorId": "max_favreau"
+      }
+    ],
     "poster": "/posters/iron_man_2.jpg",
     "imdbId": "tt1228705"
   },
@@ -198,7 +1181,232 @@
     "loreEnd": "2010",
     "runtimeMinutes": 115,
     "synopsis": "The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "thor",
+        "actorId": "chris_hemsworth"
+      },
+      {
+        "characterId": "jane_foster",
+        "actorId": "natalie_portman"
+      },
+      {
+        "characterId": "loki",
+        "actorId": "tom_hiddleston"
+      },
+      {
+        "characterId": "odin",
+        "actorId": "anthony_hopkins"
+      },
+      {
+        "characterId": "erik_selvig",
+        "actorId": "stellan_skarsgard"
+      },
+      {
+        "characterId": "darcy_lewis",
+        "actorId": "kat_dennings"
+      },
+      {
+        "characterId": "agent_phil_coulson",
+        "actorId": "clark_gregg"
+      },
+      {
+        "characterId": "king_laufey",
+        "actorId": "colm_feore"
+      },
+      {
+        "characterId": "heimdall",
+        "actorId": "idris_elba"
+      },
+      {
+        "characterId": "volstagg",
+        "actorId": "ray_stevenson"
+      },
+      {
+        "characterId": "hogun",
+        "actorId": "tadanobu_asano"
+      },
+      {
+        "characterId": "fandral",
+        "actorId": "josh_dallas"
+      },
+      {
+        "characterId": "sif",
+        "actorId": "jaimie_alexander"
+      },
+      {
+        "characterId": "frigga",
+        "actorId": "rene_russo"
+      },
+      {
+        "characterId": "isabela_alvarez",
+        "actorId": "adriana_barraza"
+      },
+      {
+        "characterId": "agent_jasper_sitwell",
+        "actorId": "maximiliano_hernandez"
+      },
+      {
+        "characterId": "frost_giant_captain",
+        "actorId": "richard_cetrone"
+      },
+      {
+        "characterId": "frost_giant_sentry",
+        "actorId": "darren_kendrick"
+      },
+      {
+        "characterId": "frost_giant_hailstrum",
+        "actorId": "josh_coxx"
+      },
+      {
+        "characterId": "frost_giant_brute",
+        "actorId": "justice_j_smith_jr"
+      },
+      {
+        "characterId": "frost_giant_grundroth",
+        "actorId": "joseph_gatt"
+      },
+      {
+        "characterId": "frost_giant_raze",
+        "actorId": "luke_massy"
+      },
+      {
+        "characterId": "einherjar_guard",
+        "actorId": "matthew_ducey"
+      },
+      {
+        "characterId": "einherjar_guard",
+        "actorId": "jason_camp"
+      },
+      {
+        "characterId": "agent_delancey",
+        "actorId": "buddy_sosthand"
+      },
+      {
+        "characterId": "techie",
+        "actorId": "blake_silver"
+      },
+      {
+        "characterId": "agent_jackson",
+        "actorId": "jamie_mcshane"
+      },
+      {
+        "characterId": "agent_garrett",
+        "actorId": "dale_godboldo"
+      },
+      {
+        "characterId": "agent_cale",
+        "actorId": "patrick_o_brien_demsey"
+      },
+      {
+        "characterId": "shield_guard",
+        "actorId": "jim_palmer"
+      },
+      {
+        "characterId": "townie",
+        "actorId": "seth_coltan"
+      },
+      {
+        "characterId": "townie",
+        "actorId": "j_michael_straczynski"
+      },
+      {
+        "characterId": "townie",
+        "actorId": "ryan_schaefer"
+      },
+      {
+        "characterId": "pete",
+        "actorId": "matt_battaglia"
+      },
+      {
+        "characterId": "stan_the_man",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "drunk_townie",
+        "actorId": "joel_mccrary"
+      },
+      {
+        "characterId": "pet_store_clerk",
+        "actorId": "isaac_kappy"
+      },
+      {
+        "characterId": "admission_nurse",
+        "actorId": "juliet_lopez"
+      },
+      {
+        "characterId": "orderly",
+        "actorId": "rob_mars"
+      },
+      {
+        "characterId": "viking_mother",
+        "actorId": "carrie_lazar"
+      },
+      {
+        "characterId": "viking_child",
+        "actorId": "harley_graham"
+      },
+      {
+        "characterId": "viking_elder",
+        "actorId": "alexander_wright"
+      },
+      {
+        "characterId": "viking",
+        "actorId": "hilary_pingle"
+      },
+      {
+        "characterId": "viking",
+        "actorId": "shawn_caulin_young"
+      },
+      {
+        "characterId": "viking",
+        "actorId": "kinsey_mclean"
+      },
+      {
+        "characterId": "viking",
+        "actorId": "kelly_hawthorne"
+      },
+      {
+        "characterId": "young_thor",
+        "actorId": "dakota_goyo"
+      },
+      {
+        "characterId": "young_loki",
+        "actorId": "ted_allpress"
+      },
+      {
+        "characterId": "frost_giant",
+        "actorId": "douglas_tait"
+      },
+      {
+        "characterId": "clint_barton",
+        "actorId": "jeremy_renner"
+      },
+      {
+        "characterId": "nick_fury",
+        "actorId": "samuel_l_jackson"
+      },
+      {
+        "characterId": "viking_villager",
+        "actorId": "vanessa_bednar"
+      },
+      {
+        "characterId": "viking_village_wife",
+        "actorId": "michelle_csitos"
+      },
+      {
+        "characterId": "einherjar_guard",
+        "actorId": "stephen_oyoung"
+      },
+      {
+        "characterId": "nurse_1",
+        "actorId": "rachel_de_la_torre"
+      },
+      {
+        "characterId": "guest",
+        "actorId": "walt_simonson"
+      }
+    ],
     "poster": "/posters/thor.jpg",
     "imdbId": "tt0800369"
   },
@@ -231,12 +1439,405 @@
     "franchiseIndex": 1,
     "phase": "Phase One",
     "releaseDate": "2011-07-22",
-    "loreStart": "1943-06",
-    "loreEnd": "1945-03",
+    "loreStart": "1942",
+    "loreEnd": "2011",
     "loreNote": "Framed by a 2011 awakening in the final scene.",
     "runtimeMinutes": 124,
     "synopsis": "A frail Brooklyn kid becomes the first Avenger and goes down with a Hydra bomber in the Arctic.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "steve_rogers",
+        "actorId": "chris_evans"
+      },
+      {
+        "characterId": "peggy_carter",
+        "actorId": "hayley_atwell"
+      },
+      {
+        "characterId": "bucky_barnes",
+        "actorId": "sebastian_stan"
+      },
+      {
+        "characterId": "colonel_chester_phillips",
+        "actorId": "tommy_lee_jones"
+      },
+      {
+        "characterId": "johann_schmidt",
+        "actorId": "hugo_weaving"
+      },
+      {
+        "characterId": "howard_stark",
+        "actorId": "dominic_cooper"
+      },
+      {
+        "characterId": "heinz_kruger",
+        "actorId": "richard_armitage"
+      },
+      {
+        "characterId": "dr_abraham_erskine",
+        "actorId": "stanley_tucci"
+      },
+      {
+        "characterId": "nick_fury",
+        "actorId": "samuel_l_jackson"
+      },
+      {
+        "characterId": "dr_arnim_zola",
+        "actorId": "toby_jones"
+      },
+      {
+        "characterId": "timothy_dum_dum_dugan",
+        "actorId": "neal_mcdonough"
+      },
+      {
+        "characterId": "gabe_jones",
+        "actorId": "derek_luke"
+      },
+      {
+        "characterId": "jim_morita",
+        "actorId": "kenneth_choi"
+      },
+      {
+        "characterId": "james_montgomery_falsworth",
+        "actorId": "jj_feild"
+      },
+      {
+        "characterId": "jacques_dernier",
+        "actorId": "bruno_ricci"
+      },
+      {
+        "characterId": "gilmore_hodge",
+        "actorId": "lex_shrapnel"
+      },
+      {
+        "characterId": "senator_brandt",
+        "actorId": "michael_brandon"
+      },
+      {
+        "characterId": "brandt_s_aide",
+        "actorId": "martin_sherman"
+      },
+      {
+        "characterId": "pvt_lorraine",
+        "actorId": "natalie_dormer"
+      },
+      {
+        "characterId": "search_team_leader",
+        "actorId": "oscar_pearce"
+      },
+      {
+        "characterId": "shield_lieutenant",
+        "actorId": "william_hope"
+      },
+      {
+        "characterId": "shield_tech",
+        "actorId": "nicholas_pinnock"
+      },
+      {
+        "characterId": "jan",
+        "actorId": "marek_oravec"
+      },
+      {
+        "characterId": "tower_keeper",
+        "actorId": "david_bradley"
+      },
+      {
+        "characterId": "steve_rogers_double",
+        "actorId": "leander_deeny"
+      },
+      {
+        "characterId": "nervous_recruit",
+        "actorId": "sam_hoare"
+      },
+      {
+        "characterId": "4f_doctor",
+        "actorId": "simon_kunz"
+      },
+      {
+        "characterId": "loud_jerk",
+        "actorId": "kieran_o_connor"
+      },
+      {
+        "characterId": "connie",
+        "actorId": "jenna_coleman"
+      },
+      {
+        "characterId": "bonnie",
+        "actorId": "sophie_colquhoun"
+      },
+      {
+        "characterId": "young_doctor",
+        "actorId": "doug_cockle"
+      },
+      {
+        "characterId": "enlistment_office_mp",
+        "actorId": "ben_batt"
+      },
+      {
+        "characterId": "stark_girl",
+        "actorId": "mollie_fitzgerald"
+      },
+      {
+        "characterId": "sergeant_duffy",
+        "actorId": "damon_driver"
+      },
+      {
+        "characterId": "johann_schmidt_s_artist",
+        "actorId": "david_mckail"
+      },
+      {
+        "characterId": "antique_store_owner",
+        "actorId": "amanda_walker"
+      },
+      {
+        "characterId": "ssr_doctor",
+        "actorId": "richard_freeman"
+      },
+      {
+        "characterId": "project_rebirth_nurse",
+        "actorId": "katherine_press"
+      },
+      {
+        "characterId": "kruger_s_aide",
+        "actorId": "sergio_james"
+      },
+      {
+        "characterId": "undercover_bum",
+        "actorId": "marcello_walton"
+      },
+      {
+        "characterId": "undercover_bum",
+        "actorId": "vincent_montuel"
+      },
+      {
+        "characterId": "kruger_s_driver",
+        "actorId": "fabrizio_santino"
+      },
+      {
+        "characterId": "boy_at_dock",
+        "actorId": "maxwell_newman"
+      },
+      {
+        "characterId": "roeder",
+        "actorId": "anatole_taubman"
+      },
+      {
+        "characterId": "hutter",
+        "actorId": "jan_pohl"
+      },
+      {
+        "characterId": "schneider",
+        "actorId": "erich_redman"
+      },
+      {
+        "characterId": "the_star_spangled_singer",
+        "actorId": "rosanna_hoult"
+      },
+      {
+        "characterId": "the_star_spangled_singer",
+        "actorId": "naomi_slights"
+      },
+      {
+        "characterId": "the_star_spangled_singer",
+        "actorId": "kirsty_mather"
+      },
+      {
+        "characterId": "kid_in_uso_audience",
+        "actorId": "megan_sanderson"
+      },
+      {
+        "characterId": "kid_in_uso_audience",
+        "actorId": "darren_simpson"
+      },
+      {
+        "characterId": "newsstand_mom",
+        "actorId": "fernanda_toker"
+      },
+      {
+        "characterId": "autograph_seeker",
+        "actorId": "laura_haddock"
+      },
+      {
+        "characterId": "adolph_hitler",
+        "actorId": "james_payton"
+      },
+      {
+        "characterId": "army_heckler",
+        "actorId": "ronan_raftery"
+      },
+      {
+        "characterId": "army_heckler",
+        "actorId": "nick_hendrix"
+      },
+      {
+        "characterId": "army_heckler",
+        "actorId": "luke_allen_gale"
+      },
+      {
+        "characterId": "army_heckler",
+        "actorId": "jack_gordon"
+      },
+      {
+        "characterId": "hydra_guard",
+        "actorId": "benjamin_uttley"
+      },
+      {
+        "characterId": "stark_s_engineer",
+        "actorId": "kevin_millington"
+      },
+      {
+        "characterId": "manager_velt",
+        "actorId": "patrick_monckeberg"
+      },
+      {
+        "characterId": "hydra_lieutenant",
+        "actorId": "peter_stark"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "amanda_righetti"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "jennifer_abbotts"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "michelle_antrobus"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "lucy_dean"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "erin_dusek"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "nicole_evans"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "lizzi_franklin"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "emma_harris"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "rachael_isherwood"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "danielle_kelly"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "nicole_may"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "stevie_jean_mcguire"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "anna_mcnicholas"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "rosie_pethullis"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "jessica_powell"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "rai_quartley"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "sarah_riches"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "holly_rostron"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "caroline_royce"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "stephanie_jayne_thompson"
+      },
+      {
+        "characterId": "uso_dancer",
+        "actorId": "lucie_waugh"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "billy_lozowski"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "gregory_paulett"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "adam_birch"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "adam_kent"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "wiliam_morris"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "david_soall"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "paul_simmons"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "marc_wheeler"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "chris_diggle"
+      },
+      {
+        "characterId": "uso_drummer",
+        "actorId": "michael_humphrey"
+      },
+      {
+        "characterId": "general",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "brooklyn_tour_guide",
+        "actorId": "steve_leighton"
+      },
+      {
+        "characterId": "lab_tech",
+        "actorId": "nathan_robinson"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "paul_blackwell"
+      },
+      {
+        "characterId": "newsreel_announcer",
+        "actorId": "spencer_garrett"
+      }
+    ],
     "poster": "/posters/captain_america_the_first_avenger.jpg",
     "imdbId": "tt0458339"
   },
@@ -250,11 +1851,444 @@
     "franchiseIndex": 1,
     "phase": "Phase One",
     "releaseDate": "2012-05-04",
-    "loreStart": "2012-05-04",
-    "loreEnd": "2012-05-04",
+    "loreStart": "2012",
+    "loreEnd": "2012",
     "runtimeMinutes": 143,
     "synopsis": "Loki opens a portal over Manhattan and Fury's team of misfits becomes a team for the first time.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "tony_stark",
+        "actorId": "robert_downey_jr"
+      },
+      {
+        "characterId": "steve_rogers",
+        "actorId": "chris_evans"
+      },
+      {
+        "characterId": "bruce_banner",
+        "actorId": "mark_ruffalo"
+      },
+      {
+        "characterId": "thor",
+        "actorId": "chris_hemsworth"
+      },
+      {
+        "characterId": "natasha_romanoff",
+        "actorId": "scarlett_johansson"
+      },
+      {
+        "characterId": "clint_barton",
+        "actorId": "jeremy_renner"
+      },
+      {
+        "characterId": "loki",
+        "actorId": "tom_hiddleston"
+      },
+      {
+        "characterId": "agent_phil_coulson",
+        "actorId": "clark_gregg"
+      },
+      {
+        "characterId": "agent_maria_hill",
+        "actorId": "cobie_smulders"
+      },
+      {
+        "characterId": "erik_selvig",
+        "actorId": "stellan_skarsgard"
+      },
+      {
+        "characterId": "nick_fury",
+        "actorId": "samuel_l_jackson"
+      },
+      {
+        "characterId": "pepper_potts",
+        "actorId": "gwyneth_paltrow"
+      },
+      {
+        "characterId": "the_other",
+        "actorId": "alexis_denisof"
+      },
+      {
+        "characterId": "nasa_scientist",
+        "actorId": "tina_benko"
+      },
+      {
+        "characterId": "georgi_luchkov",
+        "actorId": "jerzy_skolimowski"
+      },
+      {
+        "characterId": "weaselly_thug",
+        "actorId": "kirill_nikiforov"
+      },
+      {
+        "characterId": "tall_thug",
+        "actorId": "jeff_wolfe"
+      },
+      {
+        "characterId": "calcutta_woman",
+        "actorId": "rashmi_rustagi"
+      },
+      {
+        "characterId": "world_security_council",
+        "actorId": "powers_boothe"
+      },
+      {
+        "characterId": "world_security_council",
+        "actorId": "jenny_agutter"
+      },
+      {
+        "characterId": "world_security_council",
+        "actorId": "arthur_darbinyan"
+      },
+      {
+        "characterId": "world_security_council",
+        "actorId": "donald_li"
+      },
+      {
+        "characterId": "carrier_bridge_tech",
+        "actorId": "warren_kole"
+      },
+      {
+        "characterId": "carrier_bridge_tech",
+        "actorId": "alicia_sixtos"
+      },
+      {
+        "characterId": "carrier_bridge_techs",
+        "actorId": "jesse_garcia"
+      },
+      {
+        "characterId": "agent_jasper_sitwell",
+        "actorId": "maximiliano_hernandez"
+      },
+      {
+        "characterId": "gala_scientist",
+        "actorId": "dieter_riesle"
+      },
+      {
+        "characterId": "german_old_man",
+        "actorId": "kenneth_tigar"
+      },
+      {
+        "characterId": "young_shield_pilot",
+        "actorId": "walter_perez"
+      },
+      {
+        "characterId": "security_guard",
+        "actorId": "harry_dean_stanton"
+      },
+      {
+        "characterId": "maintenance_guy",
+        "actorId": "josh_cowdery"
+      },
+      {
+        "characterId": "waitress",
+        "actorId": "ashley_johnson"
+      },
+      {
+        "characterId": "japanese_family",
+        "actorId": "katsumi_komatsu"
+      },
+      {
+        "characterId": "japanese_family",
+        "actorId": "yumiko_komatsu"
+      },
+      {
+        "characterId": "japanese_family",
+        "actorId": "momoko_komatsu"
+      },
+      {
+        "characterId": "police_sergeant",
+        "actorId": "robert_clohessy"
+      },
+      {
+        "characterId": "office_woman",
+        "actorId": "fernanda_toker"
+      },
+      {
+        "characterId": "news_reporter",
+        "actorId": "andrea_vecchio"
+      },
+      {
+        "characterId": "news_reporter",
+        "actorId": "robin_swoboda"
+      },
+      {
+        "characterId": "faceless_pilot",
+        "actorId": "brent_mcgee"
+      },
+      {
+        "characterId": "celebration_montage_interviewee",
+        "actorId": "jamie_mcshane"
+      },
+      {
+        "characterId": "celebration_montage_interviewee",
+        "actorId": "michael_zhang"
+      },
+      {
+        "characterId": "celebration_montage_interviewee",
+        "actorId": "william_christopher_stephens"
+      },
+      {
+        "characterId": "celebration_montage_interviewee",
+        "actorId": "kelley_robins_hicks"
+      },
+      {
+        "characterId": "shawna_lynde",
+        "actorId": "romy_rosemont"
+      },
+      {
+        "characterId": "senator_boynton",
+        "actorId": "james_eckhouse"
+      },
+      {
+        "characterId": "stan_lee",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "thomas_roberts",
+        "actorId": "thomas_roberts"
+      },
+      {
+        "characterId": "pat_kiernan",
+        "actorId": "pat_kiernan"
+      },
+      {
+        "characterId": "man_1",
+        "actorId": "damion_poitier"
+      },
+      {
+        "characterId": "woman_in_restaurant",
+        "actorId": "jillian_morgese"
+      },
+      {
+        "characterId": "german_pedestrian",
+        "actorId": "catherine_anderson"
+      },
+      {
+        "characterId": "lentil_merchant",
+        "actorId": "ricardo_andres"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "logan_bennett"
+      },
+      {
+        "characterId": "celebration_montage_man_shaving_beard",
+        "actorId": "mayank_bhatter"
+      },
+      {
+        "characterId": "gala_guest",
+        "actorId": "sharita_bone"
+      },
+      {
+        "characterId": "museum_gala_patron",
+        "actorId": "jason_botsford"
+      },
+      {
+        "characterId": "stuttgart_biergarten_patron",
+        "actorId": "mary_kate_campbell"
+      },
+      {
+        "characterId": "shield_guard",
+        "actorId": "gene_n_chavez"
+      },
+      {
+        "characterId": "gala_guest",
+        "actorId": "layla_cushman"
+      },
+      {
+        "characterId": "soldier",
+        "actorId": "robert_dean"
+      },
+      {
+        "characterId": "museum_gala_guest",
+        "actorId": "rick_dremann"
+      },
+      {
+        "characterId": "stuttgart_citizen",
+        "actorId": "eric_frank"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "israel_hall"
+      },
+      {
+        "characterId": "museum_gala_patron",
+        "actorId": "carmen_dee_harris"
+      },
+      {
+        "characterId": "mercenary",
+        "actorId": "alexander_christopher_jones"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "demoine_kinney"
+      },
+      {
+        "characterId": "stuttgart_citizen",
+        "actorId": "andrew_knode"
+      },
+      {
+        "characterId": "hostage",
+        "actorId": "annette_lawless"
+      },
+      {
+        "characterId": "limo_driver",
+        "actorId": "kimberly_j_mahoney"
+      },
+      {
+        "characterId": "helicarrier_medical_team_leader",
+        "actorId": "todd_manes"
+      },
+      {
+        "characterId": "stuttgart_driver",
+        "actorId": "jorge_mardel"
+      },
+      {
+        "characterId": "cafe_patron",
+        "actorId": "michael_mcmillan"
+      },
+      {
+        "characterId": "guard",
+        "actorId": "sean_meehan"
+      },
+      {
+        "characterId": "museum_gala_patron",
+        "actorId": "holly_neelie"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "jeremy_orr"
+      },
+      {
+        "characterId": "new_york_pedestrian",
+        "actorId": "nate_paige"
+      },
+      {
+        "characterId": "shiel_employee",
+        "actorId": "martin_palmer"
+      },
+      {
+        "characterId": "museum_gala_guest",
+        "actorId": "maria_perossa"
+      },
+      {
+        "characterId": "helicarrier_shield_agent",
+        "actorId": "alexander_daniel_pimentel"
+      },
+      {
+        "characterId": "shield_agent_loki_escort",
+        "actorId": "frank_powers"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "jaime_powers"
+      },
+      {
+        "characterId": "stuttgart_gala_patron",
+        "actorId": "brent_reichert"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "kelly_ruble"
+      },
+      {
+        "characterId": "restaurant_patron",
+        "actorId": "gina_sarno"
+      },
+      {
+        "characterId": "new_york_city_police_officer",
+        "actorId": "robert_b_schneider_iv"
+      },
+      {
+        "characterId": "new_york_police_officer_in_firefight",
+        "actorId": "jeff_seich"
+      },
+      {
+        "characterId": "stuttgart_beer_garden_patron",
+        "actorId": "christina_shaffer"
+      },
+      {
+        "characterId": "museum_gala_patron",
+        "actorId": "douglas_slygh"
+      },
+      {
+        "characterId": "shield_agent_4",
+        "actorId": "colin_strause"
+      },
+      {
+        "characterId": "s_h_i_e_l_d_agent",
+        "actorId": "george_thomas"
+      },
+      {
+        "characterId": "mercenary",
+        "actorId": "jerry_lee_tucker"
+      },
+      {
+        "characterId": "child_on_news_1",
+        "actorId": "tai_urban"
+      },
+      {
+        "characterId": "running_pedestrian",
+        "actorId": "chris_vaina"
+      },
+      {
+        "characterId": "sweeper",
+        "actorId": "sandra_weston"
+      },
+      {
+        "characterId": "barbershop",
+        "actorId": "seth_zielicke"
+      },
+      {
+        "characterId": "tourist",
+        "actorId": "alex_decourville"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "andrea_nichole_olivas"
+      },
+      {
+        "characterId": "nyc_pedestrian",
+        "actorId": "tina_grimm"
+      },
+      {
+        "characterId": "principal",
+        "actorId": "evan_kole"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "hank_amos"
+      },
+      {
+        "characterId": "waitress",
+        "actorId": "joti_nagra"
+      },
+      {
+        "characterId": "young_girl",
+        "actorId": "m_laah_kaur_singh"
+      },
+      {
+        "characterId": "young_cop",
+        "actorId": "enver_gjokaj"
+      },
+      {
+        "characterId": "pedestrian",
+        "actorId": "rod_fielder"
+      },
+      {
+        "characterId": "pedestrian",
+        "actorId": "mike_karban"
+      },
+      {
+        "characterId": "gala_patron",
+        "actorId": "robert_p_thitoff"
+      },
+      {
+        "characterId": "pedestrian",
+        "actorId": "shane_thompson"
+      }
+    ],
     "poster": "/posters/the_avengers.jpg",
     "imdbId": "tt0848228"
   },
@@ -273,7 +2307,7 @@
     "loreNote": null,
     "runtimeMinutes": 136,
     "cast": [],
-    "poster": "https://image.tmdb.org/t/p/w500/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
+    "poster": "/posters/the_amazing_spider_man.jpg",
     "imdbId": "tt0948470",
     "tmdbId": 1930
   },
@@ -287,11 +2321,448 @@
     "franchiseIndex": 3,
     "phase": "Phase Two",
     "releaseDate": "2013-05-03",
-    "loreStart": "2012-12",
-    "loreEnd": "2012-12",
+    "loreStart": "2012",
+    "loreEnd": "2012",
     "runtimeMinutes": 130,
     "synopsis": "Post-New York panic attacks and a stolen mansion leave Tony with nothing but a broken suit and his own head.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "tony_stark",
+        "actorId": "robert_downey_jr"
+      },
+      {
+        "characterId": "pepper_potts",
+        "actorId": "gwyneth_paltrow"
+      },
+      {
+        "characterId": "james_rhodes",
+        "actorId": "don_cheadle"
+      },
+      {
+        "characterId": "aldrich_killian",
+        "actorId": "guy_pearce"
+      },
+      {
+        "characterId": "maya_hansen",
+        "actorId": "rebecca_hall"
+      },
+      {
+        "characterId": "happy_hogan",
+        "actorId": "jon_favreau"
+      },
+      {
+        "characterId": "trevor_slattery",
+        "actorId": "ben_kingsley"
+      },
+      {
+        "characterId": "savin",
+        "actorId": "james_badge_dale"
+      },
+      {
+        "characterId": "brandt",
+        "actorId": "stephanie_szostak"
+      },
+      {
+        "characterId": "president_ellis",
+        "actorId": "william_sadler"
+      },
+      {
+        "characterId": "mrs_davis",
+        "actorId": "dale_dickey"
+      },
+      {
+        "characterId": "harley_keener",
+        "actorId": "ty_simpkins"
+      },
+      {
+        "characterId": "vice_president_rodriguez",
+        "actorId": "miguel_ferrer"
+      },
+      {
+        "characterId": "doctor_wu",
+        "actorId": "wang_xueqi"
+      },
+      {
+        "characterId": "ho_yinsen",
+        "actorId": "shaun_toub"
+      },
+      {
+        "characterId": "annoying_conference_guy",
+        "actorId": "matthew_sterling_nye"
+      },
+      {
+        "characterId": "pat_kiernan",
+        "actorId": "pat_kiernan"
+      },
+      {
+        "characterId": "josh_elliott",
+        "actorId": "josh_elliott"
+      },
+      {
+        "characterId": "megan_henderson",
+        "actorId": "megan_henderson"
+      },
+      {
+        "characterId": "thomas_roberts",
+        "actorId": "thomas_roberts"
+      },
+      {
+        "characterId": "bill_maher",
+        "actorId": "bill_maher"
+      },
+      {
+        "characterId": "joan_rivers",
+        "actorId": "joan_rivers"
+      },
+      {
+        "characterId": "george_kotsiopoulos",
+        "actorId": "george_kotsiopoulos"
+      },
+      {
+        "characterId": "neptune_s_net_girl",
+        "actorId": "bronte_d_esposito"
+      },
+      {
+        "characterId": "neptune_s_net_boy",
+        "actorId": "noah_visconti"
+      },
+      {
+        "characterId": "taggart",
+        "actorId": "ashley_hamilton"
+      },
+      {
+        "characterId": "happy_s_nurse",
+        "actorId": "brooke_jaye_taylor"
+      },
+      {
+        "characterId": "hospital_news_reporter",
+        "actorId": "kim_holderness"
+      },
+      {
+        "characterId": "pushy_tabloid_reporter",
+        "actorId": "glenn_foster"
+      },
+      {
+        "characterId": "helicopter_pilot_1",
+        "actorId": "anthony_reynolds"
+      },
+      {
+        "characterId": "helicopter_pilot_2",
+        "actorId": "kendrick_cross"
+      },
+      {
+        "characterId": "reporter_at_house_wreckage",
+        "actorId": "tom_clark"
+      },
+      {
+        "characterId": "mandarin_studio_technician",
+        "actorId": "brian_schaeffer"
+      },
+      {
+        "characterId": "mandarin_look_out",
+        "actorId": "john_eddins"
+      },
+      {
+        "characterId": "rose_hill_sheriff",
+        "actorId": "spencer_garrett"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "rockey_dickey_jr"
+      },
+      {
+        "characterId": "rose_hill_christmas_tree_shopper",
+        "actorId": "drew_michael_hershner"
+      },
+      {
+        "characterId": "junior_technician",
+        "actorId": "sarah_burkhardt"
+      },
+      {
+        "characterId": "senior_technician",
+        "actorId": "jan_broberg_felt"
+      },
+      {
+        "characterId": "satellite_technician",
+        "actorId": "andrew_lauer"
+      },
+      {
+        "characterId": "technical_director",
+        "actorId": "nate_bynum"
+      },
+      {
+        "characterId": "vice_president_s_analyst",
+        "actorId": "andrew_lander"
+      },
+      {
+        "characterId": "thomas_richards",
+        "actorId": "tom_virtue"
+      },
+      {
+        "characterId": "scared_insurgent",
+        "actorId": "serdar_kalsin"
+      },
+      {
+        "characterId": "laughing_insurgent",
+        "actorId": "demetrois_hodges"
+      },
+      {
+        "characterId": "pageant_emcee",
+        "actorId": "bobby_tisdale"
+      },
+      {
+        "characterId": "miss_elk_ridge",
+        "actorId": "yvonne_zima"
+      },
+      {
+        "characterId": "pageant_judge",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "gary_the_cameraman",
+        "actorId": "adam_pally"
+      },
+      {
+        "characterId": "chad_davis",
+        "actorId": "james_rackley"
+      },
+      {
+        "characterId": "extremis_candidate",
+        "actorId": "cullen_moss"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "jake_de_witt"
+      },
+      {
+        "characterId": "sweat_shop_agent",
+        "actorId": "rebecca_mader"
+      },
+      {
+        "characterId": "mandarin_guard",
+        "actorId": "kevin_arnold"
+      },
+      {
+        "characterId": "mandarin_guard",
+        "actorId": "juan_c_bofill"
+      },
+      {
+        "characterId": "mandarin_guard",
+        "actorId": "david_anthony_buglione"
+      },
+      {
+        "characterId": "mandarin_guard",
+        "actorId": "adam_lytle"
+      },
+      {
+        "characterId": "mandarin_guard",
+        "actorId": "paul_o_connor"
+      },
+      {
+        "characterId": "mandarin_guard",
+        "actorId": "phil_ortiz"
+      },
+      {
+        "characterId": "sleepy_mandarin_girl",
+        "actorId": "gwendalyn_barker"
+      },
+      {
+        "characterId": "annoyed_mandarin_guard",
+        "actorId": "steve_wilder"
+      },
+      {
+        "characterId": "mandarin_party_girl_1",
+        "actorId": "luciana_faulhaber"
+      },
+      {
+        "characterId": "mandarin_party_girl_2",
+        "actorId": "kary_musa"
+      },
+      {
+        "characterId": "tony_s_guard",
+        "actorId": "mike_massa"
+      },
+      {
+        "characterId": "ponytail_express",
+        "actorId": "mark_kubr"
+      },
+      {
+        "characterId": "reluctant_aim_guard",
+        "actorId": "si_fu_eric_oram"
+      },
+      {
+        "characterId": "aim_ping_pong_girl",
+        "actorId": "naomi_parshin"
+      },
+      {
+        "characterId": "aim_ping_pong_girl",
+        "actorId": "aurelia_riley"
+      },
+      {
+        "characterId": "aim_ping_pong_girl",
+        "actorId": "johanna_yunda"
+      },
+      {
+        "characterId": "secret_service_agent",
+        "actorId": "wesley_thompson"
+      },
+      {
+        "characterId": "vice_president_s_daughter",
+        "actorId": "jenna_ortega"
+      },
+      {
+        "characterId": "iron_patriot_fan_1",
+        "actorId": "toochukwu_t_c_anyachonkeya"
+      },
+      {
+        "characterId": "iron_patriot_fan_2",
+        "actorId": "chad_kurtz"
+      },
+      {
+        "characterId": "air_force_one_officer",
+        "actorId": "cal_johnson"
+      },
+      {
+        "characterId": "navy_op",
+        "actorId": "corey_hawkins"
+      },
+      {
+        "characterId": "commander",
+        "actorId": "linden_ashby"
+      },
+      {
+        "characterId": "heather",
+        "actorId": "sarah_farooqui"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "sala_baker"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "kial_butler"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "nick_brandon"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "dan_brown"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "fernando_chien"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "ilram_choi"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "brycen_counts"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "kiante_elam"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "dane_farwell"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "mark_fichera"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "colin_follenweider"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "aja_frary"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "mark_ginther"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "adrian_gonzalez"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "dennis_keiffer"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "samuel_le"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "tara_macken"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "william_morts"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "jade_quon"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "j_c_robaina"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "markos_rounthwaite"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "philip_j_silvera"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "brian_simpson"
+      },
+      {
+        "characterId": "rose_hill_deputy",
+        "actorId": "mark_aaron_wagner"
+      },
+      {
+        "characterId": "bruce_banner",
+        "actorId": "mark_ruffalo"
+      },
+      {
+        "characterId": "juan",
+        "actorId": "chris_gethard"
+      },
+      {
+        "characterId": "white_house_reporter",
+        "actorId": "nick_w_nicholson"
+      },
+      {
+        "characterId": "richie",
+        "actorId": "bridger_zadina"
+      },
+      {
+        "characterId": "military_advisor",
+        "actorId": "johnny_otto"
+      },
+      {
+        "characterId": "michele_cusick",
+        "actorId": "noa_lindberg"
+      },
+      {
+        "characterId": "chinese_news_reporter",
+        "actorId": "li_siyu"
+      },
+      {
+        "characterId": "preseident_s_aide",
+        "actorId": "roy_mccrerey"
+      }
+    ],
     "poster": "/posters/iron_man_3.jpg",
     "imdbId": "tt1300854"
   },
@@ -324,11 +2795,208 @@
     "franchiseIndex": 2,
     "phase": "Phase Two",
     "releaseDate": "2013-11-08",
-    "loreStart": "2013-11",
-    "loreEnd": "2013-11",
+    "loreStart": "2013",
+    "loreEnd": "2013",
     "runtimeMinutes": 112,
     "synopsis": "The Aether resurfaces, Frigga dies, and Loki fakes his own death to take Asgard's throne.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "thor",
+        "actorId": "chris_hemsworth"
+      },
+      {
+        "characterId": "jane_foster",
+        "actorId": "natalie_portman"
+      },
+      {
+        "characterId": "loki",
+        "actorId": "tom_hiddleston"
+      },
+      {
+        "characterId": "malekith",
+        "actorId": "christopher_eccleston"
+      },
+      {
+        "characterId": "odin",
+        "actorId": "anthony_hopkins"
+      },
+      {
+        "characterId": "sif",
+        "actorId": "jaimie_alexander"
+      },
+      {
+        "characterId": "fandral",
+        "actorId": "zachary_levi"
+      },
+      {
+        "characterId": "volstagg",
+        "actorId": "ray_stevenson"
+      },
+      {
+        "characterId": "hogun",
+        "actorId": "tadanobu_asano"
+      },
+      {
+        "characterId": "heimdall",
+        "actorId": "idris_elba"
+      },
+      {
+        "characterId": "frigga",
+        "actorId": "rene_russo"
+      },
+      {
+        "characterId": "algrim",
+        "actorId": "adewale_akinnuoye_agbaje"
+      },
+      {
+        "characterId": "darcy_lewis",
+        "actorId": "kat_dennings"
+      },
+      {
+        "characterId": "erik_selvig",
+        "actorId": "stellan_skarsgard"
+      },
+      {
+        "characterId": "eir",
+        "actorId": "alice_krige"
+      },
+      {
+        "characterId": "tyr",
+        "actorId": "clive_russell"
+      },
+      {
+        "characterId": "ian_boothby",
+        "actorId": "jonathan_howard"
+      },
+      {
+        "characterId": "john",
+        "actorId": "ramone_morgan"
+      },
+      {
+        "characterId": "navid",
+        "actorId": "obada_alassadi"
+      },
+      {
+        "characterId": "maddie",
+        "actorId": "imaan_chentouf"
+      },
+      {
+        "characterId": "volstagg_s_wife",
+        "actorId": "claire_brown"
+      },
+      {
+        "characterId": "volstagg_s_child_1",
+        "actorId": "henry_calcutt"
+      },
+      {
+        "characterId": "volstagg_s_child_2",
+        "actorId": "ava_caton"
+      },
+      {
+        "characterId": "volstagg_s_child_3",
+        "actorId": "abbie_mccann"
+      },
+      {
+        "characterId": "desk_officer",
+        "actorId": "thomas_arnold"
+      },
+      {
+        "characterId": "stonehenge_tv_news_reporter",
+        "actorId": "sam_swainsbury"
+      },
+      {
+        "characterId": "sad_child",
+        "actorId": "connor_donaghey"
+      },
+      {
+        "characterId": "student",
+        "actorId": "royce_pierreson"
+      },
+      {
+        "characterId": "woman_on_platform",
+        "actorId": "annabel_norbury"
+      },
+      {
+        "characterId": "wench_1",
+        "actorId": "sophie_cosson"
+      },
+      {
+        "characterId": "richard",
+        "actorId": "chris_o_dowd"
+      },
+      {
+        "characterId": "police_officer_1",
+        "actorId": "justin_edwards"
+      },
+      {
+        "characterId": "police_officer_2",
+        "actorId": "gruffudd_glyn"
+      },
+      {
+        "characterId": "einherjar_lieutenant",
+        "actorId": "richard_brake"
+      },
+      {
+        "characterId": "stan_lee",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "steve_scott",
+        "actorId": "steve_scott"
+      },
+      {
+        "characterId": "einherjar_guard",
+        "actorId": "brett_tucker"
+      },
+      {
+        "characterId": "asylum_patient",
+        "actorId": "richard_wharton"
+      },
+      {
+        "characterId": "bor",
+        "actorId": "tony_curran"
+      },
+      {
+        "characterId": "loki_as_captain_america",
+        "actorId": "chris_evans"
+      },
+      {
+        "characterId": "taneleer_tivan",
+        "actorId": "benicio_del_toro"
+      },
+      {
+        "characterId": "carina",
+        "actorId": "ophelia_lovibond"
+      },
+      {
+        "characterId": "jane_foster_stand_in",
+        "actorId": "elsa_pataky"
+      },
+      {
+        "characterId": "police_officer",
+        "actorId": "joe_cash"
+      },
+      {
+        "characterId": "vanir_woman",
+        "actorId": "kamay_lau"
+      },
+      {
+        "characterId": "library_student",
+        "actorId": "alannah_olivia"
+      },
+      {
+        "characterId": "odin_s_palace_guard",
+        "actorId": "jd_roth_round"
+      },
+      {
+        "characterId": "asgardian_guard",
+        "actorId": "corey_jovan"
+      },
+      {
+        "characterId": "nurse",
+        "actorId": "talulah_riley"
+      }
+    ],
     "poster": "/posters/thor_the_dark_world.jpg",
     "imdbId": "tt1981115"
   },
@@ -342,11 +3010,300 @@
     "franchiseIndex": 2,
     "phase": "Phase Two",
     "releaseDate": "2014-04-04",
-    "loreStart": "2014-04",
-    "loreEnd": "2014-04",
+    "loreStart": "2014",
+    "loreEnd": "2014",
     "runtimeMinutes": 136,
     "synopsis": "Hydra has been growing inside S.H.I.E.L.D. for seventy years, and its best weapon is Steve's oldest friend.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "steve_rogers",
+        "actorId": "chris_evans"
+      },
+      {
+        "characterId": "nick_fury",
+        "actorId": "samuel_l_jackson"
+      },
+      {
+        "characterId": "natasha_romanoff",
+        "actorId": "scarlett_johansson"
+      },
+      {
+        "characterId": "alexander_pierce",
+        "actorId": "robert_redford"
+      },
+      {
+        "characterId": "bucky_barnes",
+        "actorId": "sebastian_stan"
+      },
+      {
+        "characterId": "sam_wilson",
+        "actorId": "anthony_mackie"
+      },
+      {
+        "characterId": "agent_maria_hill",
+        "actorId": "cobie_smulders"
+      },
+      {
+        "characterId": "brock_rumlow",
+        "actorId": "frank_grillo"
+      },
+      {
+        "characterId": "agent_jasper_sitwell",
+        "actorId": "maximiliano_hernandez"
+      },
+      {
+        "characterId": "kate",
+        "actorId": "emily_vancamp"
+      },
+      {
+        "characterId": "peggy_carter",
+        "actorId": "hayley_atwell"
+      },
+      {
+        "characterId": "dr_arnim_zola",
+        "actorId": "toby_jones"
+      },
+      {
+        "characterId": "smithsonian_guard",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "jack_rollins",
+        "actorId": "callan_mulvey"
+      },
+      {
+        "characterId": "councilwoman_hawley",
+        "actorId": "jenny_agutter"
+      },
+      {
+        "characterId": "councilman_singh",
+        "actorId": "bernard_white"
+      },
+      {
+        "characterId": "councilman_rockwell",
+        "actorId": "alan_dale"
+      },
+      {
+        "characterId": "councilman_yen",
+        "actorId": "chin_han"
+      },
+      {
+        "characterId": "senator_stern",
+        "actorId": "garry_shandling"
+      },
+      {
+        "characterId": "georges_batroc",
+        "actorId": "georges_st_pierre"
+      },
+      {
+        "characterId": "french_pirate_1",
+        "actorId": "salvator_xuereb"
+      },
+      {
+        "characterId": "french_pirate_2",
+        "actorId": "brian_duffy"
+      },
+      {
+        "characterId": "engine_pirate",
+        "actorId": "zack_duhame"
+      },
+      {
+        "characterId": "french_radio_pirate",
+        "actorId": "adetokumboh_m_cormack"
+      },
+      {
+        "characterId": "skinny_steve",
+        "actorId": "christopher_george_sarris"
+      },
+      {
+        "characterId": "launch_tech_1",
+        "actorId": "aaron_himelstein"
+      },
+      {
+        "characterId": "launch_tech_2",
+        "actorId": "allan_chanes"
+      },
+      {
+        "characterId": "dr_fine",
+        "actorId": "joe_russo"
+      },
+      {
+        "characterId": "shield_interrogator_1",
+        "actorId": "christopher_markus"
+      },
+      {
+        "characterId": "shield_interrogator_2",
+        "actorId": "stephen_mcfeely"
+      },
+      {
+        "characterId": "scientist_1",
+        "actorId": "pat_healy"
+      },
+      {
+        "characterId": "scientist_2",
+        "actorId": "ed_brubaker"
+      },
+      {
+        "characterId": "apple_employee",
+        "actorId": "d_c_pierson"
+      },
+      {
+        "characterId": "com_tech_1",
+        "actorId": "danny_pudi"
+      },
+      {
+        "characterId": "com_tech_2",
+        "actorId": "bernie_zilinskas"
+      },
+      {
+        "characterId": "renata",
+        "actorId": "branka_katic"
+      },
+      {
+        "characterId": "garcia",
+        "actorId": "angela_russo_otstot"
+      },
+      {
+        "characterId": "charlie_xo",
+        "actorId": "jon_sklaroff"
+      },
+      {
+        "characterId": "charlie_weapons_tech",
+        "actorId": "chad_todhunter"
+      },
+      {
+        "characterId": "shield_tech",
+        "actorId": "abigail_marlowe"
+      },
+      {
+        "characterId": "lead_shield_pilot",
+        "actorId": "jeremy_maxwell"
+      },
+      {
+        "characterId": "senior_shield_agent",
+        "actorId": "emerson_brooks"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "evan_parke"
+      },
+      {
+        "characterId": "strike_sgt_1",
+        "actorId": "ricardo_chacon"
+      },
+      {
+        "characterId": "strike_sgt_2",
+        "actorId": "griffin_m_allen"
+      },
+      {
+        "characterId": "strike_agent",
+        "actorId": "ann_russo"
+      },
+      {
+        "characterId": "strike_agent",
+        "actorId": "joe_rosalina"
+      },
+      {
+        "characterId": "strike_agent",
+        "actorId": "michael_debeljak"
+      },
+      {
+        "characterId": "strike_agent",
+        "actorId": "eddie_j_fernandez"
+      },
+      {
+        "characterId": "25th_floor_strike_agent",
+        "actorId": "jody_hart"
+      },
+      {
+        "characterId": "scudder",
+        "actorId": "steven_culp"
+      },
+      {
+        "characterId": "human_resources_executive",
+        "actorId": "derek_hughes"
+      },
+      {
+        "characterId": "doctor",
+        "actorId": "wendy_hoopes"
+      },
+      {
+        "characterId": "lead_emt",
+        "actorId": "ethan_rains"
+      },
+      {
+        "characterId": "cia_instructor",
+        "actorId": "dominic_rains"
+      },
+      {
+        "characterId": "capitol_hill_police",
+        "actorId": "charles_wittman"
+      },
+      {
+        "characterId": "capitol_hill_police",
+        "actorId": "andy_martinez_jr"
+      },
+      {
+        "characterId": "fbi_agent",
+        "actorId": "michael_de_geus"
+      },
+      {
+        "characterId": "fbi_agent",
+        "actorId": "terence_o_rourke"
+      },
+      {
+        "characterId": "committee_member",
+        "actorId": "anne_grimenstein"
+      },
+      {
+        "characterId": "little_boy_in_the_smithsonian",
+        "actorId": "dante_rosalina"
+      },
+      {
+        "characterId": "dr_list",
+        "actorId": "henry_goodman"
+      },
+      {
+        "characterId": "shield_agent",
+        "actorId": "dean_barlage"
+      },
+      {
+        "characterId": "museum_visitor",
+        "actorId": "joel_thingvall"
+      },
+      {
+        "characterId": "baron_wolfgang_von_strucker",
+        "actorId": "thomas_kretschmann"
+      },
+      {
+        "characterId": "wanda_maximoff",
+        "actorId": "elizabeth_olsen"
+      },
+      {
+        "characterId": "committee_general",
+        "actorId": "nestor_serrano"
+      },
+      {
+        "characterId": "pietro_maximoff",
+        "actorId": "aaron_taylor_johnson"
+      },
+      {
+        "characterId": "man_on_escalator_in_museum",
+        "actorId": "joss_whedon"
+      },
+      {
+        "characterId": "smithsonian_museum_visitor",
+        "actorId": "james_lewis"
+      },
+      {
+        "characterId": "s_h_i_e_l_d_strike_agent",
+        "actorId": "josh_heileman"
+      },
+      {
+        "characterId": "pedestrian",
+        "actorId": "dominique_henderson"
+      }
+    ],
     "poster": "/posters/captain_america_the_winter_soldier.jpg",
     "imdbId": "tt1843866"
   },
@@ -365,7 +3322,7 @@
     "loreNote": null,
     "runtimeMinutes": 141,
     "cast": [],
-    "poster": "https://image.tmdb.org/t/p/w500/bU7nTmvmy0h3VUP01v1T2imgH6N.jpg",
+    "poster": "/posters/the_amazing_spider_man_2.jpg",
     "imdbId": "tt1872181",
     "tmdbId": 102382
   },
@@ -398,11 +3355,296 @@
     "franchiseIndex": 1,
     "phase": "Phase Two",
     "releaseDate": "2014-08-01",
-    "loreStart": "2014-08",
-    "loreEnd": "2014-08",
+    "loreStart": "2014",
+    "loreEnd": "2014",
     "runtimeMinutes": 121,
     "synopsis": "Five criminals steal an Infinity Stone from Ronan and, to everyone's surprise, decide to save Xandar.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "peter_quill",
+        "actorId": "chris_pratt"
+      },
+      {
+        "characterId": "gamora",
+        "actorId": "zoe_saldana"
+      },
+      {
+        "characterId": "drax",
+        "actorId": "dave_bautista"
+      },
+      {
+        "characterId": "ronan",
+        "actorId": "lee_pace"
+      },
+      {
+        "characterId": "yondu_udonta",
+        "actorId": "michael_rooker"
+      },
+      {
+        "characterId": "nebula",
+        "actorId": "karen_gillan"
+      },
+      {
+        "characterId": "korath",
+        "actorId": "djimon_hounsou"
+      },
+      {
+        "characterId": "corpsman_dey",
+        "actorId": "john_c_reilly"
+      },
+      {
+        "characterId": "nova_prime",
+        "actorId": "glenn_close"
+      },
+      {
+        "characterId": "taneleer_tivan",
+        "actorId": "benicio_del_toro"
+      },
+      {
+        "characterId": "meredith_quill",
+        "actorId": "laura_haddock"
+      },
+      {
+        "characterId": "kraglin",
+        "actorId": "sean_gunn"
+      },
+      {
+        "characterId": "rocket",
+        "actorId": "sean_gunn"
+      },
+      {
+        "characterId": "denarian_saal",
+        "actorId": "peter_serafinowicz"
+      },
+      {
+        "characterId": "the_broker",
+        "actorId": "christopher_fairbank"
+      },
+      {
+        "characterId": "groot",
+        "actorId": "krystian_godlewski"
+      },
+      {
+        "characterId": "grandpa",
+        "actorId": "gregg_henry"
+      },
+      {
+        "characterId": "meredith_s_mother",
+        "actorId": "janis_ahern"
+      },
+      {
+        "characterId": "meredith_s_brother",
+        "actorId": "solomon_mousley"
+      },
+      {
+        "characterId": "meredith_s_best_friend",
+        "actorId": "lindsay_morton"
+      },
+      {
+        "characterId": "dr_fitzgibbon",
+        "actorId": "robert_firth"
+      },
+      {
+        "characterId": "bereet",
+        "actorId": "melia_kreiling"
+      },
+      {
+        "characterId": "horuz",
+        "actorId": "tom_proctor"
+      },
+      {
+        "characterId": "horuz_mate",
+        "actorId": "nick_holmes"
+      },
+      {
+        "characterId": "sacrificed_nova_corpsman",
+        "actorId": "max_wrottesley"
+      },
+      {
+        "characterId": "xandarian_ladies_man",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "pretty_xandarian",
+        "actorId": "nicole_alexandra_shipley"
+      },
+      {
+        "characterId": "nova_arresting_pilot",
+        "actorId": "sharif_atkins"
+      },
+      {
+        "characterId": "corpsman_dey_s_partner",
+        "actorId": "brendan_fehr"
+      },
+      {
+        "characterId": "kree_ambassador",
+        "actorId": "tomas_arana"
+      },
+      {
+        "characterId": "nova_prime_s_assistant",
+        "actorId": "mikaela_hoover"
+      },
+      {
+        "characterId": "head_riot_guard",
+        "actorId": "emmett_j_scanlan"
+      },
+      {
+        "characterId": "angry_guard",
+        "actorId": "dominic_grant"
+      },
+      {
+        "characterId": "mean_guard",
+        "actorId": "spencer_wilding"
+      },
+      {
+        "characterId": "sad_woman_with_horns",
+        "actorId": "alison_lintott"
+      },
+      {
+        "characterId": "moloka_dar",
+        "actorId": "alexis_rodney"
+      },
+      {
+        "characterId": "monstrous_inmate",
+        "actorId": "nathan_fillion"
+      },
+      {
+        "characterId": "mottled_prisoner",
+        "actorId": "keeley_forsyth"
+      },
+      {
+        "characterId": "burly_prisoner",
+        "actorId": "frank_gilhooley"
+      },
+      {
+        "characterId": "the_other",
+        "actorId": "alexis_denisof"
+      },
+      {
+        "characterId": "watchtower_guard",
+        "actorId": "enzo_cilenti"
+      },
+      {
+        "characterId": "one_legged_prisoner",
+        "actorId": "richard_katz"
+      },
+      {
+        "characterId": "rifle_guard",
+        "actorId": "ene_frost"
+      },
+      {
+        "characterId": "drop_the_leg_guard",
+        "actorId": "ronan_summers"
+      },
+      {
+        "characterId": "carina",
+        "actorId": "ophelia_lovibond"
+      },
+      {
+        "characterId": "tortured_pink_girl",
+        "actorId": "laura_ortiz"
+      },
+      {
+        "characterId": "pit_boss",
+        "actorId": "marama_corlett"
+      },
+      {
+        "characterId": "lady_of_the_boot_of_jemiah",
+        "actorId": "rosie_jones"
+      },
+      {
+        "characterId": "lady_of_the_boot_of_jemiah",
+        "actorId": "abidemi_sobande"
+      },
+      {
+        "characterId": "lady_of_the_boot_of_jemiah",
+        "actorId": "ekaterina_zalitko"
+      },
+      {
+        "characterId": "lady_of_the_boot_of_jemiah",
+        "actorId": "emily_redding"
+      },
+      {
+        "characterId": "knowhere_dispatcher",
+        "actorId": "stephen_blackehart"
+      },
+      {
+        "characterId": "sad_krylorian_girl",
+        "actorId": "jennifer_moylan_taylor"
+      },
+      {
+        "characterId": "one_eyed_ravager",
+        "actorId": "bruce_mackinnon"
+      },
+      {
+        "characterId": "ravager_pilot",
+        "actorId": "ralph_ineson"
+      },
+      {
+        "characterId": "nova_centurion",
+        "actorId": "naomi_ryan"
+      },
+      {
+        "characterId": "nova_starblaster_pilot",
+        "actorId": "john_brotherton"
+      },
+      {
+        "characterId": "alien_nova_pilot",
+        "actorId": "graham_shiels"
+      },
+      {
+        "characterId": "maskless_sakaaran",
+        "actorId": "james_gunn"
+      },
+      {
+        "characterId": "maskless_sakaaran",
+        "actorId": "douglas_robson"
+      },
+      {
+        "characterId": "corpsman_dey_s_wife",
+        "actorId": "rachel_cullen"
+      },
+      {
+        "characterId": "corpsman_dey_s_daughter",
+        "actorId": "isabella_poynton"
+      },
+      {
+        "characterId": "corpsman_dey_s_daughter",
+        "actorId": "imogen_poynton"
+      },
+      {
+        "characterId": "goth_ravager",
+        "actorId": "david_yarovesky"
+      },
+      {
+        "characterId": "crying_xandarian_citizen",
+        "actorId": "miriam_lucia"
+      },
+      {
+        "characterId": "thanos",
+        "actorId": "josh_brolin"
+      },
+      {
+        "characterId": "prisoner",
+        "actorId": "lloyd_kaufman"
+      },
+      {
+        "characterId": "ravager_pilot",
+        "actorId": "tyler_bates"
+      },
+      {
+        "characterId": "kyln_prisoner",
+        "actorId": "jozef_aoki"
+      },
+      {
+        "characterId": "xandar_resident",
+        "actorId": "erica_melargo"
+      },
+      {
+        "characterId": "young_quill",
+        "actorId": "wyatt_oleff"
+      }
+    ],
     "poster": "/posters/guardians_of_the_galaxy.jpg",
     "imdbId": "tt2015381"
   },
@@ -563,11 +3805,332 @@
     "franchiseIndex": 1,
     "phase": "Phase Three",
     "releaseDate": "2017-07-07",
-    "loreStart": "2016-09",
-    "loreEnd": "2016-10",
+    "loreStart": "2016",
+    "loreEnd": "2016",
     "runtimeMinutes": 133,
     "synopsis": "Peter wants to be an Avenger; the Vulture wants to sell alien tech; the homecoming date's father is the Vulture.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "peter_parker",
+        "actorId": "tom_holland"
+      },
+      {
+        "characterId": "adrian_toomes",
+        "actorId": "michael_keaton"
+      },
+      {
+        "characterId": "tony_stark",
+        "actorId": "robert_downey_jr"
+      },
+      {
+        "characterId": "may_parker",
+        "actorId": "marisa_tomei"
+      },
+      {
+        "characterId": "happy_hogan",
+        "actorId": "jon_favreau"
+      },
+      {
+        "characterId": "pepper_potts",
+        "actorId": "gwyneth_paltrow"
+      },
+      {
+        "characterId": "mj",
+        "actorId": "zendaya"
+      },
+      {
+        "characterId": "aaron_davis",
+        "actorId": "donald_glover"
+      },
+      {
+        "characterId": "ned_leeds",
+        "actorId": "jacob_batalon"
+      },
+      {
+        "characterId": "liz",
+        "actorId": "laura_harrier"
+      },
+      {
+        "characterId": "flash_thompson",
+        "actorId": "tony_revolori"
+      },
+      {
+        "characterId": "herman_schultz",
+        "actorId": "bokeem_woodbine"
+      },
+      {
+        "characterId": "anne_marie_hoag",
+        "actorId": "tyne_daly"
+      },
+      {
+        "characterId": "abraham",
+        "actorId": "abraham_attah"
+      },
+      {
+        "characterId": "coach_wilson",
+        "actorId": "hannibal_buress"
+      },
+      {
+        "characterId": "principal_morita",
+        "actorId": "kenneth_choi"
+      },
+      {
+        "characterId": "ms_warren",
+        "actorId": "selenis_leyva"
+      },
+      {
+        "characterId": "betty_brant",
+        "actorId": "angourie_rice"
+      },
+      {
+        "characterId": "mr_harrington",
+        "actorId": "martin_starr"
+      },
+      {
+        "characterId": "doris_toomes",
+        "actorId": "garcelle_beauvais"
+      },
+      {
+        "characterId": "phineas_mason",
+        "actorId": "michael_chernus"
+      },
+      {
+        "characterId": "mac_gargan",
+        "actorId": "michael_mando"
+      },
+      {
+        "characterId": "jackson_brice",
+        "actorId": "logan_marshall_green"
+      },
+      {
+        "characterId": "agent_foster",
+        "actorId": "gary_weeks"
+      },
+      {
+        "characterId": "randy",
+        "actorId": "christopher_berry"
+      },
+      {
+        "characterId": "jason",
+        "actorId": "jorge_lendeborg_jr"
+      },
+      {
+        "characterId": "mr_cobbwell",
+        "actorId": "tunde_adebimpe"
+      },
+      {
+        "characterId": "cindy",
+        "actorId": "tiffany_espensen"
+      },
+      {
+        "characterId": "sally",
+        "actorId": "isabella_amara"
+      },
+      {
+        "characterId": "charles",
+        "actorId": "michael_barbieri"
+      },
+      {
+        "characterId": "seymour",
+        "actorId": "josie_totah"
+      },
+      {
+        "characterId": "mr_delmar",
+        "actorId": "hemky_madera"
+      },
+      {
+        "characterId": "street_vendor",
+        "actorId": "zach_cherry"
+      },
+      {
+        "characterId": "punk_on_street",
+        "actorId": "kirk_r_thatcher"
+      },
+      {
+        "characterId": "car_jacker",
+        "actorId": "yu_lew"
+      },
+      {
+        "characterId": "yelling_woman",
+        "actorId": "sondra_james"
+      },
+      {
+        "characterId": "yelling_man",
+        "actorId": "bob_adrian"
+      },
+      {
+        "characterId": "day_sleeper",
+        "actorId": "gary_richardson"
+      },
+      {
+        "characterId": "gary",
+        "actorId": "stan_lee"
+      },
+      {
+        "characterId": "thai_waiter",
+        "actorId": "joe_hang"
+      },
+      {
+        "characterId": "history_teacher",
+        "actorId": "wayne_pere"
+      },
+      {
+        "characterId": "steve_rogers",
+        "actorId": "chris_evans"
+      },
+      {
+        "characterId": "tent_kid",
+        "actorId": "alexa_laraki"
+      },
+      {
+        "characterId": "tent_kid",
+        "actorId": "liza_fagin"
+      },
+      {
+        "characterId": "mr_hapgood",
+        "actorId": "john_penick"
+      },
+      {
+        "characterId": "tiny",
+        "actorId": "ethan_dizon"
+      },
+      {
+        "characterId": "decathlon_moderator",
+        "actorId": "amy_hill"
+      },
+      {
+        "characterId": "park_ranger",
+        "actorId": "miles_mussenden"
+      },
+      {
+        "characterId": "brooklyn_tour_guide",
+        "actorId": "martha_kelly"
+      },
+      {
+        "characterId": "helicopter_pilot",
+        "actorId": "kevin_larosa_jr"
+      },
+      {
+        "characterId": "ferry_kid",
+        "actorId": "ren_colley"
+      },
+      {
+        "characterId": "ferry_mom",
+        "actorId": "jennifer_kim"
+      },
+      {
+        "characterId": "ferry_commuter",
+        "actorId": "ari_groover"
+      },
+      {
+        "characterId": "ferry_commuter",
+        "actorId": "louis_gonzalez"
+      },
+      {
+        "characterId": "ferry_commuter",
+        "actorId": "stewart_steinberg"
+      },
+      {
+        "characterId": "ferry_commuter",
+        "actorId": "andy_powers"
+      },
+      {
+        "characterId": "yeah_spider_man_guy",
+        "actorId": "omar_capra"
+      },
+      {
+        "characterId": "dean_crimson",
+        "actorId": "nitin_nohria"
+      },
+      {
+        "characterId": "stark_tower_technician",
+        "actorId": "vince_foster"
+      },
+      {
+        "characterId": "stark_tower_employee",
+        "actorId": "brian_schaeffer"
+      },
+      {
+        "characterId": "nyc_pedestrian",
+        "actorId": "chris_adams"
+      },
+      {
+        "characterId": "indian_flower_girl",
+        "actorId": "maiya_boyd"
+      },
+      {
+        "characterId": "drama_club_member",
+        "actorId": "rebeca_donovan"
+      },
+      {
+        "characterId": "rabbi_on_subway",
+        "actorId": "elli"
+      },
+      {
+        "characterId": "mascot",
+        "actorId": "nickolas_wolf"
+      },
+      {
+        "characterId": "chemistry_student",
+        "actorId": "jaine_ye"
+      },
+      {
+        "characterId": "dc_tourist",
+        "actorId": "gina_cordan"
+      },
+      {
+        "characterId": "skateboarder",
+        "actorId": "friday_chamberlain"
+      },
+      {
+        "characterId": "homecoming_dance_student",
+        "actorId": "dante_brattelli"
+      },
+      {
+        "characterId": "new_yorker",
+        "actorId": "melissa_kay_glaze"
+      },
+      {
+        "characterId": "avenger_s_staff_agent",
+        "actorId": "donald_k_overstreet"
+      },
+      {
+        "characterId": "dc_news_reporter",
+        "actorId": "hallie_ricardo"
+      },
+      {
+        "characterId": "stark_vtol_pilot",
+        "actorId": "doug_scroggins_iii"
+      },
+      {
+        "characterId": "ny_pedestrian",
+        "actorId": "marmee_regine_cosico"
+      },
+      {
+        "characterId": "midtown_high_student",
+        "actorId": "harrison_osterfield"
+      },
+      {
+        "characterId": "helicopter_d_c_metro_sniper",
+        "actorId": "chris_silcox"
+      },
+      {
+        "characterId": "ned_s_dad",
+        "actorId": "clam_sepulveda"
+      },
+      {
+        "characterId": "vulture_weapons_tech",
+        "actorId": "wesley_kuykendoll"
+      },
+      {
+        "characterId": "flash_s_prom_date",
+        "actorId": "cassidy_alexandra_kahler"
+      },
+      {
+        "characterId": "inmate",
+        "actorId": "josh_turner"
+      }
+    ],
     "poster": "/posters/spider_man_homecoming.jpg",
     "imdbId": "tt2250912"
   },
@@ -710,8 +4273,8 @@
     "franchiseIndex": 1,
     "phase": "Phase Three",
     "releaseDate": "2019-03-08",
-    "loreStart": "1995-06",
-    "loreEnd": "1995-06",
+    "loreStart": "1995",
+    "loreEnd": "1995",
     "runtimeMinutes": 123,
     "synopsis": "Vers learns she was Air Force pilot Carol Danvers and ends the Kree-Skrull war she was fighting on the wrong side of.",
     "cast": [],
@@ -766,12 +4329,573 @@
     "franchiseIndex": 2,
     "phase": "Phase Three",
     "releaseDate": "2019-07-02",
-    "loreStart": "2024-06",
-    "loreEnd": "2024-07",
+    "loreStart": "2024",
+    "loreEnd": "2024",
     "loreNote": "Eight months after Endgame, in the summer after the Blip.",
     "runtimeMinutes": 129,
     "synopsis": "On a school trip through Europe, Peter hands Stark's glasses to a man who has been lying the whole time.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "peter_parker",
+        "actorId": "tom_holland"
+      },
+      {
+        "characterId": "quentin_beck",
+        "actorId": "jake_gyllenhaal"
+      },
+      {
+        "characterId": "nick_fury",
+        "actorId": "samuel_l_jackson"
+      },
+      {
+        "characterId": "may_parker",
+        "actorId": "marisa_tomei"
+      },
+      {
+        "characterId": "happy_hogan",
+        "actorId": "jon_favreau"
+      },
+      {
+        "characterId": "mj",
+        "actorId": "zendaya"
+      },
+      {
+        "characterId": "ned_leeds",
+        "actorId": "jacob_batalon"
+      },
+      {
+        "characterId": "flash_thompson",
+        "actorId": "tony_revolori"
+      },
+      {
+        "characterId": "betty_brant",
+        "actorId": "angourie_rice"
+      },
+      {
+        "characterId": "brad_davis",
+        "actorId": "remy_hii"
+      },
+      {
+        "characterId": "mr_harrington",
+        "actorId": "martin_starr"
+      },
+      {
+        "characterId": "mr_dell",
+        "actorId": "jb_smoove"
+      },
+      {
+        "characterId": "jason_ionello",
+        "actorId": "jorge_lendeborg_jr"
+      },
+      {
+        "characterId": "agent_maria_hill",
+        "actorId": "cobie_smulders"
+      },
+      {
+        "characterId": "dimitri",
+        "actorId": "numan_acar"
+      },
+      {
+        "characterId": "zach",
+        "actorId": "zach_barack"
+      },
+      {
+        "characterId": "zoha",
+        "actorId": "zoha_rahman"
+      },
+      {
+        "characterId": "yasmin",
+        "actorId": "yasmin_mwanza"
+      },
+      {
+        "characterId": "josh",
+        "actorId": "joshua_sinclair_evans"
+      },
+      {
+        "characterId": "tyler",
+        "actorId": "tyler_luke_cunningham"
+      },
+      {
+        "characterId": "sebastian",
+        "actorId": "sebastian_viveros"
+      },
+      {
+        "characterId": "the_seamstress",
+        "actorId": "toni_garrn"
+      },
+      {
+        "characterId": "william_ginter_riva",
+        "actorId": "peter_billingsley"
+      },
+      {
+        "characterId": "victoria",
+        "actorId": "clare_dunne"
+      },
+      {
+        "characterId": "guterman",
+        "actorId": "nicholas_gleaves"
+      },
+      {
+        "characterId": "janice",
+        "actorId": "claire_rushbrook"
+      },
+      {
+        "characterId": "j_jonah_jameson",
+        "actorId": "j_k_simmons"
+      },
+      {
+        "characterId": "dutch_soccer_hooligan",
+        "actorId": "jeroen_van_koningsbrugge"
+      },
+      {
+        "characterId": "dutch_soccer_hooligan",
+        "actorId": "michael_de_roos"
+      },
+      {
+        "characterId": "dutch_soccer_hooligan",
+        "actorId": "jan_paul_buijs"
+      },
+      {
+        "characterId": "venetian_glassblower",
+        "actorId": "sergio_pierattini"
+      },
+      {
+        "characterId": "queens_reporter",
+        "actorId": "anjana_vasan"
+      },
+      {
+        "characterId": "queens_reporter",
+        "actorId": "brian_law"
+      },
+      {
+        "characterId": "queens_reporter",
+        "actorId": "evelyn_mok"
+      },
+      {
+        "characterId": "italian_tv_newsreader",
+        "actorId": "tatiana_lunardon"
+      },
+      {
+        "characterId": "italian_customs_office",
+        "actorId": "giada_benedetti"
+      },
+      {
+        "characterId": "helpful_dutch_man",
+        "actorId": "lukas_bech"
+      },
+      {
+        "characterId": "italian_street_vendor",
+        "actorId": "alessandro_giuggioli"
+      },
+      {
+        "characterId": "opera_singer",
+        "actorId": "petr_opava"
+      },
+      {
+        "characterId": "caricaturist",
+        "actorId": "giuseppe_andriolo"
+      },
+      {
+        "characterId": "pat_kiernan",
+        "actorId": "pat_kiernan"
+      },
+      {
+        "characterId": "high_school_reporter",
+        "actorId": "shari_abdul"
+      },
+      {
+        "characterId": "tourist_in_venice",
+        "actorId": "mari_alexandrova"
+      },
+      {
+        "characterId": "police_officer",
+        "actorId": "kristen_alminta"
+      },
+      {
+        "characterId": "midtown_high_student",
+        "actorId": "vincent_angel"
+      },
+      {
+        "characterId": "airplane_pilot",
+        "actorId": "peter_arpesella"
+      },
+      {
+        "characterId": "salvation_army_guest",
+        "actorId": "lasco_atkins"
+      },
+      {
+        "characterId": "dutch_lady",
+        "actorId": "sitara_attaie"
+      },
+      {
+        "characterId": "mob_boss",
+        "actorId": "peter_bankole"
+      },
+      {
+        "characterId": "queens_reporter",
+        "actorId": "blair_barnette"
+      },
+      {
+        "characterId": "officer_bristow",
+        "actorId": "tuwaine_barrett"
+      },
+      {
+        "characterId": "shop_owner_in_venice",
+        "actorId": "anna_benamati"
+      },
+      {
+        "characterId": "mob_boss",
+        "actorId": "bruno_bilotta"
+      },
+      {
+        "characterId": "soren",
+        "actorId": "sharon_blynn"
+      },
+      {
+        "characterId": "italian_builder_in_venice",
+        "actorId": "luigi_boccanfuso"
+      },
+      {
+        "characterId": "poliziotto",
+        "actorId": "paolo_braghetto"
+      },
+      {
+        "characterId": "high_school_student",
+        "actorId": "dante_brattelli"
+      },
+      {
+        "characterId": "london_passerby",
+        "actorId": "graham_burton"
+      },
+      {
+        "characterId": "post_office_customer",
+        "actorId": "ken_byrd"
+      },
+      {
+        "characterId": "mob_boss",
+        "actorId": "sokol_cahani"
+      },
+      {
+        "characterId": "victoria_s_crew",
+        "actorId": "darren_lee_campbell"
+      },
+      {
+        "characterId": "austrian_backpacker",
+        "actorId": "helene_cardona"
+      },
+      {
+        "characterId": "american_reporter",
+        "actorId": "dian_cathal"
+      },
+      {
+        "characterId": "airport_traveler",
+        "actorId": "jake_cerny"
+      },
+      {
+        "characterId": "passport_clerk",
+        "actorId": "daphne_cheung"
+      },
+      {
+        "characterId": "high_school_student",
+        "actorId": "sam_chuck"
+      },
+      {
+        "characterId": "london_passerby",
+        "actorId": "victoria_coburn"
+      },
+      {
+        "characterId": "charity_event_mom",
+        "actorId": "kimberly_collison"
+      },
+      {
+        "characterId": "local_venetian",
+        "actorId": "tiziana_coste"
+      },
+      {
+        "characterId": "tourist",
+        "actorId": "jaylen_davis"
+      },
+      {
+        "characterId": "london_passerby",
+        "actorId": "kristianne_kaith_domingo"
+      },
+      {
+        "characterId": "courier",
+        "actorId": "andrew_dunkelberger"
+      },
+      {
+        "characterId": "mexican_survivor",
+        "actorId": "charlie_esquer"
+      },
+      {
+        "characterId": "tourist_in_venice",
+        "actorId": "ria_fend"
+      },
+      {
+        "characterId": "tourist_in_venice",
+        "actorId": "ferroz_fernandez"
+      },
+      {
+        "characterId": "venice_local",
+        "actorId": "vincent_frattini"
+      },
+      {
+        "characterId": "flight_attendant",
+        "actorId": "massi_furlan"
+      },
+      {
+        "characterId": "charity_dinner_guest",
+        "actorId": "cynthia_garbutt"
+      },
+      {
+        "characterId": "tourist_in_venice",
+        "actorId": "thomas_goodridge"
+      },
+      {
+        "characterId": "tourist",
+        "actorId": "sonia_goswami"
+      },
+      {
+        "characterId": "saved_londoner",
+        "actorId": "nicholle_hembra"
+      },
+      {
+        "characterId": "hotel_guest",
+        "actorId": "michael_hennessy"
+      },
+      {
+        "characterId": "pretty_tourist",
+        "actorId": "meagan_holder"
+      },
+      {
+        "characterId": "partygoer",
+        "actorId": "patrick_doran"
+      },
+      {
+        "characterId": "tourist",
+        "actorId": "ruth_clarson"
+      },
+      {
+        "characterId": "sneezy_tour_guide",
+        "actorId": "chris_hyacinthe"
+      },
+      {
+        "characterId": "airport_kid_traveler",
+        "actorId": "michael_iacono"
+      },
+      {
+        "characterId": "bar_customer",
+        "actorId": "roman_ibragimov"
+      },
+      {
+        "characterId": "tourist",
+        "actorId": "theo_ip"
+      },
+      {
+        "characterId": "high_school_student",
+        "actorId": "timothy_christian_jansen"
+      },
+      {
+        "characterId": "flight_attendant",
+        "actorId": "keon_kendrick"
+      },
+      {
+        "characterId": "midtown_high_school_student",
+        "actorId": "camille_kinloch"
+      },
+      {
+        "characterId": "czech_tv_news_anchor",
+        "actorId": "michal_kubal"
+      },
+      {
+        "characterId": "student",
+        "actorId": "hannah_kurczeski"
+      },
+      {
+        "characterId": "traffic_warden",
+        "actorId": "geraldine_lamarre"
+      },
+      {
+        "characterId": "mexican_villager",
+        "actorId": "jimena_larraguivel"
+      },
+      {
+        "characterId": "journalist",
+        "actorId": "rich_lawton"
+      },
+      {
+        "characterId": "czech_traditional_dancer",
+        "actorId": "kat_leroy"
+      },
+      {
+        "characterId": "saved_londoner",
+        "actorId": "gavin_lee_lewis"
+      },
+      {
+        "characterId": "airport_passenger",
+        "actorId": "patrick_loh"
+      },
+      {
+        "characterId": "mob_boss",
+        "actorId": "joseph_long"
+      },
+      {
+        "characterId": "berlin_commuter",
+        "actorId": "ketan_majmudar"
+      },
+      {
+        "characterId": "saved_londoner",
+        "actorId": "tony_mardon"
+      },
+      {
+        "characterId": "bellboy",
+        "actorId": "antonin_masek"
+      },
+      {
+        "characterId": "talos",
+        "actorId": "ben_mendelsohn"
+      },
+      {
+        "characterId": "london_passerby",
+        "actorId": "bradley_wj_miller"
+      },
+      {
+        "characterId": "tourist",
+        "actorId": "melissa_beth_miller"
+      },
+      {
+        "characterId": "mob_guy",
+        "actorId": "anthony_molinari"
+      },
+      {
+        "characterId": "venice_local",
+        "actorId": "adrian_mozzi"
+      },
+      {
+        "characterId": "police_officer",
+        "actorId": "brendan_murphy"
+      },
+      {
+        "characterId": "carnival_hot_girl",
+        "actorId": "amanda_musso"
+      },
+      {
+        "characterId": "italian_tourist",
+        "actorId": "emily_ng"
+      },
+      {
+        "characterId": "czech_guy",
+        "actorId": "daniel_olson"
+      },
+      {
+        "characterId": "british_station_staff",
+        "actorId": "hiten_patel"
+      },
+      {
+        "characterId": "gondolier",
+        "actorId": "luigi_petrazzuolo"
+      },
+      {
+        "characterId": "london_passerby",
+        "actorId": "aleksandrs_petukhovs"
+      },
+      {
+        "characterId": "pedestrian",
+        "actorId": "jivan_xander_ramesh"
+      },
+      {
+        "characterId": "london_passerby",
+        "actorId": "mike_ray"
+      },
+      {
+        "characterId": "high_school_student",
+        "actorId": "sofia_renee"
+      },
+      {
+        "characterId": "victoria_s_crew",
+        "actorId": "cailan_robinson"
+      },
+      {
+        "characterId": "tsa_agent",
+        "actorId": "ray_rosario"
+      },
+      {
+        "characterId": "dad_collecting_kids",
+        "actorId": "daniel_ryves"
+      },
+      {
+        "characterId": "party_goer",
+        "actorId": "maurice_sardison"
+      },
+      {
+        "characterId": "american_tourist",
+        "actorId": "karen_j_sear"
+      },
+      {
+        "characterId": "tourist_in_venice",
+        "actorId": "ilya_tank_shilov"
+      },
+      {
+        "characterId": "london_tourist",
+        "actorId": "davina_sitaram"
+      },
+      {
+        "characterId": "london_tourist",
+        "actorId": "joakim_skarli"
+      },
+      {
+        "characterId": "tourist",
+        "actorId": "lucas_antoine_starrets"
+      },
+      {
+        "characterId": "perfumed_lady",
+        "actorId": "faith_tarby"
+      },
+      {
+        "characterId": "tourist_in_venice",
+        "actorId": "emily_tebbutt"
+      },
+      {
+        "characterId": "tourist",
+        "actorId": "lesdy_vanessa"
+      },
+      {
+        "characterId": "student",
+        "actorId": "jessica_vanoss"
+      },
+      {
+        "characterId": "pawn_shop_owner",
+        "actorId": "joe_david_walters"
+      },
+      {
+        "characterId": "armed_security_officer",
+        "actorId": "jo_wheatley"
+      },
+      {
+        "characterId": "peter_s_art_classmate",
+        "actorId": "rocco_wu"
+      },
+      {
+        "characterId": "italian_boy",
+        "actorId": "aristou_meehan"
+      },
+      {
+        "characterId": "yearbook_student",
+        "actorId": "sean_coleman"
+      },
+      {
+        "characterId": "obadiah_stane",
+        "actorId": "jeff_bridges"
+      },
+      {
+        "characterId": "venice_fish_seller",
+        "actorId": "pierre_bergman"
+      },
+      {
+        "characterId": "traveler",
+        "actorId": "annie_pisapia"
+      }
+    ],
     "poster": "/posters/spider_man_far_from_home.jpg",
     "imdbId": "tt6320628"
   },
@@ -957,11 +5081,264 @@
     "franchiseIndex": 3,
     "phase": "Phase Four",
     "releaseDate": "2021-12-17",
-    "loreStart": "2024-11",
-    "loreEnd": "2024-12",
+    "loreStart": "2024",
+    "loreEnd": "2024",
     "runtimeMinutes": 148,
     "synopsis": "A botched forgetting spell pulls in villains from other universes, and ends with nobody remembering Peter Parker.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "peter_parker",
+        "actorId": "tom_holland"
+      },
+      {
+        "characterId": "mj",
+        "actorId": "zendaya"
+      },
+      {
+        "characterId": "doctor_strange",
+        "actorId": "benedict_cumberbatch"
+      },
+      {
+        "characterId": "ned_leeds",
+        "actorId": "jacob_batalon"
+      },
+      {
+        "characterId": "happy_hogan",
+        "actorId": "jon_favreau"
+      },
+      {
+        "characterId": "max_dillon",
+        "actorId": "jamie_foxx"
+      },
+      {
+        "characterId": "norman_osborn",
+        "actorId": "willem_dafoe"
+      },
+      {
+        "characterId": "dr_otto_octavius",
+        "actorId": "alfred_molina"
+      },
+      {
+        "characterId": "wong",
+        "actorId": "benedict_wong"
+      },
+      {
+        "characterId": "flash_thompson",
+        "actorId": "tony_revolori"
+      },
+      {
+        "characterId": "may_parker",
+        "actorId": "marisa_tomei"
+      },
+      {
+        "characterId": "peter_parker",
+        "actorId": "andrew_garfield"
+      },
+      {
+        "characterId": "peter_parker",
+        "actorId": "tobey_maguire"
+      },
+      {
+        "characterId": "betty_brant",
+        "actorId": "angourie_rice"
+      },
+      {
+        "characterId": "agent_cleary",
+        "actorId": "arian_moayed"
+      },
+      {
+        "characterId": "mit_assistant_vice_chancellor",
+        "actorId": "paula_newsome"
+      },
+      {
+        "characterId": "coach_wilson",
+        "actorId": "hannibal_buress"
+      },
+      {
+        "characterId": "mr_harrington",
+        "actorId": "martin_starr"
+      },
+      {
+        "characterId": "mr_dell",
+        "actorId": "jb_smoove"
+      },
+      {
+        "characterId": "j_jonah_jameson",
+        "actorId": "j_k_simmons"
+      },
+      {
+        "characterId": "dr_curt_connors",
+        "actorId": "rhys_ifans"
+      },
+      {
+        "characterId": "matt_murdock",
+        "actorId": "charlie_cox"
+      },
+      {
+        "characterId": "flint_marko",
+        "actorId": "thomas_haden_church"
+      },
+      {
+        "characterId": "apprentice",
+        "actorId": "haroon_khan"
+      },
+      {
+        "characterId": "apprentice",
+        "actorId": "emily_fong"
+      },
+      {
+        "characterId": "ned_s_lola",
+        "actorId": "mary_rivera"
+      },
+      {
+        "characterId": "arena_bystander",
+        "actorId": "rudy_eisenzopf"
+      },
+      {
+        "characterId": "arena_bystander",
+        "actorId": "kathleen_cardoso"
+      },
+      {
+        "characterId": "arena_bystander",
+        "actorId": "jonathan_sam"
+      },
+      {
+        "characterId": "dad_in_car",
+        "actorId": "andrew_dunlap"
+      },
+      {
+        "characterId": "mom_in_car",
+        "actorId": "zany_dunlap"
+      },
+      {
+        "characterId": "kid_in_car",
+        "actorId": "b_clutch_dunlap"
+      },
+      {
+        "characterId": "kid_in_car",
+        "actorId": "minnah_dunlap"
+      },
+      {
+        "characterId": "man_in_car",
+        "actorId": "ben_vandermey"
+      },
+      {
+        "characterId": "agent_foster",
+        "actorId": "gary_weeks"
+      },
+      {
+        "characterId": "donut_shop_boss",
+        "actorId": "gregory_konow"
+      },
+      {
+        "characterId": "donut_shop_waitress",
+        "actorId": "carol_anne_dines"
+      },
+      {
+        "characterId": "school_security_guard",
+        "actorId": "anisa_nyell_johnson"
+      },
+      {
+        "characterId": "may_s_neighbor",
+        "actorId": "willie_d_burton"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "mallory_hoff"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "greg_clarkson"
+      },
+      {
+        "characterId": "reporter",
+        "actorId": "regina_ting_chen"
+      },
+      {
+        "characterId": "daily_bugle_lackey",
+        "actorId": "robert_mitchel_owenby"
+      },
+      {
+        "characterId": "british_reporter",
+        "actorId": "glenn_keogh"
+      },
+      {
+        "characterId": "british_anchor",
+        "actorId": "paris_benjamin"
+      },
+      {
+        "characterId": "damage_control_agent",
+        "actorId": "jwaundace_candece"
+      },
+      {
+        "characterId": "protestor",
+        "actorId": "taylor_st_clair"
+      },
+      {
+        "characterId": "crowd_member",
+        "actorId": "rolando_fernandez"
+      },
+      {
+        "characterId": "crowd_member",
+        "actorId": "gabriella_cila"
+      },
+      {
+        "characterId": "crowd_member",
+        "actorId": "darnell_appling"
+      },
+      {
+        "characterId": "donut_shop_patron",
+        "actorId": "edward_force"
+      },
+      {
+        "characterId": "guy_with_phone",
+        "actorId": "michael_le"
+      },
+      {
+        "characterId": "ny1_reporter",
+        "actorId": "dean_meminger"
+      },
+      {
+        "characterId": "fred_the_janitor",
+        "actorId": "frederick_a_brown"
+      },
+      {
+        "characterId": "female_bartender",
+        "actorId": "cristo_fernandez"
+      },
+      {
+        "characterId": "eddie_brock",
+        "actorId": "tom_hardy"
+      },
+      {
+        "characterId": "bodega_customer",
+        "actorId": "jay_karales"
+      },
+      {
+        "characterId": "shaker_kid",
+        "actorId": "harry_holland"
+      },
+      {
+        "characterId": "paparazzi",
+        "actorId": "john_m_maiers"
+      },
+      {
+        "characterId": "protestor",
+        "actorId": "robert_tinsley"
+      },
+      {
+        "characterId": "student",
+        "actorId": "cole_failing"
+      },
+      {
+        "characterId": "daily_bugle_producer",
+        "actorId": "justin_east"
+      },
+      {
+        "characterId": "quentin_beck",
+        "actorId": "jake_gyllenhaal"
+      }
+    ],
     "poster": "/posters/spider_man_no_way_home.jpg",
     "imdbId": "tt10872600"
   },
@@ -1526,7 +5903,236 @@
     "loreNote": "Set roughly four years after No Way Home, in a New York that no longer remembers Peter Parker.",
     "runtimeMinutes": 145,
     "synopsis": "Erased from everyone who loved him, Peter works the city full_time as Spider-Man — until his own body starts changing.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "peter_parker",
+        "actorId": "tom_holland"
+      },
+      {
+        "characterId": "mj",
+        "actorId": "zendaya"
+      },
+      {
+        "characterId": "bruce_banner",
+        "actorId": "mark_ruffalo"
+      },
+      {
+        "characterId": "frank_castle",
+        "actorId": "jon_bernthal"
+      },
+      {
+        "characterId": "ned_leeds",
+        "actorId": "jacob_batalon"
+      },
+      {
+        "characterId": "jean_grey",
+        "actorId": "sadie_sink"
+      },
+      {
+        "characterId": "yelena_belova",
+        "actorId": "florence_pugh"
+      },
+      {
+        "characterId": "detective_jean_dewolff",
+        "actorId": "liza_colon_zayas"
+      },
+      {
+        "characterId": "william_bill_metzger",
+        "actorId": "tramell_tillman"
+      },
+      {
+        "characterId": "may_parker",
+        "actorId": "marisa_tomei"
+      },
+      {
+        "characterId": "mac_gargan",
+        "actorId": "michael_mando"
+      },
+      {
+        "characterId": "tombstone",
+        "actorId": "marvin_jones_iii"
+      },
+      {
+        "characterId": "sara_grey",
+        "actorId": "olivia_booth_ford"
+      },
+      {
+        "characterId": "apartment_girl",
+        "actorId": "taryn_marie_butler"
+      },
+      {
+        "characterId": "building_manager",
+        "actorId": "johnny_myers"
+      },
+      {
+        "characterId": "ramrod",
+        "actorId": "billy_clements"
+      },
+      {
+        "characterId": "sheila_rivera",
+        "actorId": "zabryna_guevara"
+      },
+      {
+        "characterId": "marley",
+        "actorId": "nina_rose_galano"
+      },
+      {
+        "characterId": "ej",
+        "actorId": "maikol_roque"
+      },
+      {
+        "characterId": "nyc_street_driver",
+        "actorId": "jamel_davall_rodriguez"
+      },
+      {
+        "characterId": "scooter_kid",
+        "actorId": "ethan_sokontwe"
+      },
+      {
+        "characterId": "tour_bus_guide",
+        "actorId": "tariye_peterside"
+      },
+      {
+        "characterId": "dodc_escort_guard",
+        "actorId": "phoenix_di_sebastiani"
+      },
+      {
+        "characterId": "female_janitor",
+        "actorId": "vivien_keene"
+      },
+      {
+        "characterId": "dodc_box_guard",
+        "actorId": "kurtis_lowe"
+      },
+      {
+        "characterId": "dodc_box_agent",
+        "actorId": "marc_small"
+      },
+      {
+        "characterId": "warehouse_worker",
+        "actorId": "david_hepple"
+      },
+      {
+        "characterId": "dodc_crew_chief",
+        "actorId": "jamaal_burcher"
+      },
+      {
+        "characterId": "bathhouse_attendant",
+        "actorId": "lieve_carchon"
+      },
+      {
+        "characterId": "female_dodc_guard",
+        "actorId": "mary_stillwaggon_stewart"
+      },
+      {
+        "characterId": "dodc_weapons_tech",
+        "actorId": "luka_hays"
+      },
+      {
+        "characterId": "bodega_clerk",
+        "actorId": "camila_lopez"
+      },
+      {
+        "characterId": "partygoer",
+        "actorId": "robert_veng"
+      },
+      {
+        "characterId": "partygoer",
+        "actorId": "aoife_haakenson"
+      },
+      {
+        "characterId": "partygoer",
+        "actorId": "gabriel_blaikie"
+      },
+      {
+        "characterId": "the_boyfriend",
+        "actorId": "eman_esfandi"
+      },
+      {
+        "characterId": "building_tenant",
+        "actorId": "shing_moussa_chung"
+      },
+      {
+        "characterId": "apartment_girl_boyfriend",
+        "actorId": "akil_young"
+      },
+      {
+        "characterId": "dodc_substation_guard",
+        "actorId": "benedict_cezair_thompson"
+      },
+      {
+        "characterId": "cindy",
+        "actorId": "shannon_young_cho"
+      },
+      {
+        "characterId": "david",
+        "actorId": "niyi_akin"
+      },
+      {
+        "characterId": "businessman",
+        "actorId": "carlos_agualusa"
+      },
+      {
+        "characterId": "street_woman",
+        "actorId": "shelley_williams"
+      },
+      {
+        "characterId": "street_worker",
+        "actorId": "jud_charlton"
+      },
+      {
+        "characterId": "balcony_guy",
+        "actorId": "john_moraitis"
+      },
+      {
+        "characterId": "balcony_girl",
+        "actorId": "beatriz_do_o"
+      },
+      {
+        "characterId": "lucy",
+        "actorId": "daisy_sequerra"
+      },
+      {
+        "characterId": "john",
+        "actorId": "nezar_alderazi"
+      },
+      {
+        "characterId": "cater_waiter",
+        "actorId": "daniel_kabanda"
+      },
+      {
+        "characterId": "marriage_heli_pilot",
+        "actorId": "michael_magnet"
+      },
+      {
+        "characterId": "night_driver",
+        "actorId": "simon_schatzberger"
+      },
+      {
+        "characterId": "dodc_weapons_tech",
+        "actorId": "sean_carrington"
+      },
+      {
+        "characterId": "dodc_prison_yard_guard",
+        "actorId": "anthony_nyro"
+      },
+      {
+        "characterId": "dodc_containment_guard",
+        "actorId": "michael_amariah"
+      },
+      {
+        "characterId": "snow",
+        "actorId": "fan_xiaoshuang"
+      },
+      {
+        "characterId": "web_kid",
+        "actorId": "elvis_carlos"
+      },
+      {
+        "characterId": "pat_kiernan",
+        "actorId": "pat_kiernan"
+      }
+    ],
     "poster": "/posters/spider_man_brand_new_day.jpg",
     "imdbId": "tt22084616"
   },
@@ -1558,9 +6164,145 @@
     "franchiseIndex": 5,
     "phase": "Phase Six",
     "releaseDate": "2026-12-18",
+    "runtimeMinutes": "165",
+    "loreStart": "2028",
+    "loreEnd": "2028",
     "loreNote": "Announced — where it sits in the lore has not been revealed.",
     "synopsis": "Doctor Doom moves against a scattered Earth, and the survivors of several universes are pulled into one fight.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "victor_von_doom",
+        "actorId": "robert_downey_jr"
+      },
+      {
+        "characterId": "steve_rogers",
+        "actorId": "chris_evans"
+      },
+      {
+        "characterId": "thor",
+        "actorId": "chris_hemsworth"
+      },
+      {
+        "characterId": "reed_richards",
+        "actorId": "pedro_pascal"
+      },
+      {
+        "characterId": "scott_lang",
+        "actorId": "paul_rudd"
+      },
+      {
+        "characterId": "sam_wilson",
+        "actorId": "anthony_mackie"
+      },
+      {
+        "characterId": "yelena_belova",
+        "actorId": "florence_pugh"
+      },
+      {
+        "characterId": "sue_storm",
+        "actorId": "vanessa_kirby"
+      },
+      {
+        "characterId": "ben_grimm",
+        "actorId": "ebon_moss_bachrach"
+      },
+      {
+        "characterId": "john_walker",
+        "actorId": "wyatt_russell"
+      },
+      {
+        "characterId": "gambit",
+        "actorId": "channing_tatum"
+      },
+      {
+        "characterId": "shaun",
+        "actorId": "simu_liu"
+      },
+      {
+        "characterId": "magneto",
+        "actorId": "ian_mckellen"
+      },
+      {
+        "characterId": "peggy_carter",
+        "actorId": "hayley_atwell"
+      },
+      {
+        "characterId": "loki",
+        "actorId": "tom_hiddleston"
+      },
+      {
+        "characterId": "scott_summers",
+        "actorId": "james_marsden"
+      },
+      {
+        "characterId": "professor_charles_xavier",
+        "actorId": "patrick_stewart"
+      },
+      {
+        "characterId": "johnny_storm",
+        "actorId": "joseph_quinn"
+      },
+      {
+        "characterId": "bucky_barnes",
+        "actorId": "sebastian_stan"
+      },
+      {
+        "characterId": "alexei_shostakov",
+        "actorId": "david_harbour"
+      },
+      {
+        "characterId": "shuri",
+        "actorId": "letitia_wright"
+      },
+      {
+        "characterId": "robert_reynolds",
+        "actorId": "lewis_pullman"
+      },
+      {
+        "characterId": "dr_henry_hank_mccoy",
+        "actorId": "kelsey_grammer"
+      },
+      {
+        "characterId": "cassie_lang",
+        "actorId": "kathryn_newton"
+      },
+      {
+        "characterId": "joaquin_torres",
+        "actorId": "danny_ramirez"
+      },
+      {
+        "characterId": "m_baku",
+        "actorId": "winston_duke"
+      },
+      {
+        "characterId": "kurt_wagner",
+        "actorId": "alan_cumming"
+      },
+      {
+        "characterId": "ava_starr",
+        "actorId": "hannah_john_kamen"
+      },
+      {
+        "characterId": "raven_darkholme",
+        "actorId": "rebecca_romijn"
+      },
+      {
+        "characterId": "namora",
+        "actorId": "mabel_cadena"
+      },
+      {
+        "characterId": "namor",
+        "actorId": "tenoch_huerta_mejia"
+      },
+      {
+        "characterId": "attuma",
+        "actorId": "alex_livinalli"
+      },
+      {
+        "characterId": "gorr_s_daughter",
+        "actorId": "india_rose_hemsworth"
+      }
+    ],
     "poster": "/posters/avengers_doomsday.jpg",
     "imdbId": "tt21357150"
   },
@@ -1609,7 +6351,76 @@
     "releaseDate": "2027-12-17",
     "loreNote": "Announced — billed as the end of the Multiverse Saga.",
     "synopsis": "The closing chapter of the Multiverse Saga.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "victor_von_doom",
+        "actorId": "robert_downey_jr"
+      },
+      {
+        "characterId": "reed_richards",
+        "actorId": "pedro_pascal"
+      },
+      {
+        "characterId": "sue_storm",
+        "actorId": "vanessa_kirby"
+      },
+      {
+        "characterId": "ben_grimm",
+        "actorId": "ebon_moss_bachrach"
+      },
+      {
+        "characterId": "johnny_storm",
+        "actorId": "joseph_quinn"
+      },
+      {
+        "characterId": "bucky_barnes",
+        "actorId": "sebastian_stan"
+      },
+      {
+        "characterId": "yelena_belova",
+        "actorId": "florence_pugh"
+      },
+      {
+        "characterId": "alexei_shostakov",
+        "actorId": "david_harbour"
+      },
+      {
+        "characterId": "john_walker",
+        "actorId": "wyatt_russell"
+      },
+      {
+        "characterId": "ava_starr",
+        "actorId": "hannah_john_kamen"
+      },
+      {
+        "characterId": "valentina_allegra_de_fontaine",
+        "actorId": "julia_louis_dreyfus"
+      },
+      {
+        "characterId": "sam_wilson",
+        "actorId": "anthony_mackie"
+      },
+      {
+        "characterId": "jean_grey",
+        "actorId": "sadie_sink"
+      },
+      {
+        "characterId": "thor",
+        "actorId": "chris_hemsworth"
+      },
+      {
+        "characterId": "bruce_banner",
+        "actorId": "mark_ruffalo"
+      },
+      {
+        "characterId": "shuri",
+        "actorId": "letitia_wright"
+      },
+      {
+        "characterId": "steve_rogers",
+        "actorId": "chris_evans"
+      }
+    ],
     "poster": "/posters/avengers_secret_wars.jpg",
     "imdbId": "tt21361444"
   },
@@ -1625,7 +6436,36 @@
     "releaseDate": "2028-05-05",
     "loreNote": "Announced — Marvel Studios' own X-Men, unconnected to the Fox films above.",
     "synopsis": "The X-Men, rebooted inside the Marvel Studios timeline.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "jean_grey",
+        "actorId": "sadie_sink"
+      },
+      {
+        "characterId": "scott_summers",
+        "actorId": "kit_connor"
+      },
+      {
+        "characterId": "professor_charles_xavier",
+        "actorId": "christopher_abbott"
+      },
+      {
+        "characterId": "emma_frost",
+        "actorId": "samara_weaving"
+      },
+      {
+        "characterId": "rogue",
+        "actorId": "inde_navarrette"
+      },
+      {
+        "characterId": "nathaniel_milbury",
+        "actorId": "adam_driver"
+      },
+      {
+        "characterId": "storm",
+        "actorId": "maya_boyd"
+      }
+    ],
     "poster": "/posters/x_men_2028.jpg",
     "imdbId": "tt29347085"
   },
@@ -1641,7 +6481,12 @@
     "releaseDate": "2028-07-28",
     "loreNote": "Announced — no plot details released.",
     "synopsis": "The Spirit of Vengeance joins the Marvel Studios timeline.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "johnny_blaze",
+        "actorId": "ryan_gosling"
+      }
+    ],
     "poster": "/posters/ghost_rider.jpg",
     "imdbId": "tt43711959"
   },
@@ -1657,8 +6502,56 @@
     "releaseDate": "2028-12-15",
     "loreNote": "Announced — no plot details released.",
     "synopsis": "Ryan Coogler returns for a third trip to Wakanda.",
-    "cast": [],
+    "cast": [
+      {
+        "characterId": "t_challa",
+        "actorId": "david_jonsson"
+      },
+      {
+        "characterId": "shuri",
+        "actorId": "letitia_wright"
+      },
+      {
+        "characterId": "m_baku",
+        "actorId": "winston_duke"
+      }
+    ],
     "poster": "/posters/black_panther_iii.jpg",
     "imdbId": "tt37884905"
+  },
+  {
+    "id": "untitled_shang_chi_and_the_legend_of_the_ten_rings_sequel",
+    "title": "Untitled Shang_Chi and the Legend of the Ten Rings Sequel",
+    "type": "movie",
+    "studio": "Marvel Studios",
+    "universe": "Earth_616 (Sacred Timeline)",
+    "franchiseId": "shang_chi",
+    "franchiseIndex": 2,
+    "phase": "Phase Seven",
+    "cast": [
+      {
+        "characterId": "shaun",
+        "actorId": "simu_liu"
+      }
+    ],
+    "synopsis": "The sequel to the 2021 film set in the Marvel Cinematic Universe (MCU) based on the Marvel comics. Plot TBA.",
+    "poster": "/posters/untitled_shang_chi_and_the_legend_of_the_ten_rings_sequel.jpg",
+    "imdbId": "tt16357306",
+    "tmdbId": 1737233
+  },
+  {
+    "id": "nova",
+    "title": "Nova",
+    "type": "movie",
+    "studio": "Marvel Studios",
+    "universe": "Earth_616 (Sacred Timeline)",
+    "franchiseId": "nova",
+    "franchiseIndex": 1,
+    "phase": "Phase One",
+    "cast": [],
+    "synopsis": "A film set in the Marvel Cinematic Universe (MCU) based on the Marvel Comics character. Plot TBA.",
+    "poster": null,
+    "imdbId": "tt19037048",
+    "tmdbId": 1731190
   }
 ]

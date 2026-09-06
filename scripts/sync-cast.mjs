@@ -154,7 +154,7 @@ function inOrder(credits) {
   return credits.sort(
     (one, two) =>
       (one.order ?? Number.MAX_SAFE_INTEGER) -
-        (two.order ?? Number.MAX_SAFE_INTEGER) || two.episodes - one.episodes,
+      (two.order ?? Number.MAX_SAFE_INTEGER) || two.episodes - one.episodes,
   );
 }
 
@@ -263,7 +263,7 @@ function byTokens(name, credit, title) {
   if (matches.length > 1)
     ambiguous.push(
       `${title.id}: "${credit.character}" (${credit.name}) — could be ` +
-        matches.map((character) => character.id).join(" or "),
+      matches.map((character) => character.id).join(" or "),
     );
   return matches.length > 1 ? null : undefined;
 }
@@ -409,6 +409,13 @@ for (const [index, title] of targets.entries()) {
     if (kept >= limit) break;
     if (title.type === "series" && credit.episodes < minEpisodes) continue;
 
+    if (/\([^)]*\bvoice\b[^)]*\)/i.test(credit.character)) continue;
+    if (
+      /\([^)]*\bvoice\b[^)]*\)/i.test(credit.character) ||
+      /^\s*voice of\b/i.test(credit.character)
+    )
+      continue;
+
     const part = parsePart(credit.character);
     if (!part) continue;
     if (part.uncredited && !withUncredited) continue;
@@ -434,7 +441,7 @@ for (const [index, title] of targets.entries()) {
 
   console.log(
     `↓ ${label} — ${kept} credits (${found.how}): ` +
-      `+${addedCharacters} characters, +${addedActors} actors, +${addedCredits} credits`,
+    `+${addedCharacters} characters, +${addedActors} actors, +${addedCredits} credits`,
   );
 }
 
@@ -477,7 +484,8 @@ function renderCast(cast, trailing) {
 }
 
 function patch(raw, lists) {
-  const lines = raw.split("\n");
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  const lines = raw.split(eol);
   const out = [];
   let current = null;
 
@@ -504,7 +512,7 @@ function patch(raw, lists) {
     out.push(renderCast(lists.get(current), trailing));
   }
 
-  return out.join("\n");
+  return out.join(eol);
 }
 
 if (!dryRun) {
@@ -523,9 +531,9 @@ console.log(
   [
     "",
     `done — ${stats.titles} entries updated, ` +
-      `+${characters.length - stats.characters} characters (${characters.length} total), ` +
-      `+${actors.length - stats.actors} actors (${actors.length} total), ` +
-      `+${stats.credits} credits`,
+    `+${characters.length - stats.characters} characters (${characters.length} total), ` +
+    `+${actors.length - stats.actors} actors (${actors.length} total), ` +
+    `+${stats.credits} credits`,
     dryRun ? "(--dry-run: nothing written)" : "",
     ambiguous.length
       ? "\nskipped — the codename alone does not say who this is:"

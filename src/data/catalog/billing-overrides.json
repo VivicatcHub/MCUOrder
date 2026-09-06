@@ -1,1 +1,252 @@
-[]
+[
+    {
+        "subject": "actor",
+        "id": "stan_lee",
+        "weight": "principal"
+    },
+    {
+        "subject": "actor",
+        "id": "samuel_l_jackson",
+        "weight": "principal"
+    },
+    {
+        "subject": "actor",
+        "id": "martin_starr",
+        "weight": "principal"
+    },
+    {
+        "subject": "actor",
+        "id": "robert_downey_jr",
+        "weight": "principal"
+    },
+    {
+        "subject": "actor",
+        "id": "chris_evans",
+        "weight": "principal"
+    },
+    {
+        "subject": "actor",
+        "id": "sean_gunn",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "william_ginter_riva",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "jean_grey",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "rocket",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "groot",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "thanos",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "obadiah_stane",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "dr_curt_connors",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "matt_murdock",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "eddie_brock",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "magneto",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "scott_summers",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "professor_charles_xavier",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "johnny_storm",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "alexei_shostakov",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "shuri",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "robert_reynolds",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "dr_henry_hank_mccoy",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "cassie_lang",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "joaquin_torres",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "m_baku",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "kurt_wagner",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "taneleer_tivan",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "ava_starr",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "raven_darkholme",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "sara_grey",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "j_jonah_jameson",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "quentin_beck",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "flint_marko",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "sif",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "frigga",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "clint_barton",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "howard_stark",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "happy_hogan",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "peter_parker",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "ho_yinsen",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "darcy_lewis",
+        "weight": "principal"
+    },
+    {
+        "subject": "character",
+        "id": "commando",
+        "weight": "secondary"
+    },
+    {
+        "subject": "character",
+        "id": "helicopter_soldier",
+        "weight": "secondary"
+    },
+    {
+        "subject": "character",
+        "id": "reporter",
+        "weight": "secondary"
+    },
+    {
+        "subject": "character",
+        "id": "soldier",
+        "weight": "secondary"
+    },
+    {
+        "subject": "character",
+        "id": "guard",
+        "weight": "secondary"
+    },
+    {
+        "subject": "character",
+        "id": "shield_agent",
+        "weight": "secondary"
+    },
+    {
+        "subject": "character",
+        "id": "student",
+        "weight": "secondary"
+    },
+    {
+        "subject": "character",
+        "id": "pedestrian",
+        "weight": "secondary"
+    }
+]

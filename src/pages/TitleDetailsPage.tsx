@@ -185,7 +185,7 @@ export function TitleDetailsPage() {
           />
           <Fact
             label={title.episodes ? "Episodes" : "Duration"}
-            value={formatRuntime(title)}
+            value={title.runtimeMinutes ? formatRuntime(title) : null}
           />
           <Fact
             label={title.episodes ? "Total runtime" : "Universe"}

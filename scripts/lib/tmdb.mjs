@@ -22,8 +22,8 @@ export function requireCredentials() {
   if (token || key) return;
   console.error(
     "Set TMDB_API_KEY (v3 key) or TMDB_ACCESS_TOKEN (v4 read token) first —\n" +
-      "in the environment or in .env at the repo root.\n" +
-      "Both live at https://www.themoviedb.org/settings/api",
+    "in the environment or in .env at the repo root.\n" +
+    "Both live at https://www.themoviedb.org/settings/api",
   );
   process.exit(1);
 }
@@ -122,10 +122,11 @@ export function writeJson(path, value) {
 }
 
 export function entryBlock(value) {
+  const eol = JSON.stringify(value, null, 2).includes("\r\n") ? "\r\n" : "\n";
   return JSON.stringify(value, null, 2)
-    .split("\n")
+    .split(eol)
     .map((line) => `  ${line}`)
-    .join("\n");
+    .join(eol);
 }
 
 export function parseArgs(argv, valueOptions = []) {

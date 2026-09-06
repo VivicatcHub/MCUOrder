@@ -1,15 +1,11 @@
 {
-  "characters": {},
-  "skip": [
-    "party guest",
-    "partygoer",
-    "reveler",
-    "onlooker",
-    "bystander",
-    "pedestrian",
-    "commuter",
-    "wedding guest",
-    "dancer",
-    "stunt double"
-  ]
+  "characters": {
+    "rhodey": "james_rhodes",
+    "lt_col_james_rhodey_rhodes": "james_rhodes",
+    "hogan": "happy_hogan",
+    "james_buchanan_bucky_barnes": "bucky_barnes",
+    "sara": "sara_grey",
+    "on_set_groot": "groot"
+  },
+  "skip": []
 }
