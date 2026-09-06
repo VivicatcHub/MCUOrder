@@ -1,51 +1,25 @@
 [
   {
-    "filmId": "the_avengers",
-    "label": "Road to The Avengers",
-    "description": "Films you need to watch to understand The Avengers",
+    "filmId": "avengers_doomsday",
+    "label": "Road to Avengers Doomsday",
+    "description": "Films you need to watch to understand Avengers Doomsday",
     "prerequisites": [
-      "iron_man",
-      "the_incredible_hulk",
-      "iron_man_2",
-      "thor",
-      "captain_america_the_first_avenger"
-    ]
-  },
-  {
-    "filmId": "avengers_age_of_ultron",
-    "label": "Road to Age of Ultron",
-    "description": "Films you need to watch to understand Avengers: Age of Ultron",
-    "prerequisites": [
-      "iron_man",
-      "the_incredible_hulk",
-      "iron_man_2",
-      "thor",
-      "captain_america_the_first_avenger",
-      "the_avengers"
-    ]
-  },
-  {
-    "filmId": "avengers_infinity_war",
-    "label": "Road to Infinity War",
-    "description": "Films you need to watch to understand Avengers: Infinity War",
-    "prerequisites": [
-      "iron_man",
-      "the_incredible_hulk",
-      "iron_man_2",
-      "thor",
+      "x_men",
+      "x2",
       "captain_america_the_first_avenger",
       "the_avengers",
-      "iron_man_3",
-      "thor_the_dark_world",
-      "captain_america_the_winter_soldier",
-      "guardians_of_the_galaxy",
-      "avengers_age_of_ultron",
-      "ant_man",
-      "captain_america_civil_war",
-      "doctor_strange",
-      "spider_man_homecoming",
-      "thor_ragnarok",
-      "black_panther"
+      "avengers_infinity_war",
+      "avengers_endgame",
+      "loki_season_1",
+      "shang_chi",
+      "spider_man_no_way_home",
+      "doctor_strange_in_the_multiverse_of_madness",
+      "black_panther_wakanda_forever",
+      "loki_season_2",
+      "deadpool_and_wolverine",
+      "captain_america_brave_new_world",
+      "thunderbolts",
+      "the_fantastic_four_first_steps"
     ]
   }
 ]
