@@ -3,8 +3,8 @@
   { "subject": "actor", "id": "samuel_l_jackson", "weight": "principal" },
   { "subject": "actor", "id": "martin_starr", "weight": "principal" },
   { "subject": "actor", "id": "robert_downey_jr", "weight": "principal" },
-  { "subject": "actor", "id": "chris_evans", "weight": "principal" },
   { "subject": "actor", "id": "sean_gunn", "weight": "principal" },
+  { "subject": "actor", "id": "evan_peters", "weight": "principal" },
   {
     "subject": "character",
     "id": "william_ginter_riva",
@@ -48,6 +48,9 @@
   { "subject": "character", "id": "sif", "weight": "principal" },
   { "subject": "character", "id": "frigga", "weight": "principal" },
   { "subject": "character", "id": "clint_barton", "weight": "principal" },
+  { "subject": "character", "id": "billy_maximoff", "weight": "principal" },
+  { "subject": "character", "id": "tommy_maximoff", "weight": "principal" },
+  { "subject": "character", "id": "clint_barton", "weight": "principal" },
   { "subject": "character", "id": "howard_stark", "weight": "principal" },
   { "subject": "character", "id": "happy_hogan", "weight": "principal" },
   { "subject": "character", "id": "peter_parker", "weight": "principal" },
@@ -60,5 +63,16 @@
   { "subject": "character", "id": "guard", "weight": "secondary" },
   { "subject": "character", "id": "shield_agent", "weight": "secondary" },
   { "subject": "character", "id": "student", "weight": "secondary" },
-  { "subject": "character", "id": "pedestrian", "weight": "secondary" }
+  { "subject": "character", "id": "pedestrian", "weight": "secondary" },
+  { "subject": "character", "id": "doctor", "weight": "secondary" },
+  { "subject": "character", "id": "nurse", "weight": "secondary" },
+  { "subject": "character", "id": "security_guard", "weight": "secondary" },
+  {
+    "subject": "character",
+    "id": "doctor_stan_nielson",
+    "weight": "secondary"
+  },
+  { "subject": "character", "id": "mrs_nielson", "weight": "secondary" },
+  { "subject": "character", "id": "dr_highland", "weight": "secondary" },
+  { "subject": "character", "id": "tap_dancer", "weight": "secondary" }
 ]
