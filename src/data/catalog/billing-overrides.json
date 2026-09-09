@@ -35,6 +35,7 @@
     "weight": "principal"
   },
   { "subject": "character", "id": "cassie_lang", "weight": "principal" },
+  { "subject": "character", "id": "janet_van_dyne", "weight": "principal" },
   { "subject": "character", "id": "joaquin_torres", "weight": "principal" },
   { "subject": "character", "id": "m_baku", "weight": "principal" },
   { "subject": "character", "id": "kurt_wagner", "weight": "principal" },
@@ -74,5 +75,8 @@
   },
   { "subject": "character", "id": "mrs_nielson", "weight": "secondary" },
   { "subject": "character", "id": "dr_highland", "weight": "secondary" },
+  { "subject": "character", "id": "lead_emt", "weight": "secondary" },
+  { "subject": "character", "id": "helicopter_pilot", "weight": "secondary" },
+  { "subject": "character", "id": "prisoner", "weight": "secondary" },
   { "subject": "character", "id": "tap_dancer", "weight": "secondary" }
 ]
