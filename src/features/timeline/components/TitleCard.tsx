@@ -65,7 +65,9 @@ export const TitleCard = memo(function TitleCard({
               ? title.episodes
                 ? `${title.episodes} ep.`
                 : "Series"
-              : "Movie"}
+              : title.type === "movie"
+                ? "Movie"
+                : "One-Shot"}
           </span>
           {upcoming && (
             <span

@@ -44,7 +44,7 @@ export function ValuePicker({
     const normalized = query.trim().toLowerCase();
     if (!normalized) return options;
     return options.filter((option) =>
-      option.toLowerCase().includes(normalized),
+      (option ?? "").toLowerCase().includes(normalized),
     );
   }, [options, query]);
 

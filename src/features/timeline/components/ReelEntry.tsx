@@ -129,7 +129,12 @@ export const ReelEntry = memo(function ReelEntry({
               )}
               {title.type === "series" && title.episodes
                 ? `${title.episodes} ep.`
-                : (runtime ?? (title.type === "series" ? "Series" : "Movie"))}
+                : (runtime ??
+                  (title.type === "series"
+                    ? "Series"
+                    : title.type === "movie"
+                      ? "Movie"
+                      : "One-Shot"))}
             </span>
             <span className="truncate">
               {dateLabel ?? "Date to be announced"}

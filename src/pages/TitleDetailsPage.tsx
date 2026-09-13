@@ -128,7 +128,11 @@ export function TitleDetailsPage() {
                   ) : (
                     <Clapperboard className="size-3" />
                   )}
-                  {title.type === "series" ? "Series" : "Movie"}
+                  {title.type === "series"
+                    ? "Series"
+                    : title.type === "movie"
+                      ? "Movie"
+                      : "One-Shot"}
                 </Badge>
                 <Badge variant="outline">{title.phase}</Badge>
                 <Badge variant="outline">{title.studio}</Badge>
