@@ -2,11 +2,16 @@ import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import type { ActorId, CharacterId, TitleId } from "@/domain/entities/title";
 import { isSpotlightActive, type Spotlight } from "@/domain/services/spotlight";
+import { ALL_PHASES, type PhaseFilter } from "@/domain/services/phase-filter";
 import {
   isStudioFilter,
   type StudioFilter,
 } from "@/domain/services/studio-filter";
 import { isTypeFilter, type TypeFilter } from "@/domain/services/type-filter";
+import {
+  ALL_UNIVERSES,
+  type UniverseFilter,
+} from "@/domain/services/universe-filter";
 import {
   isWatchedFilter,
   type WatchedFilter,
@@ -17,6 +22,8 @@ const CHARACTER = "c";
 const ACTOR = "a";
 const STUDIO = "studio";
 const TYPE = "type";
+const PHASE = "phase";
+const UNIVERSE = "universe";
 const WATCHED = "watched";
 const ROAD_TO = "road";
 
@@ -27,6 +34,8 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
   const actorId: ActorId | null = searchParams.get(ACTOR) || null;
   const rawStudio = searchParams.get(STUDIO);
   const rawType = searchParams.get(TYPE);
+  const phase: PhaseFilter = searchParams.get(PHASE) || ALL_PHASES;
+  const universe: UniverseFilter = searchParams.get(UNIVERSE) || ALL_UNIVERSES;
   const rawWatched = searchParams.get(WATCHED);
   const roadTo: TitleId | null = searchParams.get(ROAD_TO) || null;
 
@@ -36,10 +45,21 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
       actorId,
       studio: isStudioFilter(rawStudio) ? rawStudio : "all",
       type: isTypeFilter(rawType) ? rawType : "all",
+      phase,
+      universe,
       watched: isWatchedFilter(rawWatched) ? rawWatched : "all",
       roadTo,
     }),
-    [characterId, actorId, rawStudio, rawType, rawWatched, roadTo],
+    [
+      characterId,
+      actorId,
+      rawStudio,
+      rawType,
+      phase,
+      universe,
+      rawWatched,
+      roadTo,
+    ],
   );
 
   const patch = useCallback(
@@ -116,6 +136,24 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
     [patch],
   );
 
+  const setPhase = useCallback(
+    (value: PhaseFilter) =>
+      patch((params) =>
+        value === ALL_PHASES ? params.delete(PHASE) : params.set(PHASE, value),
+      ),
+    [patch],
+  );
+
+  const setUniverse = useCallback(
+    (value: UniverseFilter) =>
+      patch((params) =>
+        value === ALL_UNIVERSES
+          ? params.delete(UNIVERSE)
+          : params.set(UNIVERSE, value),
+      ),
+    [patch],
+  );
+
   const setWatched = useCallback(
     (value: WatchedFilter) =>
       patch((params) =>
@@ -139,6 +177,8 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
         params.delete(ACTOR);
         params.delete(STUDIO);
         params.delete(TYPE);
+        params.delete(PHASE);
+        params.delete(UNIVERSE);
         params.delete(WATCHED);
         params.delete(ROAD_TO);
       }),
@@ -151,6 +191,8 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
     setActor,
     setStudio,
     setType,
+    setPhase,
+    setUniverse,
     setWatched,
     setRoadTo,
     clear,

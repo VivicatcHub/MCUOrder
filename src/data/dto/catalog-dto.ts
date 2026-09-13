@@ -25,7 +25,7 @@ export interface FranchiseDto {
 export interface TitleDto {
   id: string;
   title: string;
-  type: "movie" | "series";
+  type: "movie" | "series" | "oneshot";
   studio: string;
   universe: string;
   franchiseId: string;

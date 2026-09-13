@@ -7,7 +7,7 @@ export type CharacterId = string;
 export type ActorId = string;
 export type FranchiseId = string;
 
-export type TitleType = "movie" | "series";
+export type TitleType = "movie" | "series" | "oneshot";
 
 export type OrderMode = "chronological" | "release";
 

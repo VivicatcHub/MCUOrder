@@ -268,7 +268,7 @@ export function PersonPicker({
                       {row.name}
                     </span>
                     {row.caption && (
-                      <span className="block truncate text-xs text-muted-foreground w-60 sm:w-20">
+                      <span className="block truncate text-xs text-muted-foreground w-30 sm:w-60">
                         {row.caption}
                       </span>
                     )}

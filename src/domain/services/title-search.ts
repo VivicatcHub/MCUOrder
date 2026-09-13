@@ -4,7 +4,11 @@ const DIACRITICS = /[\u0300-\u036f]/g;
 const WORD_BREAK = /[\s:'’\-–—.,()!&/]/;
 
 export function normalizeQuery(value: string): string {
-  return value.toLowerCase().normalize("NFD").replace(DIACRITICS, "").trim();
+  return (value ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(DIACRITICS, "")
+    .trim();
 }
 
 interface Field {

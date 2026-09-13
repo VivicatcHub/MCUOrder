@@ -52,5 +52,13 @@
   { "id": "ghost_rider", "name": "Ghost Rider", "accent": "#d4622a" },
   { "id": "spider_man_maguire", "name": "Spider-Man", "accent": "#c8332f" },
   { "id": "spider_man_garfield", "name": "Spider-Man", "accent": "#c8332f" },
-  { "id": "nova", "name": "Nova", "accent": "#dfb707" }
+  { "id": "nova", "name": "Nova", "accent": "#dfb707" },
+  { "id": "all_hail", "name": "All Hail the King", "accent": "#104676" },
+  { "id": "the_consultant", "name": "The Consultant", "accent": "#104676" },
+  {
+    "id": "funny_thing",
+    "name": "A Funny Thing Happened on the Way to Thor's Hammer",
+    "accent": "#104676"
+  },
+  { "id": "item_47", "name": "Item 47", "accent": "#104676" }
 ]

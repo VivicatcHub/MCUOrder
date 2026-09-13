@@ -56,8 +56,13 @@ const franchises = readJson(paths.franchises);
 
 const season = options.has("season") ? Number(options.get("season")) : null;
 let kind = options.get("type") ?? (season !== null ? "series" : null);
-if (kind !== null && kind !== "movie" && kind !== "series")
-  fail('--type must be "movie" or "series"');
+if (
+  kind !== null &&
+  kind !== "movie" &&
+  kind !== "series" &&
+  kind !== "oneshot"
+)
+  fail('--type must be "movie", "series" or "One-Shot"');
 
 async function findRecord() {
   if (options.has("tmdb")) {

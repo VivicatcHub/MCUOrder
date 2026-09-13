@@ -22,6 +22,8 @@ import { useViewMode } from "@/features/timeline/hooks/useViewMode";
 import { PersonPicker } from "@/features/spotlight/components/PersonPicker";
 import { StudioToggle } from "@/features/spotlight/components/StudioToggle";
 import { TypeToggle } from "@/features/spotlight/components/TypeToggle";
+import { PhasePicker } from "@/features/spotlight/components/PhasePicker";
+import { UniversePicker } from "@/features/spotlight/components/UniversePicker";
 import { WatchedToggle } from "@/features/spotlight/components/WatchedToggle";
 import { useSpotlight } from "@/features/spotlight/hooks/useSpotlight";
 import { RoadToPicker } from "@/features/road-to/components/RoadToPicker";
@@ -45,6 +47,8 @@ export function TimelinePage() {
     setActor,
     setStudio,
     setType,
+    setPhase,
+    setUniverse,
     setWatched,
     setRoadTo,
     clear,
@@ -164,6 +168,16 @@ export function TimelinePage() {
               />
               <StudioToggle value={spotlight.studio} onChange={setStudio} />
               <TypeToggle value={spotlight.type} onChange={setType} />
+              <PhasePicker
+                titles={catalog.titles}
+                value={spotlight.phase}
+                onChange={setPhase}
+              />
+              <UniversePicker
+                titles={catalog.titles}
+                value={spotlight.universe}
+                onChange={setUniverse}
+              />
               <WatchedToggle value={spotlight.watched} onChange={setWatched} />
               <RoadToPicker
                 dependencies={catalog.dependencies}

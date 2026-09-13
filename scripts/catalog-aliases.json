@@ -5,7 +5,11 @@
     "hogan": "happy_hogan",
     "james_buchanan_bucky_barnes": "bucky_barnes",
     "sara": "sara_grey",
-    "on_set_groot": "groot"
+    "on_set_groot": "groot",
+    "kate": "sharon_carter",
+    "general_thunderbolt_ross": "thaddeus_ross",
+    "secretary_of_state_thaddeus_ross": "thaddeus_ross",
+    "thaddeus_thunderbolt_ross": "thaddeus_ross"
   },
   "skip": []
 }
