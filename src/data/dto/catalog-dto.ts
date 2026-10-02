@@ -27,10 +27,10 @@ export interface TitleDto {
   title: string;
   type: "movie" | "series" | "oneshot";
   studio: string;
-  universe: string;
+  universe: string | null;
   franchiseId: string;
   franchiseIndex: number;
-  phase: string;
+  phase: string | null;
   releaseDate: string | null;
   loreStart: string | null;
   loreEnd: string | null;

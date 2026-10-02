@@ -355,8 +355,6 @@ function actorFor(credit) {
   return { actor, created: true };
 }
 
-/** Appends one line to a cast sheet — a part the entry already credits that
- * actor with is left exactly as it stands. */
 function attach(cast, characterId, actorId) {
   const known = cast.some(
     (credit) =>
@@ -445,7 +443,6 @@ for (const [index, title] of targets.entries()) {
   );
 }
 
-// One credit a line, wrapped where titles.json already wraps.
 const PRINT_WIDTH = 80;
 
 function compact(credit) {

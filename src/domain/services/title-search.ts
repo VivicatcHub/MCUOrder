@@ -3,7 +3,7 @@ import type { Title } from "../entities/title";
 const DIACRITICS = /[\u0300-\u036f]/g;
 const WORD_BREAK = /[\s:'’\-–—.,()!&/]/;
 
-export function normalizeQuery(value: string): string {
+export function normalizeQuery(value: string | null): string {
   return (value ?? "")
     .toLowerCase()
     .normalize("NFD")

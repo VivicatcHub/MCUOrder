@@ -108,7 +108,6 @@ export function uniqueId(base, taken) {
 export function datasetText(text, keepDashes = false) {
   if (keepDashes) return text;
   return text
-
     .replace(/ [-\u2010\u2011] /g, " — ")
     .replace(/[-\u2010\u2011]/g, "_");
 }

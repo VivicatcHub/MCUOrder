@@ -1,13 +1,6 @@
 import { compareOptionalDates } from "../entities/partial-date";
 import type { OrderMode, Title } from "../entities/title";
 
-export const ORDER_MODES: readonly OrderMode[] = ["chronological", "release"];
-
-export const ORDER_MODE_LABEL: Record<OrderMode, string> = {
-  chronological: "Chronological order",
-  release: "Release order",
-};
-
 export function isOrderMode(value: unknown): value is OrderMode {
   return value === "chronological" || value === "release";
 }

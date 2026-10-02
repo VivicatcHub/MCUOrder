@@ -182,7 +182,7 @@ export function TitleSearch({
                   </span>
 
                   <span className="min-w-0 flex-1">
-                    <span className="flex items-center gap-1.5">
+                    <span className="flex items-center gap-1.5 w-50 sm:w-80">
                       <span className="truncate text-sm font-medium">
                         {title.title}
                       </span>
@@ -199,7 +199,7 @@ export function TitleSearch({
                       ) : (
                         <Clapperboard className="size-3 shrink-0" />
                       )}
-                      <span className="truncate">
+                      <span className="truncate w-50 sm:w-80">
                         {title.franchise.name} · {year}
                       </span>
                     </span>

@@ -6,7 +6,7 @@ export const ALL_PHASES: PhaseFilter = "all";
 
 export function phasesOf(titles: readonly Title[]): string[] {
   const seen = new Set<string>();
-  for (const title of titles) seen.add(title.phase);
+  for (const title of titles) if (title.phase) seen.add(title.phase);
   return [...seen];
 }
 

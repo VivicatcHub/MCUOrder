@@ -3,10 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import type { ActorId, CharacterId, TitleId } from "@/domain/entities/title";
 import { isSpotlightActive, type Spotlight } from "@/domain/services/spotlight";
 import { ALL_PHASES, type PhaseFilter } from "@/domain/services/phase-filter";
-import {
-  isStudioFilter,
-  type StudioFilter,
-} from "@/domain/services/studio-filter";
+import { ALL_STUDIOS, type StudioFilter } from "@/domain/services/studio-filter";
 import { isTypeFilter, type TypeFilter } from "@/domain/services/type-filter";
 import {
   ALL_UNIVERSES,
@@ -32,7 +29,7 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
 
   const characterId: CharacterId | null = searchParams.get(CHARACTER) || null;
   const actorId: ActorId | null = searchParams.get(ACTOR) || null;
-  const rawStudio = searchParams.get(STUDIO);
+  const studio: StudioFilter = searchParams.get(STUDIO) || ALL_STUDIOS;
   const rawType = searchParams.get(TYPE);
   const phase: PhaseFilter = searchParams.get(PHASE) || ALL_PHASES;
   const universe: UniverseFilter = searchParams.get(UNIVERSE) || ALL_UNIVERSES;
@@ -43,7 +40,7 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
     () => ({
       characterId,
       actorId,
-      studio: isStudioFilter(rawStudio) ? rawStudio : "all",
+      studio,
       type: isTypeFilter(rawType) ? rawType : "all",
       phase,
       universe,
@@ -53,7 +50,7 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
     [
       characterId,
       actorId,
-      rawStudio,
+      studio,
       rawType,
       phase,
       universe,
@@ -123,7 +120,9 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
   const setStudio = useCallback(
     (value: StudioFilter) =>
       patch((params) =>
-        value === "all" ? params.delete(STUDIO) : params.set(STUDIO, value),
+        value === ALL_STUDIOS
+          ? params.delete(STUDIO)
+          : params.set(STUDIO, value),
       ),
     [patch],
   );

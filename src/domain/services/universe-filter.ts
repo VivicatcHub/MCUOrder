@@ -6,7 +6,7 @@ export const ALL_UNIVERSES: UniverseFilter = "all";
 
 export function universesOf(titles: readonly Title[]): string[] {
   const seen = new Set<string>();
-  for (const title of titles) seen.add(title.universe);
+  for (const title of titles) if (title.universe) seen.add(title.universe);
   return [...seen];
 }
 

@@ -25,14 +25,12 @@ export function actorAppearanceCounts(
   return counts;
 }
 
-/** The parts a cast sheet names, each once, still in billing order. */
 export function characterIdsOf(
   cast: readonly CastCredit[],
 ): readonly CharacterId[] {
   return [...new Set(cast.map((credit) => credit.characterId))];
 }
 
-/** The people a cast sheet credits, each once — an actor may play two parts. */
 export function actorIdsOf(cast: readonly CastCredit[]): readonly ActorId[] {
   const actorIds = cast
     .map((credit) => credit.actorId)
@@ -71,7 +69,6 @@ export function charactersForActor(
   ];
 }
 
-/** Every part each actor plays anywhere on the wall, in first-seen order. */
 export function charactersByActor(
   titles: readonly Title[],
 ): Map<ActorId, CharacterId[]> {
