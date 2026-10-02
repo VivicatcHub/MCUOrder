@@ -108,7 +108,6 @@ export function uniqueId(base, taken) {
 export function datasetText(text, keepDashes = false) {
   if (keepDashes) return text;
   return text
-
     .replace(/ [-\u2010\u2011] /g, " — ")
     .replace(/[-\u2010\u2011]/g, "_");
 }
@@ -122,10 +121,11 @@ export function writeJson(path, value) {
 }
 
 export function entryBlock(value) {
+  const eol = JSON.stringify(value, null, 2).includes("\r\n") ? "\r\n" : "\n";
   return JSON.stringify(value, null, 2)
-    .split("\n")
+    .split(eol)
     .map((line) => `  ${line}`)
-    .join("\n");
+    .join(eol);
 }
 
 export function parseArgs(argv, valueOptions = []) {

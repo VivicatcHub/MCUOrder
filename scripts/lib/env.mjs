@@ -9,7 +9,8 @@ try {
   raw = readFileSync(resolve(root, ".env"), "utf8");
 } catch {}
 
-for (const line of raw.split("\n")) {
+const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+for (const line of raw.split(eol)) {
   const match = /^\s*(?:export\s+)?([A-Z0-9_]+)\s*=\s*(.*)$/.exec(line);
   if (!match) continue;
   const value = match[2].trim().replace(/^["']|["']$/g, "");

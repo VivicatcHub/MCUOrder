@@ -28,7 +28,7 @@ export const TitleCard = memo(function TitleCard({
   highlighted = false,
 }: TitleCardProps) {
   const upcoming = isUpcoming(title);
-  const runtime = formatRuntime(title);
+  const runtime = title.runtimeMinutes ? formatRuntime(title) : null;
 
   return (
     <div
@@ -65,7 +65,9 @@ export const TitleCard = memo(function TitleCard({
               ? title.episodes
                 ? `${title.episodes} ep.`
                 : "Series"
-              : "Movie"}
+              : title.type === "movie"
+                ? "Movie"
+                : "One-Shot"}
           </span>
           {upcoming && (
             <span

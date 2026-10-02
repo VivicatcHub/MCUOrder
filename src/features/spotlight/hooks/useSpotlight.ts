@@ -2,11 +2,13 @@ import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import type { ActorId, CharacterId, TitleId } from "@/domain/entities/title";
 import { isSpotlightActive, type Spotlight } from "@/domain/services/spotlight";
-import {
-  isStudioFilter,
-  type StudioFilter,
-} from "@/domain/services/studio-filter";
+import { ALL_PHASES, type PhaseFilter } from "@/domain/services/phase-filter";
+import { ALL_STUDIOS, type StudioFilter } from "@/domain/services/studio-filter";
 import { isTypeFilter, type TypeFilter } from "@/domain/services/type-filter";
+import {
+  ALL_UNIVERSES,
+  type UniverseFilter,
+} from "@/domain/services/universe-filter";
 import {
   isWatchedFilter,
   type WatchedFilter,
@@ -17,6 +19,8 @@ const CHARACTER = "c";
 const ACTOR = "a";
 const STUDIO = "studio";
 const TYPE = "type";
+const PHASE = "phase";
+const UNIVERSE = "universe";
 const WATCHED = "watched";
 const ROAD_TO = "road";
 
@@ -25,8 +29,10 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
 
   const characterId: CharacterId | null = searchParams.get(CHARACTER) || null;
   const actorId: ActorId | null = searchParams.get(ACTOR) || null;
-  const rawStudio = searchParams.get(STUDIO);
+  const studio: StudioFilter = searchParams.get(STUDIO) || ALL_STUDIOS;
   const rawType = searchParams.get(TYPE);
+  const phase: PhaseFilter = searchParams.get(PHASE) || ALL_PHASES;
+  const universe: UniverseFilter = searchParams.get(UNIVERSE) || ALL_UNIVERSES;
   const rawWatched = searchParams.get(WATCHED);
   const roadTo: TitleId | null = searchParams.get(ROAD_TO) || null;
 
@@ -34,12 +40,23 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
     () => ({
       characterId,
       actorId,
-      studio: isStudioFilter(rawStudio) ? rawStudio : "all",
+      studio,
       type: isTypeFilter(rawType) ? rawType : "all",
+      phase,
+      universe,
       watched: isWatchedFilter(rawWatched) ? rawWatched : "all",
       roadTo,
     }),
-    [characterId, actorId, rawStudio, rawType, rawWatched, roadTo],
+    [
+      characterId,
+      actorId,
+      studio,
+      rawType,
+      phase,
+      universe,
+      rawWatched,
+      roadTo,
+    ],
   );
 
   const patch = useCallback(
@@ -103,7 +120,9 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
   const setStudio = useCallback(
     (value: StudioFilter) =>
       patch((params) =>
-        value === "all" ? params.delete(STUDIO) : params.set(STUDIO, value),
+        value === ALL_STUDIOS
+          ? params.delete(STUDIO)
+          : params.set(STUDIO, value),
       ),
     [patch],
   );
@@ -112,6 +131,24 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
     (value: TypeFilter) =>
       patch((params) =>
         value === "all" ? params.delete(TYPE) : params.set(TYPE, value),
+      ),
+    [patch],
+  );
+
+  const setPhase = useCallback(
+    (value: PhaseFilter) =>
+      patch((params) =>
+        value === ALL_PHASES ? params.delete(PHASE) : params.set(PHASE, value),
+      ),
+    [patch],
+  );
+
+  const setUniverse = useCallback(
+    (value: UniverseFilter) =>
+      patch((params) =>
+        value === ALL_UNIVERSES
+          ? params.delete(UNIVERSE)
+          : params.set(UNIVERSE, value),
       ),
     [patch],
   );
@@ -139,6 +176,8 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
         params.delete(ACTOR);
         params.delete(STUDIO);
         params.delete(TYPE);
+        params.delete(PHASE);
+        params.delete(UNIVERSE);
         params.delete(WATCHED);
         params.delete(ROAD_TO);
       }),
@@ -151,6 +190,8 @@ export function useSpotlight({ persist = false }: { persist?: boolean } = {}) {
     setActor,
     setStudio,
     setType,
+    setPhase,
+    setUniverse,
     setWatched,
     setRoadTo,
     clear,

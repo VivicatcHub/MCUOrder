@@ -1,9 +1,11 @@
 import type { ActorId, CharacterId, Title, TitleId } from "../entities/title";
 import { featuresActor } from "./actor-filter";
 import { featuresCharacter } from "./character-filter";
+import { matchesPhase, type PhaseFilter } from "./phase-filter";
 import { matchesRoadTo } from "./road-to-filter";
 import { matchesStudio, type StudioFilter } from "./studio-filter";
 import { matchesType, type TypeFilter } from "./type-filter";
+import { matchesUniverse, type UniverseFilter } from "./universe-filter";
 import { matchesWatchedFilter, type WatchedFilter } from "./watched-filter";
 
 export interface Spotlight {
@@ -11,6 +13,8 @@ export interface Spotlight {
   readonly actorId: ActorId | null;
   readonly studio: StudioFilter;
   readonly type: TypeFilter;
+  readonly phase: PhaseFilter;
+  readonly universe: UniverseFilter;
   readonly watched: WatchedFilter;
   readonly roadTo: TitleId | null;
 }
@@ -20,6 +24,8 @@ export const NO_SPOTLIGHT: Spotlight = {
   actorId: null,
   studio: "all",
   type: "all",
+  phase: "all",
+  universe: "all",
   watched: "all",
   roadTo: null,
 };
@@ -35,6 +41,8 @@ export function isSpotlit(
     featuresActor(title, spotlight.actorId) &&
     matchesStudio(title, spotlight.studio) &&
     matchesType(title, spotlight.type) &&
+    matchesPhase(title, spotlight.phase) &&
+    matchesUniverse(title, spotlight.universe) &&
     matchesWatchedFilter(isWatched, spotlight.watched) &&
     matchesRoadTo(title.id, roadToPrerequisites)
   );
@@ -46,6 +54,8 @@ export function isSpotlightActive(spotlight: Spotlight): boolean {
     spotlight.actorId !== null ||
     spotlight.studio !== "all" ||
     spotlight.type !== "all" ||
+    spotlight.phase !== "all" ||
+    spotlight.universe !== "all" ||
     spotlight.watched !== "all" ||
     spotlight.roadTo !== null
   );

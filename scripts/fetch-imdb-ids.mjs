@@ -162,7 +162,8 @@ for (const [index, title] of pending.entries()) {
 }
 
 function patch(raw, ids, already) {
-  const lines = raw.split("\n");
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  const lines = raw.split(oel);
   const out = [];
   let current = null;
 
@@ -191,7 +192,7 @@ function patch(raw, ids, already) {
 
     out.push(line);
   }
-  return out.join("\n");
+  return out.join(oel);
 }
 
 if (!dryRun && found.size > 0) {

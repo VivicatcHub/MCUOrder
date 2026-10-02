@@ -355,8 +355,6 @@ function actorFor(credit) {
   return { actor, created: true };
 }
 
-/** Appends one line to a cast sheet — a part the entry already credits that
- * actor with is left exactly as it stands. */
 function attach(cast, characterId, actorId) {
   const known = cast.some(
     (credit) =>
@@ -409,6 +407,13 @@ for (const [index, title] of targets.entries()) {
     if (kept >= limit) break;
     if (title.type === "series" && credit.episodes < minEpisodes) continue;
 
+    if (/\([^)]*\bvoice\b[^)]*\)/i.test(credit.character)) continue;
+    if (
+      /\([^)]*\bvoice\b[^)]*\)/i.test(credit.character) ||
+      /^\s*voice of\b/i.test(credit.character)
+    )
+      continue;
+
     const part = parsePart(credit.character);
     if (!part) continue;
     if (part.uncredited && !withUncredited) continue;
@@ -438,7 +443,6 @@ for (const [index, title] of targets.entries()) {
   );
 }
 
-// One credit a line, wrapped where titles.json already wraps.
 const PRINT_WIDTH = 80;
 
 function compact(credit) {
@@ -477,7 +481,8 @@ function renderCast(cast, trailing) {
 }
 
 function patch(raw, lists) {
-  const lines = raw.split("\n");
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  const lines = raw.split(eol);
   const out = [];
   let current = null;
 
@@ -504,7 +509,7 @@ function patch(raw, lists) {
     out.push(renderCast(lists.get(current), trailing));
   }
 
-  return out.join("\n");
+  return out.join(eol);
 }
 
 if (!dryRun) {

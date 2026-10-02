@@ -29,8 +29,8 @@
   { "id": "she_hulk", "name": "She-Hulk", "accent": "#5aa04f" },
   { "id": "secret_invasion", "name": "Secret Invasion", "accent": "#4f6f4f" },
   { "id": "echo", "name": "Echo", "accent": "#a03f3f" },
-  { "id": "agatha", "name": "Agatha All Along", "accent": "#6f3f8f" },
   { "id": "daredevil", "name": "Daredevil", "accent": "#8f2020" },
+  { "id": "daredevil_serie", "name": "Daredevil Serie", "accent": "#8f2020" },
   { "id": "ironheart", "name": "Ironheart", "accent": "#c85a2f" },
   { "id": "venom", "name": "Venom", "accent": "#3a3a44" },
   { "id": "morbius", "name": "Morbius", "accent": "#4a5a6a" },
@@ -41,15 +41,104 @@
   { "id": "wolverine", "name": "Wolverine", "accent": "#8a5a2a" },
   { "id": "new_mutants", "name": "The New Mutants", "accent": "#5a4a7a" },
   { "id": "wonder_man", "name": "Wonder Man", "accent": "#c03a5a" },
-  { "id": "vision_quest", "name": "Vision Quest", "accent": "#c8a83a" },
   { "id": "marvel_zombies", "name": "Marvel Zombies", "accent": "#4a6a3a" },
   { "id": "eyes_of_wakanda", "name": "Eyes of Wakanda", "accent": "#3f8f8a" },
+  { "id": "blade", "name": "Blade", "accent": "#710F0F" },
   {
     "id": "friendly_spider_man",
     "name": "Your Friendly Neighborhood Spider-Man",
     "accent": "#2f6fc8"
   },
   { "id": "ghost_rider", "name": "Ghost Rider", "accent": "#d4622a" },
-  { "id": "spider_man_maguire", "name": "Spider-Man", "accent": "#c8332f" },
-  { "id": "spider_man_garfield", "name": "Spider-Man", "accent": "#c8332f" }
+  {
+    "id": "the_punisher_one_last_kill",
+    "name": "The Punisher: One Last Kill",
+    "accent": "#d4622a"
+  },
+  { "id": "the_punisher", "name": "The Punisher", "accent": "#d4622a" },
+  { "id": "x_men_animation", "name": "X-Men Animation", "accent": "#d4622a" },
+  {
+    "id": "iron_man_animation",
+    "name": "Iron Man Animation",
+    "accent": "#d4622a"
+  },
+  {
+    "id": "fantastic_four_animation",
+    "name": "Fantastic Four Animation",
+    "accent": "#d4622a"
+  },
+  {
+    "id": "spider_man_animation",
+    "name": "Spider-Man Animation",
+    "accent": "#d4622a"
+  },
+  {
+    "id": "marvel_one_shot_agent_carter",
+    "name": "Marvel One_Shot: Agent Carter",
+    "accent": "#d4622a"
+  },
+  { "id": "agent_carter", "name": "Agent Carter", "accent": "#d4622a" },
+  { "id": "midnight_sons", "name": "Midnight Sons", "accent": "#d4622a" },
+  {
+    "id": "spider_man_maguire",
+    "name": "Spider-Man (Maguire)",
+    "accent": "#c8332f"
+  },
+  {
+    "id": "spider_man_garfield",
+    "name": "Spider-Man (Garfield)",
+    "accent": "#c8332f"
+  },
+  { "id": "nova", "name": "Nova", "accent": "#dfb707" },
+  { "id": "all_hail", "name": "All Hail the King", "accent": "#104676" },
+  { "id": "the_consultant", "name": "The Consultant", "accent": "#104676" },
+  {
+    "id": "funny_thing",
+    "name": "A Funny Thing Happened on the Way to Thor's Hammer",
+    "accent": "#104676"
+  },
+  { "id": "item_47", "name": "Item 47", "accent": "#104676" },
+  { "id": "team_thor", "name": "Team Thor", "accent": "#104676" },
+  { "id": "team_darryl", "name": "Team Darryl", "accent": "#104676" },
+  {
+    "id": "peter_todo_list",
+    "name": "Peter's To-Do List",
+    "accent": "#104676"
+  },
+  { "id": "i_am_groot", "name": "I Am Groot", "accent": "#57CC15" },
+  { "id": "what_if", "name": "What If...?", "accent": "#57CC15" },
+  { "id": "werewolf", "name": "Werewolf by Night", "accent": "#57CC15" },
+  { "id": "holiday_special", "name": "Holiday Special", "accent": "#57CC15" },
+  { "id": "blade_serie", "name": "Blade: The Series", "accent": "#710F0F" },
+  { "id": "jessica_jones", "name": "Jessica Jones", "accent": "#D41E1C" },
+  { "id": "luke_cage", "name": "Luke Cage", "accent": "#EBB028" },
+  { "id": "daredevil_fox", "name": "Daredevil (Fox)", "accent": "#991b1b" },
+  {
+    "id": "fantastic_four_fox",
+    "name": "Fantastic Four (Fox)",
+    "accent": "#2563eb"
+  },
+  {
+    "id": "agents_of_shield",
+    "name": "Agents of S.H.I.E.L.D.",
+    "accent": "#1e3a8a"
+  },
+  { "id": "whih", "name": "WHIH Newsfront", "accent": "#0891b2" },
+  { "id": "iron_fist", "name": "Iron Fist", "accent": "#ca8a04" },
+  { "id": "defenders", "name": "The Defenders", "accent": "#7f1d1d" },
+  {
+    "id": "punisher_serie",
+    "name": "The Punisher (Netflix)",
+    "accent": "#3f3f46"
+  },
+  { "id": "inhumans", "name": "Inhumans", "accent": "#6d28d9" },
+  { "id": "runaways", "name": "Runaways", "accent": "#db2777" },
+  { "id": "cloak_dagger", "name": "Cloak & Dagger", "accent": "#4338ca" },
+  { "id": "helstrom", "name": "Helstrom", "accent": "#9a3412" },
+  {
+    "id": "moon_girl",
+    "name": "Moon Girl and Devil Dinosaur",
+    "accent": "#c026d3"
+  },
+  { "id": "spider_noir", "name": "Spider-Noir", "accent": "#525252" }
 ]

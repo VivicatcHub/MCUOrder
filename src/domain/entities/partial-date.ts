@@ -13,7 +13,7 @@ export interface PartialDate {
 const PATTERN = /^(-?\d{1,6})(?:-(\d{2}))?(?:-(\d{2}))?$/;
 
 export function parsePartialDate(raw: string): PartialDate {
-  const match = PATTERN.exec(raw.trim());
+  const match = PATTERN.exec(raw.toString().trim());
   if (!match) throw new Error(`Unparseable date: "${raw}"`);
 
   const year = Number(match[1]);

@@ -1,4 +1,9 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import { ArrowLeft, Check, Clapperboard, ExternalLink, Tv } from "lucide-react";
 import { useCatalog } from "@/app/providers/catalog-context";
 import { isUpcoming } from "@/domain/entities/title";
@@ -10,7 +15,11 @@ import {
   formatRuntime,
   formatTotalRuntime,
 } from "@/domain/services/formatting";
-import { imdbUrl, isImdbGuess } from "@/domain/services/external-links";
+import {
+  imdbCastUrl,
+  imdbUrl,
+  isImdbGuess,
+} from "@/domain/services/external-links";
 import { sortTitles } from "@/domain/services/ordering";
 import { castByCharacter } from "@/domain/services/actor-filter";
 import {
@@ -25,8 +34,10 @@ import { ActorAvatar } from "@/components/actor-avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Skeleton } from "@/components/ui/skeleton";
+import { BrandLoader, BrandLogo } from "@/components/brand-logo";
 import { cn } from "@/shared/lib/utils";
+
+const FULL_CAST = "cast";
 
 function Fact({ label, value }: { label: string; value: string | null }) {
   return (
@@ -47,20 +58,19 @@ export function TitleDetailsPage() {
   const { status, catalog, getTitle, getCharacter } = useCatalog();
   const { isWatched, toggle } = useWatched();
   const { setCharacter, setActor } = useSpotlight();
+  const [searchParams] = useSearchParams();
+  const showSupporting = searchParams.get(FULL_CAST) === "1";
 
   if (status === "loading") {
-    return (
-      <div className="mx-auto max-w-4xl p-8">
-        <Skeleton className="h-96 w-full rounded-2xl" />
-      </div>
-    );
+    return <BrandLoader className="h-dvh" />;
   }
 
   const title = getTitle(titleId);
   if (!title || !catalog) {
     return (
       <div className="grid h-dvh place-items-center p-8 text-center">
-        <div>
+        <div className="flex flex-col items-center">
+          <BrandLogo size="lg" className="mb-4 w-24" />
           <p className="text-lg font-medium">No entry with that id.</p>
           <Button asChild variant="link">
             <Link to="/">Back to the wall</Link>
@@ -103,15 +113,24 @@ export function TitleDetailsPage() {
         }}
       >
         <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 sm:py-8">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="-ml-2 mb-4"
-            onClick={() => navigate(-1)}
-          >
-            <ArrowLeft className="size-4" />
-            Back
-          </Button>
+          <div className="mb-4 flex items-center justify-between">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="-ml-2"
+              onClick={() => navigate(-1)}
+            >
+              <ArrowLeft className="size-4" />
+              Back
+            </Button>
+            <Link
+              to="/"
+              className="flex items-center gap-2 rounded-full pr-1 text-sm font-bold tracking-tight transition-opacity hover:opacity-80"
+            >
+              <BrandLogo className="size-8" />
+              <span className="hidden sm:inline">Marvel Order</span>
+            </Link>
+          </div>
 
           <div className="flex flex-col gap-6 md:flex-row md:gap-8">
             <div className="w-32 shrink-0 sm:w-40 md:w-64">
@@ -128,9 +147,13 @@ export function TitleDetailsPage() {
                   ) : (
                     <Clapperboard className="size-3" />
                   )}
-                  {title.type === "series" ? "Series" : "Movie"}
+                  {title.type === "series"
+                    ? "Series"
+                    : title.type === "movie"
+                      ? "Movie"
+                      : "One-Shot"}
                 </Badge>
-                <Badge variant="outline">{title.phase}</Badge>
+                {title.phase && <Badge variant="outline">{title.phase}</Badge>}
                 <Badge variant="outline">{title.studio}</Badge>
               </div>
 
@@ -185,7 +208,7 @@ export function TitleDetailsPage() {
           />
           <Fact
             label={title.episodes ? "Episodes" : "Duration"}
-            value={formatRuntime(title)}
+            value={title.runtimeMinutes ? formatRuntime(title) : null}
           />
           <Fact
             label={title.episodes ? "Total runtime" : "Universe"}
@@ -318,7 +341,7 @@ export function TitleDetailsPage() {
             </div>
           )}
 
-          {supporting.length > 0 && (
+          {supporting.length > 0 && showSupporting && (
             <>
               <h3 className="mt-8 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                 Also appearing
@@ -360,6 +383,18 @@ export function TitleDetailsPage() {
               </div>
             </>
           )}
+
+          <Button asChild variant="outline" size="sm" className="mt-6">
+            <a
+              href={imdbCastUrl(title)}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open the full cast of "${title.title}" on IMDb`}
+            >
+              <ExternalLink className="size-4" />
+              More on IMDb
+            </a>
+          </Button>
         </section>
       </div>
     </div>

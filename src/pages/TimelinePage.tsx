@@ -20,8 +20,10 @@ import { ViewToggle } from "@/features/timeline/components/ViewToggle";
 import { useOrderMode } from "@/features/timeline/hooks/useOrderMode";
 import { useViewMode } from "@/features/timeline/hooks/useViewMode";
 import { PersonPicker } from "@/features/spotlight/components/PersonPicker";
-import { StudioToggle } from "@/features/spotlight/components/StudioToggle";
+import { StudioPicker } from "@/features/spotlight/components/StudioPicker";
 import { TypeToggle } from "@/features/spotlight/components/TypeToggle";
+import { PhasePicker } from "@/features/spotlight/components/PhasePicker";
+import { UniversePicker } from "@/features/spotlight/components/UniversePicker";
 import { WatchedToggle } from "@/features/spotlight/components/WatchedToggle";
 import { useSpotlight } from "@/features/spotlight/hooks/useSpotlight";
 import { RoadToPicker } from "@/features/road-to/components/RoadToPicker";
@@ -29,7 +31,7 @@ import { TitleSearch } from "@/features/search/components/TitleSearch";
 import { WatchedProgress } from "@/features/watched/components/WatchedProgress";
 import { useWatched } from "@/features/watched/hooks/watched-context";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
+import { BrandLoader, BrandLogo } from "@/components/brand-logo";
 import { useMediaQuery } from "@/shared/hooks/use-media-query";
 import { cn } from "@/shared/lib/utils";
 
@@ -45,6 +47,8 @@ export function TimelinePage() {
     setActor,
     setStudio,
     setType,
+    setPhase,
+    setUniverse,
     setWatched,
     setRoadTo,
     clear,
@@ -113,13 +117,16 @@ export function TimelinePage() {
   return (
     <div className="flex h-dvh flex-col overflow-hidden">
       <header className="z-10 flex flex-wrap items-center gap-x-3 gap-y-2.5 border-b bg-background/80 px-4 py-2.5 backdrop-blur sm:py-3">
-        <div className="mr-auto flex min-w-0 flex-col sm:flex-row sm:items-baseline sm:gap-2.5">
-          <h1 className="text-base font-bold tracking-tight sm:text-lg">
-            Marvel Order
-          </h1>
-          <p className="truncate text-[11px] text-muted-foreground sm:text-xs">
-            {caption}
-          </p>
+        <div className="mr-auto flex min-w-0 items-center gap-2">
+          <BrandLogo className="size-8 sm:size-9" />
+          <div className="flex min-w-0 flex-col sm:flex-row sm:items-baseline sm:gap-2.5">
+            <h1 className="text-base font-bold tracking-tight sm:text-lg">
+              Marvel Order
+            </h1>
+            <p className="truncate text-[11px] text-muted-foreground sm:text-xs">
+              {caption}
+            </p>
+          </div>
         </div>
 
         {catalog && (
@@ -162,8 +169,22 @@ export function TimelinePage() {
                 onSelectCharacter={setCharacter}
                 onSelectActor={setActor}
               />
-              <StudioToggle value={spotlight.studio} onChange={setStudio} />
+              <StudioPicker
+                titles={catalog.titles}
+                value={spotlight.studio}
+                onChange={setStudio}
+              />
               <TypeToggle value={spotlight.type} onChange={setType} />
+              <PhasePicker
+                titles={catalog.titles}
+                value={spotlight.phase}
+                onChange={setPhase}
+              />
+              <UniversePicker
+                titles={catalog.titles}
+                value={spotlight.universe}
+                onChange={setUniverse}
+              />
               <WatchedToggle value={spotlight.watched} onChange={setWatched} />
               <RoadToPicker
                 dependencies={catalog.dependencies}
@@ -190,22 +211,7 @@ export function TimelinePage() {
       </header>
 
       <main className="relative min-h-0 flex-1">
-        {status === "loading" && (
-          <div className="grid h-full place-items-center p-4">
-            <div className="grid w-full max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
-              {Array.from({ length: 8 }, (_, index) => (
-                <Skeleton
-                  key={index}
-                  className={cn(
-                    "aspect-[208/300] w-full rounded-xl",
-
-                    index > 3 && "hidden sm:block",
-                  )}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+        {status === "loading" && <BrandLoader />}
 
         {status === "error" && (
           <div className="grid h-full place-items-center p-8 text-center">

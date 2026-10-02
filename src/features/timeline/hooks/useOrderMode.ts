@@ -4,7 +4,7 @@ import type { OrderMode } from "@/domain/entities/title";
 import { isOrderMode } from "@/domain/services/ordering";
 
 const PARAM = "order";
-const DEFAULT: OrderMode = "chronological";
+const DEFAULT: OrderMode = "release";
 
 export function useOrderMode() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -27,7 +27,7 @@ export function useOrderMode() {
   );
 
   const toggle = useCallback(
-    () => setMode(mode === "chronological" ? "release" : "chronological"),
+    () => setMode(mode === "chronological" ? "release" : "release"),
     [mode, setMode],
   );
 

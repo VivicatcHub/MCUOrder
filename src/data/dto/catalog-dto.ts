@@ -25,12 +25,12 @@ export interface FranchiseDto {
 export interface TitleDto {
   id: string;
   title: string;
-  type: "movie" | "series";
+  type: "movie" | "series" | "oneshot";
   studio: string;
-  universe: string;
+  universe: string | null;
   franchiseId: string;
   franchiseIndex: number;
-  phase: string;
+  phase: string | null;
   releaseDate: string | null;
   loreStart: string | null;
   loreEnd: string | null;

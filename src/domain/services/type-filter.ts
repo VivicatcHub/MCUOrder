@@ -2,18 +2,25 @@ import type { Title, TitleType } from "../entities/title";
 
 export type TypeFilter = "all" | TitleType;
 
-export const TYPE_FILTERS: readonly TypeFilter[] = ["all", "movie", "series"];
+export const TYPE_FILTERS: readonly TypeFilter[] = [
+  "all",
+  "movie",
+  "series",
+  "oneshot",
+];
 
 export const TYPE_FILTER_LABEL: Record<TypeFilter, string> = {
   all: "All",
   movie: "Movies",
   series: "Series",
+  oneshot: "One-Shots",
 };
 
 export const TYPE_FILTER_TITLE: Record<TypeFilter, string> = {
   all: "Films and series",
   movie: "Films only",
   series: "Series only",
+  oneshot: "One-Shots only",
 };
 
 export function matchesType(title: Title, filter: TypeFilter): boolean {

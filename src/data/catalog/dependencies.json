@@ -21,5 +21,28 @@
       "thunderbolts",
       "the_fantastic_four_first_steps"
     ]
+  },
+  {
+    "filmId": "avengers_doomsday",
+    "label": "Road to Avengers Doomsday",
+    "description": "Films you need to watch to understand Avengers Doomsday",
+    "prerequisites": [
+      "x_men",
+      "x2",
+      "captain_america_the_first_avenger",
+      "the_avengers",
+      "avengers_infinity_war",
+      "avengers_endgame",
+      "loki_season_1",
+      "shang_chi",
+      "spider_man_no_way_home",
+      "doctor_strange_in_the_multiverse_of_madness",
+      "black_panther_wakanda_forever",
+      "loki_season_2",
+      "deadpool_and_wolverine",
+      "captain_america_brave_new_world",
+      "thunderbolts",
+      "the_fantastic_four_first_steps"
+    ]
   }
 ]

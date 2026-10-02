@@ -7,7 +7,7 @@ export type CharacterId = string;
 export type ActorId = string;
 export type FranchiseId = string;
 
-export type TitleType = "movie" | "series";
+export type TitleType = "movie" | "series" | "oneshot";
 
 export type OrderMode = "chronological" | "release";
 
@@ -18,7 +18,6 @@ export interface Character {
   readonly aka?: string;
 }
 
-/** One line of a title's cast sheet: the part, and who plays it here. */
 export interface CastCredit {
   readonly characterId: CharacterId;
   readonly actorId: ActorId | null;
@@ -56,11 +55,11 @@ export interface Title {
   readonly title: string;
   readonly type: TitleType;
   readonly studio: string;
-  readonly universe: string;
+  readonly universe: string | null;
   readonly franchise: Franchise;
 
   readonly franchiseIndex: number;
-  readonly phase: string;
+  readonly phase: string | null;
 
   readonly releaseDate: PartialDate | null;
 
@@ -72,10 +71,8 @@ export interface Title {
 
   readonly episodes: number | null;
 
-  /** In billing order, one line per credit — a part may be played by several. */
   readonly cast: readonly CastCredit[];
 
-  /** The parts in `cast`, deduplicated and still in billing order. */
   readonly characters: readonly CharacterId[];
   readonly synopsis: string;
   readonly poster: string | null;

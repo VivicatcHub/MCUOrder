@@ -21,5 +21,9 @@ export function formatTotalRuntime(title: Title): string | null {
 }
 
 export function formatTypeLabel(title: Title): string {
-  return title.type === "series" ? "Series" : "Movie";
+  return title.type === "series"
+    ? "Series"
+    : title.type === "movie"
+      ? "Movie"
+      : "One-Shot";
 }

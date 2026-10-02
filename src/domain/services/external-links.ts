@@ -8,6 +8,11 @@ export function imdbUrl(title: Title): string {
   return IMDB_FIND + encodeURIComponent(title.title);
 }
 
+export function imdbCastUrl(title: Title): string {
+  if (title.imdbId) return `${IMDB_TITLE}${title.imdbId}/fullcredits/`;
+  return imdbUrl(title);
+}
+
 export function isImdbGuess(title: Title): boolean {
   return title.imdbId === null;
 }

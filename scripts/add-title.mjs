@@ -56,8 +56,13 @@ const franchises = readJson(paths.franchises);
 
 const season = options.has("season") ? Number(options.get("season")) : null;
 let kind = options.get("type") ?? (season !== null ? "series" : null);
-if (kind !== null && kind !== "movie" && kind !== "series")
-  fail('--type must be "movie" or "series"');
+if (
+  kind !== null &&
+  kind !== "movie" &&
+  kind !== "series" &&
+  kind !== "oneshot"
+)
+  fail('--type must be "movie", "series" or "One-Shot"');
 
 async function findRecord() {
   if (options.has("tmdb")) {
@@ -322,7 +327,8 @@ const successor = titles.find(
 );
 
 function insert(raw, block, beforeId) {
-  const lines = raw.split("\n");
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  const lines = raw.split(eol);
 
   if (!beforeId) {
     let last = lines.length - 1;
@@ -330,7 +336,7 @@ function insert(raw, block, beforeId) {
     if (last < 0) throw new Error("titles.json does not end in an entry");
     lines[last] = "  },";
     lines.splice(last + 1, 0, block);
-    return lines.join("\n");
+    return lines.join(eol);
   }
 
   const marker = lines.findIndex((line) => line === `    "id": "${beforeId}",`);
@@ -339,7 +345,7 @@ function insert(raw, block, beforeId) {
   let open = marker;
   while (open >= 0 && !/^ {2}\{$/.test(lines[open])) open -= 1;
   lines.splice(open, 0, `${block},`);
-  return lines.join("\n");
+  return lines.join(eol);
 }
 
 const block = entryBlock(entry);

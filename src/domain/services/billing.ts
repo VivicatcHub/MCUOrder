@@ -16,11 +16,6 @@ export interface BilledCast {
   readonly supporting: readonly CharacterId[];
 }
 
-/**
- * Hand-written verdicts that beat the billing rule, resolved down to the one
- * thing the rule works in: a character, in a title. An entry scoped to a title
- * beats an unscoped one for that title.
- */
 export interface BillingOverrideIndex {
   readonly everywhere: ReadonlyMap<CharacterId, BillingWeight>;
   readonly perTitle: ReadonlyMap<
@@ -39,9 +34,7 @@ interface PlayedPart {
   readonly characterId: CharacterId;
 }
 
-function partsByActor(
-  titles: readonly Title[],
-): Map<ActorId, PlayedPart[]> {
+function partsByActor(titles: readonly Title[]): Map<ActorId, PlayedPart[]> {
   const played = new Map<ActorId, PlayedPart[]>();
 
   for (const title of titles) {
@@ -58,11 +51,6 @@ function partsByActor(
   return played;
 }
 
-/**
- * Flattens the overrides into character verdicts. An actor entry follows the
- * parts that actor is credited with, entry by entry, so demoting Norton never
- * touches Ruffalo.
- */
 export function indexBillingOverrides(
   overrides: readonly BillingOverride[],
   titles: readonly Title[],
